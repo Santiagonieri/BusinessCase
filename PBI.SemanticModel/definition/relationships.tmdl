@@ -1,16 +1,16 @@
 relationship AutoDetected_602bb5a7-3ae6-4f33-9633-487449e9c16d
-	fromColumn: FacTransacciones.Id_Mercado
+	fromColumn: FactTransacciones.Id_Mercado
 	toColumn: DimMercados.Id_Mercado
 
 relationship AutoDetected_af704956-ca79-4cb9-84f7-b61d7bb8ea43
-	fromColumn: FacTransacciones.Id_TipoApp
+	fromColumn: FactTransacciones.Id_TipoApp
 	toColumn: DimTipoAplicacion.Id_TipoApp
 
 relationship AutoDetected_18ae09b2-4f8d-4f5a-9023-882ecd452a93
-	fromColumn: FacTransacciones.Id_Canal_Detail
+	fromColumn: FactTransacciones.Id_Canal_Detail
 	toColumn: DimCanal.Id_Canal_Detail
 
-relationship a8923c48-70e3-6918-069e-eae76cd9bd04
-	fromColumn: FacTransacciones.fecha
-	toColumn: DimCalendar.Date
+relationship 630fbe2b-d706-8d7b-a894-29feba773cf8
+	fromColumn: FactTransacciones.fecha
+	toColumn: DimCalendario.Fecha
 

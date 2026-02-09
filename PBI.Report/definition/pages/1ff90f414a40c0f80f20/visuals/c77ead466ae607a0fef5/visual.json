@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "22e0e1a4ad1a7eb31c40",
+  "name": "c77ead466ae607a0fef5",
   "position": {
-    "x": 202.33183856502242,
-    "y": 495.067264573991,
-    "z": 8000,
-    "height": 190.85201793721973,
-    "width": 100.44843049327353,
-    "tabOrder": 8000
+    "x": 207.38986864956095,
+    "y": 684.16114277327983,
+    "z": 2,
+    "height": 31.559327837976667,
+    "width": 501.56788885355775,
+    "tabOrder": 2
   },
   "visual": {
     "visualType": "advancedSlicerVisual",
@@ -72,7 +72,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'''DimCanal''[canal]'"
+                                "Value": "'''DimCanal''[Canal]'"
                               }
                             }
                           ]
@@ -100,7 +100,7 @@
                                 "0": [
                                   {
                                     "Literal": {
-                                      "Value": "'''DimCanal''[canal]'"
+                                      "Value": "'''DimCanal''[Canal]'"
                                     }
                                   }
                                 ]
@@ -124,7 +124,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "canal"
+                            "0": "Canal"
                           }
                         ]
                       }
@@ -142,14 +142,14 @@
             "rowCount": {
               "expr": {
                 "Literal": {
-                  "Value": "4L"
+                  "Value": "1L"
                 }
               }
             },
             "columnCount": {
               "expr": {
                 "Literal": {
-                  "Value": "1L"
+                  "Value": "4L"
                 }
               }
             },
@@ -185,6 +185,55 @@
             "id": "default"
           }
         }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "overFlow": [
+        {
+          "properties": {
+            "overFlowStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "overFlowDirection": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "paddingSelection": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Narrow'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -206,6 +255,13 @@
               }
             },
             "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "top": {
               "expr": {
                 "Literal": {
                   "Value": "0D"

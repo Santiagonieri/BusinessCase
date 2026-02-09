@@ -1,11 +1,11 @@
 table DimMercados
 	lineageTag: 765852c9-dd81-460b-ad6a-b57fab9afbc7
 
-	column mercado
+	column Mercado
 		dataType: string
 		lineageTag: 7e6c567a-9f31-4a5b-b746-484d0addac92
 		summarizeBy: none
-		sourceColumn: mercado
+		sourceColumn: Mercado
 
 		annotation SummarizationSetBy = Automatic
 
@@ -23,14 +23,37 @@ table DimMercados
 
 	partition DimMercados = m
 		mode: import
+		queryGroup: 'Dimensiones Sintéticas'
 		source =
 				let
+				    // Origen de datos, referencia a la tabla de origen
 				    Origen = TransaccionesTransaccional_agrupado,
-				    #"Otras columnas quitadas" = Table.SelectColumns(Origen,{"mercado"}),
-				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas"),
-				    #"Índice agregado" = Table.AddIndexColumn(#"Duplicados quitados", "Id_Mercado", 1, 1, Int64.Type)
+				
+				    // Seleccionar solo la columna "mercado"
+				    Columnas_seleccionadas = Table.SelectColumns(
+				        Origen,
+				        {"mercado"}
+				    ),
+				
+				    // Quitar duplicados
+				    Duplicados_quitados = Table.Distinct(Columnas_seleccionadas),
+				
+				    // Agregar índice que servirá como Id_Mercado
+				    Indice_agregado = Table.AddIndexColumn(
+				        Duplicados_quitados,
+				        "Id_Mercado",
+				        1,
+				        1,
+				        Int64.Type
+				    ),
+				
+				    // Renombrar columna
+				    Columnas_renombradas = Table.RenameColumns(
+				        Indice_agregado,
+				        {{"mercado", "Mercado"}}
+				    )
 				in
-				    #"Índice agregado"
+				    Columnas_renombradas
 
 	annotation PBI_NavigationStepName = Navegación
 

@@ -1,0 +1,226 @@
+table FactTransacciones
+	lineageTag: 0e3616a8-f2ca-4c79-be80-5d7cf8423dbf
+
+	column fecha
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0139bf0f-47a9-45de-b974-3d0ae3bff080
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column revenue
+		dataType: double
+		lineageTag: 6855a8bc-13cc-4f44-afe4-2b0ceb0a81eb
+		summarizeBy: sum
+		sourceColumn: revenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column revenue_distribuido
+		dataType: decimal
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		lineageTag: b0339331-19ed-4237-89b5-5676a449db20
+		summarizeBy: sum
+		sourceColumn: revenue_distribuido
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Mercado
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 2235b5ea-43ca-46b4-8cbb-abd0afed2170
+		summarizeBy: none
+		sourceColumn: Id_Mercado
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_TipoApp
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d7f6596a-0d0f-417c-8137-502c7e1d774b
+		summarizeBy: none
+		sourceColumn: Id_TipoApp
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Canal_Detail
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 6f30c83e-6d55-4d82-a73e-0d4e46c86967
+		summarizeBy: none
+		sourceColumn: Id_Canal_Detail
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column sesiones_ga
+		dataType: int64
+		formatString: 0
+		lineageTag: 507cfd43-5aeb-4f16-a772-2f20cfa2bbeb
+		summarizeBy: sum
+		sourceColumn: sesiones_ga
+
+		annotation SummarizationSetBy = Automatic
+
+	column transacciones_ga
+		dataType: int64
+		formatString: 0
+		lineageTag: f2853248-9501-4b73-9718-bcd3f1800e72
+		summarizeBy: sum
+		sourceColumn: transacciones_ga
+
+		annotation SummarizationSetBy = Automatic
+
+	column transacciones_real
+		dataType: double
+		lineageTag: 0dbb2bd1-a3a8-4023-97e5-925483187a3c
+		summarizeBy: sum
+		sourceColumn: transacciones_real
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column peso_canal
+		dataType: double
+		lineageTag: 58b3feba-e7b1-4adb-b2a0-4ec2c34f7dc0
+		summarizeBy: sum
+		sourceColumn: peso_canal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ratio_conversion_ga
+		dataType: double
+		formatString: 0.00
+		lineageTag: f1404c14-ffb1-40ad-b990-726c6acd41b4
+		summarizeBy: sum
+		sourceColumn: ratio_conversion_ga
+
+		annotation SummarizationSetBy = Automatic
+
+	column ratio_conversion_real
+		dataType: double
+		formatString: 0.00
+		lineageTag: ee12d8a4-06d3-4859-822e-297150941c8c
+		summarizeBy: sum
+		sourceColumn: ratio_conversion_real
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactTransacciones = m
+		mode: import
+		source = ```
+				let
+				    // Origen de datos, referencia a la tabla de origen
+				    Origen = TransaccionesTransaccional_agrupado,
+				
+				    //  Cambiar tipos de columna
+				    Tipo_Cambiado = Table.TransformColumnTypes(
+				        Origen,
+				        {
+				            {"fecha", type date},
+				            {"mercado", type text},
+				            {"tipo_aplicacion", type text},
+				            {"canal", type text},
+				            {"canal_detail", type text},
+				            {"sesiones_ga", Int64.Type},
+				            {"transacciones_ga", Int64.Type},
+				            {"peso_canal", Percentage.Type},
+				            {"ratio_conversion_ga", Percentage.Type},
+				            {"ratio_conversion_real", Percentage.Type},
+				            {"revenue", type number},
+				            {"transacciones_real", type number},
+				            {"revenue_distribuido", Currency.Type}
+				        },
+				        "US-us"
+				    ),
+				    //  Unir DimMercados
+				    Combinar_DimMercados = Table.NestedJoin(
+				        Tipo_Cambiado, 
+				        {"mercado"}, 
+				        DimMercados, 
+				        {"Mercado"}, 
+				        "DimMercados", 
+				        JoinKind.LeftOuter
+				    ),
+				    Expandir_DimMercados = Table.ExpandTableColumn(
+				        Combinar_DimMercados, 
+				        "DimMercados", 
+				        {"Id_Mercado"}, 
+				        {"Id_Mercado"}
+				    ),
+				
+				    //  Unir DimTipoAplicacion
+				    Combinar_DimTipoAplicacion = Table.NestedJoin(
+				        Expandir_DimMercados, 
+				        {"tipo_aplicacion"}, 
+				        DimTipoAplicacion, 
+				        {"Tipo Aplicacion"}, 
+				        "DimTipoAplicacion", 
+				        JoinKind.LeftOuter
+				    ),
+				    Expandir_DimTipoAplicacion = Table.ExpandTableColumn(
+				        Combinar_DimTipoAplicacion, 
+				        "DimTipoAplicacion", 
+				        {"Id_TipoApp"}, 
+				        {"Id_TipoApp"}
+				    ),
+				
+				    //  Unir DimCanal
+				    Combinar_DimCanal = Table.NestedJoin(
+				        Expandir_DimTipoAplicacion, 
+				        {"canal", "canal_detail"}, 
+				        DimCanal, 
+				        {"Canal", "Canal Detail"}, 
+				        "DimCanal", 
+				        JoinKind.LeftOuter
+				    ),
+				    Expandir_DimCanal = Table.ExpandTableColumn(
+				        Combinar_DimCanal, 
+				        "DimCanal", 
+				        {"Id_Canal_Detail"}, 
+				        {"Id_Canal_Detail"}
+				    ),
+				
+				    //  Seleccionar solo columnas necesarias
+				    Seleccionar_columnas_necesarias = Table.SelectColumns(
+				        Expandir_DimCanal,
+				        {
+				            "fecha",
+				            "sesiones_ga",
+				            "transacciones_ga",
+				            "peso_canal",
+				            "ratio_conversion_ga",
+				            "revenue",
+				            "transacciones_real",
+				            "revenue_distribuido",
+				            "ratio_conversion_real",
+				            "Id_Mercado",
+				            "Id_TipoApp",
+				            "Id_Canal_Detail"
+				        }
+				    )
+				in
+				    Seleccionar_columnas_necesarias
+				```
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

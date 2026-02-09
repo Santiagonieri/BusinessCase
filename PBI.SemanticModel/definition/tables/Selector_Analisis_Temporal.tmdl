@@ -1,0 +1,27 @@
+table Selector_Analisis_Temporal
+	lineageTag: f4362a5f-fa5b-4541-a301-d91c45a81cf7
+
+	column Analisis
+		lineageTag: 810c7f85-0236-4b4a-937f-e38e9daa9b49
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Analisis]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Selector_Analisis_Temporal = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "Analisis", STRING,
+				    {
+				        {"Semana vs Semana"},
+				        {"Mes vs Mes"}
+				    }
+				)
+				
+				```
+
+	annotation PBI_Id = 819b1d2f7d8245da8f0b6bdb67d31a81
+

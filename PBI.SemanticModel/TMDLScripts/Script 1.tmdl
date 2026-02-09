@@ -1,0 +1,382 @@
+createOrReplace
+
+	ref table Medidas
+
+		measure '% Diferencia Transacciones Google-Real' =
+				
+				
+				DIVIDE([Diferencia Ratio Conversion Google-Real],[Ratio Conversion Google])
+			formatString: 0.00\ %;-0.00\ %;0.00\ %
+			displayFolder: Transacciones
+			lineageTag: 1fc0e69e-1b5c-4cf7-a3da-c5375494899a
+
+		measure '% Transacciones perdidas' =
+				
+				
+				DIVIDE([Transacciones Perdidas],[Transacciones Google],0)
+			displayFolder: Transacciones
+			lineageTag: b6003544-57c8-4fad-8e91-e4dde2b1d898
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure '% Variacion Dinamica Cesta' = ```
+				
+				DIVIDE(
+				    [Varacion Cesta Periodo Dinamico],
+				    [Cesta Periodo Anterior Dinamico],
+				    0
+				)
+				
+				```
+			formatString: 0.00\ %;-0.00\ %;0.00\ %
+			displayFolder: Cesta
+			
+
+		measure 'Cesta Media' = ```
+				
+				
+				VAR _TotalTransacciones=[Transacciones Real]
+				VAR _Revenue=[Revenue Total]
+				RETURN
+				
+				DIVIDE(_Revenue,_TotalTransacciones,0)
+				
+				
+				```
+			formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+			displayFolder: Cesta
+			
+
+		measure 'Cesta Media MoM' =
+				
+				CALCULATE(
+				    [Cesta Media],
+				    DATEADD(DimCalendario[Fecha], -1, MONTH)
+				)
+			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+			displayFolder: Cesta
+			
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+		measure 'Cesta Media WoW' =
+				
+				CALCULATE(
+				    [Cesta Media],
+				    DATEADD(DimCalendario[Fecha], -7, DAY)
+				)
+			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+			displayFolder: Cesta
+			
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+		measure 'Cesta Periodo Anterior Dinamico' =
+				
+				VAR Seleccion =
+				    SELECTEDVALUE(Selector_Analisis_Temporal[Analisis])
+				RETURN
+				SWITCH(
+				    Seleccion,
+				    "Semana vs Semana", [Cesta Media WoW],
+				    "Mes vs Mes", [Cesta Media MoM],
+				    BLANK()
+				)
+			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+			displayFolder: Cesta
+			
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+		measure 'Varacion Cesta Periodo Dinamico' =
+				
+				[Cesta Media] - [Cesta Periodo Anterior Dinamico]
+			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+			displayFolder: Cesta
+			
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+		measure '% Revenue MoM' =
+				
+				DIVIDE(
+				    [Variacion Revenue MoM],
+				    [Revenue MoM],
+				    0
+				)
+			displayFolder: Revenue
+			
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure '% Revenue WoW' = ```
+				
+				VAR IngresosActual = [Revenue Total]
+				VAR IngresosSemanaAnterior = 
+				    CALCULATE(
+				        [Revenue Total], 
+				        DATEADD('DimCalendario'[Fecha], -7, DAY)
+				    )
+				RETURN
+				DIVIDE(IngresosActual - IngresosSemanaAnterior, IngresosSemanaAnterior, 0)
+				```
+			displayFolder: Revenue
+			
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure '% Variacion Revenue' =
+				
+				DIVIDE(
+				    [Revenue Total] - [Revenue Periodo Anterior],
+				    [Revenue Periodo Anterior],
+				    0
+				)
+			displayFolder: Revenue
+			
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Revenue MoM' =
+				
+				CALCULATE(
+				    [Revenue Total],
+				    DATEADD(DimCalendario[Fecha], -1, MONTH)
+				)
+			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+			displayFolder: Revenue
+			
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+		measure 'Revenue Periodo Anterior' = ```
+				
+				VAR Sel = SELECTEDVALUE(Selector_Analisis_Temporal[Analisis])
+				RETURN
+				SWITCH(
+				    Sel,
+				    "Semana vs Semana", [Revenue WoW],
+				    "Mes vs Mes", [Revenue MoM]
+				)
+				
+				```
+			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+			displayFolder: Revenue
+			
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+		measure 'Revenue Periodo Anterior Dinamico' =
+				
+				VAR Seleccion =
+				    SELECTEDVALUE(Selector_Analisis_Temporal[Analisis])
+				RETURN
+				SWITCH(
+				    Seleccion,
+				    "Semana vs Semana", [Revenue WoW],
+				    "Mes vs Mes", [Revenue MoM],
+				    BLANK()
+				)
+			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+			displayFolder: Revenue
+			
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+		measure 'Revenue Total' =
+				
+				
+				SUM(FactTransacciones[revenue_distribuido])
+			displayFolder: Revenue
+			
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Revenue WoW' =
+				
+				CALCULATE(
+				    [Revenue Total],
+				    DATEADD(DimCalendario[Fecha], -7, DAY)
+				)
+			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+			displayFolder: Revenue
+			
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+		measure 'Variacion Revenue MoM' =
+				
+				[Revenue Total] - [Revenue MoM]
+			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+			displayFolder: Revenue
+			
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+		measure 'Diferencia Ratio Conversion Google-Real' =
+				
+				
+				[Ratio Conversion Google]-[Ratio Conversion Real]
+			displayFolder: Ratios
+			lineageTag: 6fadc9ee-e699-4f25-8d49-c5c95e9ecf39
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Ratio Conversion Google' = DIVIDE([Transacciones Google],[Sesiones],0)
+			formatString: 0.00\ %;-0.00\ %;0.00\ %
+			displayFolder: Ratios
+			lineageTag: fb6adb9d-a78b-4782-a775-240e0a078ee1
+
+		measure 'Ratio Conversion Google Mes Anterior' =
+				
+				CALCULATE(
+				    [Ratio Conversion Google],
+				    DATEADD(DimCalendario[Fecha], -1, MONTH)
+				)
+			displayFolder: Ratios
+			lineageTag: 918625a6-5d37-4498-ac91-0058bc379d87
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Ratio Conversion Google Semana Anterior' =
+				
+				CALCULATE(
+				    [Ratio Conversion Google],
+				    DATEADD(DimCalendario[Fecha], -7, DAY)
+				)
+			displayFolder: Ratios
+			lineageTag: cd79718c-88ba-4fdc-87d5-a46753209c40
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Ratio Conversion Real' = DIVIDE([Transacciones Real],[Sesiones],0)
+			formatString: 0.00\ %;-0.00\ %;0.00\ %
+			displayFolder: Ratios
+			lineageTag: ce6e62ce-706d-4a2a-a86a-e26ac2a5ffe9
+
+		measure 'Ratio Conversion Real Mes Anterior' =
+				
+				CALCULATE(
+				    [Ratio Conversion Real],
+				    DATEADD(DimCalendario[Fecha], -1, MONTH)
+				)
+			displayFolder: Ratios
+			lineageTag: e719f02b-c2dd-4e45-9bff-83077918460a
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Ratio Conversion Real Semana Anterior' =
+				
+				CALCULATE(
+				    [Ratio Conversion Real],
+				    DATEADD(DimCalendario[Fecha], -7, DAY)
+				)
+			displayFolder: Ratios
+			lineageTag: 0f117f53-e08c-4078-ad36-1e26fe02468b
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Revenue Por Sesion' =
+				
+				
+				DIVIDE([Revenue Total],[Sesiones],0)
+			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+			displayFolder: Revenue
+			lineageTag: f96e5556-2742-4628-9671-52ad79cd1f09
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+		measure Sesiones =
+				
+				
+				SUM(FactTransacciones[sesiones_ga])
+			formatString: #,0
+			displayFolder: Transacciones
+			lineageTag: 1d960fae-b2ee-465f-94b0-14eafd478c3c
+
+		measure 'Transacciones Google' = ```
+				
+				
+				VAR _TransGA= 
+				SUMMARIZE(FactTransacciones,FactTransacciones[fecha],FactTransacciones[Id_Mercado],FactTransacciones[Id_TipoApp],"Numero transacciones",sum(FactTransacciones[transacciones_ga]))
+				
+				RETURN
+				
+				SUMX(_TransGA,[Numero transacciones])
+				```
+			formatString: #,0
+			displayFolder: Transacciones
+			lineageTag: 3af579b5-5309-4b53-8658-c6af4e0573e7
+
+		measure 'Transacciones Google Mes Anterior' =
+				
+				CALCULATE(
+				    [Transacciones Google],
+				    DATEADD(DimCalendario[Fecha], -1, MONTH)
+				)
+			formatString: 0
+			displayFolder: Transacciones
+			lineageTag: 27c3610d-b4cb-4851-9ace-82fb2de7205e
+
+		measure 'Transacciones Google Semana Anterior' =
+				
+				CALCULATE(
+				    [Transacciones Google],
+				    DATEADD(DimCalendario[Fecha], -7, DAY)
+				)
+			formatString: 0
+			displayFolder: Transacciones
+			lineageTag: f1416195-d3c4-4905-8aae-9232f1cb9500
+
+		measure 'Transacciones Perdidas' = [Transacciones Google]-[Transacciones Real]
+			displayFolder: Transacciones
+			lineageTag: 1e5474d2-d8a5-4e6e-8065-63141e478496
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Transacciones Real' = ```
+				
+				
+				VAR _TransReal= 
+				            SUMMARIZE(
+				                FactTransacciones,
+				                FactTransacciones[fecha],
+				                FactTransacciones[Id_Mercado],
+				                FactTransacciones[Id_TipoApp],
+				                "TotalTransacciones",
+				                MAX(FactTransacciones[transacciones_real])
+				            )
+				
+				RETURN
+				
+				    SUMX(
+				        _TransReal,
+				        [TotalTransacciones]
+				    )   
+				```
+			formatString: #,0
+			displayFolder: Transacciones
+			lineageTag: 905739fd-9226-4a12-8d1d-d1682f47fb84
+
+		measure 'Transacciones Real Mes Anterior' =
+				
+				CALCULATE(
+				    [Transacciones Real],
+				    DATEADD(DimCalendario[Fecha], -1, MONTH)
+				)
+			displayFolder: Transacciones
+			lineageTag: ef74c62c-ed02-4fd3-8d21-f75f1a444b6e
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Transacciones Real Semana Anterior' =
+				
+				CALCULATE(
+				    [Transacciones Real],
+				    DATEADD(DimCalendario[Fecha], -7, DAY)
+				)
+			displayFolder: Transacciones
+			lineageTag: 6934d4e0-5b82-46df-9368-3672b169dceb
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+

@@ -1,0 +1,103 @@
+table DimCalendario
+	lineageTag: 336a76d2-fc97-4f23-a0e8-09b6a1dd3959
+	dataCategory: Time
+
+	column Fecha
+		dataType: dateTime
+		isKey
+		formatString: Long Date
+		lineageTag: 067af78c-d1f5-41ba-9008-d91e40af7432
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Año
+		dataType: int64
+		formatString: 0
+		lineageTag: 1634c7ee-f21c-40de-a6c2-5200aa4422ce
+		summarizeBy: none
+		sourceColumn: Año
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Nro'
+		dataType: int64
+		formatString: 0
+		lineageTag: df264155-9f1e-462a-8c69-d5688ebba718
+		summarizeBy: none
+		sourceColumn: Mes Nro
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: string
+		lineageTag: 89d64ed3-9b98-4f94-9405-c451c46ecbc6
+		summarizeBy: none
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre
+		dataType: string
+		lineageTag: ba71f6e6-fccb-4c78-9912-ae572b9c1413
+		summarizeBy: none
+		sourceColumn: Trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+	column Día
+		dataType: string
+		lineageTag: e70927f6-0efa-4172-929b-b383f390ce3b
+		summarizeBy: none
+		sourceColumn: Día
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes-Año
+		dataType: string
+		lineageTag: d2112e54-6a47-4c33-956d-4a51b8274048
+		summarizeBy: none
+		sourceColumn: Mes-Año
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimCalendario = m
+		mode: import
+		queryGroup: 'Dimensiones Sintéticas'
+		source = ```
+				let
+				    // Usamos los valores de las consultas FechaMin y FechaMax creadas antes
+				
+				    Fechas =FechasMinMax,
+				    FechaInicio = Fechas[FechaMin],
+				    FechaFin = Fechas[FechaMax],
+				    
+				    // Calculamos el número de días entre ambas fechas
+				    NumeroDias = Duration.Days(Duration.From(FechaFin - FechaInicio)) + 1,
+				    
+				    // Generamos la lista de fechas
+				    Origen = List.Dates(FechaInicio, NumeroDias, #duration(1, 0, 0, 0)),
+				    
+				    // Convertimos la lista en tabla
+				    #"Convertido en tabla" = Table.FromList(Origen, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Convertido en tabla",{{"Column1", "Fecha"}}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columnas con nombre cambiado",{{"Fecha", type date}}),
+				    
+				    // Agregamos columnas útiles
+				    #"Año Agregado" = Table.AddColumn(#"Tipo cambiado", "Año", each Date.Year([Fecha]), Int64.Type),
+				    #"Mes Agregado" = Table.AddColumn(#"Año Agregado", "Mes Nro", each Date.Month([Fecha]), Int64.Type),
+				    #"Nombre Mes Agregado" = Table.AddColumn(#"Mes Agregado", "Mes", each Text.Proper(Date.MonthName([Fecha])), type text),
+				    #"Trimestre Agregado" = Table.AddColumn(#"Nombre Mes Agregado", "Trimestre", each "T" & Text.From(Date.QuarterOfYear([Fecha])), type text),
+				    #"Día Semana Agregado" = Table.AddColumn(#"Trimestre Agregado", "Día", each Text.Proper(Date.DayOfWeekName([Fecha])), type text),
+				    #"Mes-Año Agregado" = Table.AddColumn(#"Día Semana Agregado", "Mes-Año", each Text.Start([Mes],3) & "-" & Text.End(Text.From([Año]),2), type text)
+				in
+				    #"Mes-Año Agregado"
+				```
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

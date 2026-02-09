@@ -1,11 +1,11 @@
 table DimTipoAplicacion
 	lineageTag: 8b445670-1b54-4849-9b09-a34a1c89d524
 
-	column tipo_aplicacion
+	column 'Tipo Aplicacion'
 		dataType: string
 		lineageTag: 2976bfea-35d0-4ff0-887a-2fd9e5e9247c
 		summarizeBy: none
-		sourceColumn: tipo_aplicacion
+		sourceColumn: Tipo Aplicacion
 
 		annotation SummarizationSetBy = Automatic
 
@@ -23,14 +23,37 @@ table DimTipoAplicacion
 
 	partition DimTipoAplicacion = m
 		mode: import
+		queryGroup: 'Dimensiones Sintéticas'
 		source =
 				let
+				    // Origen de datos, referencia a la tabla de origen
 				    Origen = TransaccionesTransaccional_agrupado,
-				    #"Otras columnas quitadas" = Table.SelectColumns(Origen,{"tipo_aplicacion"}),
-				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas"),
-				    #"Índice agregado" = Table.AddIndexColumn(#"Duplicados quitados", "Id_TipoApp", 1, 1, Int64.Type)
+				
+				    // Seleccionar únicamente la columna que nos interesa
+				    Columnas_seleccionadas = Table.SelectColumns(
+				        Origen,
+				        {"tipo_aplicacion"}
+				    ),
+				
+				    // Quitar duplicados para tener solo valores únicos
+				    Duplicados_quitados = Table.Distinct(Columnas_seleccionadas),
+				
+				    // Agregar columna índice que servirá como Id_TipoApp
+				    Indice_agregado = Table.AddIndexColumn(
+				        Duplicados_quitados,
+				        "Id_TipoApp",
+				        1,
+				        1,
+				        Int64.Type
+				    ),
+				
+				    // Renombrar la columna original para dejarla con nombre limpio
+				    Columnas_renombradas = Table.RenameColumns(
+				        Indice_agregado,
+				        {{"tipo_aplicacion", "Tipo Aplicacion"}}
+				    )
 				in
-				    #"Índice agregado"
+				    Columnas_renombradas
 
 	annotation PBI_NavigationStepName = Navegación
 

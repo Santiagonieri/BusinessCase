@@ -40,10 +40,10 @@ table Campo_Seleccion
 		mode: import
 		source =
 				{
-				    ("canal", NAMEOF('DimCanal'[canal]), 0),
-				    ("canal_detail", NAMEOF('DimCanal'[canal_detail]), 1),
-				    ("mercado", NAMEOF('DimMercados'[mercado]), 2),
-				    ("tipo_aplicacion", NAMEOF('DimTipoAplicacion'[tipo_aplicacion]), 3)
+				    ("Canal", NAMEOF('DimCanal'[Canal]), 0),
+				    ("Canal Detail", NAMEOF('DimCanal'[Canal Detail]), 1),
+				    ("Mercado", NAMEOF('DimMercados'[Mercado]), 2),
+				    ("Tipo Aplicacion", NAMEOF('DimTipoAplicacion'[Tipo Aplicacion]), 3)
 				}
 
 	annotation PBI_Id = 5c50a4af731f49f4bee2f6be3ee0a94f

@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DimCalendar"
+                      "Entity": "DimCalendario"
                     }
                   },
-                  "Property": "Date"
+                  "Property": "Fecha"
                 }
               },
-              "queryRef": "DimCalendar.Date",
-              "nativeQueryRef": "Date",
+              "queryRef": "DimCalendario.Fecha",
+              "nativeQueryRef": "Fecha",
               "active": true
             }
           ]
@@ -40,10 +40,10 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "DimCalendar"
+                    "Entity": "DimCalendario"
                   }
                 },
-                "Property": "Date"
+                "Property": "Fecha"
               }
             },
             "direction": "Ascending"
@@ -64,6 +64,11 @@
               }
             }
           }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
         }
       ]
     },

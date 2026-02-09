@@ -23,11 +23,11 @@
                       "Entity": "DimMercados"
                     }
                   },
-                  "Property": "mercado"
+                  "Property": "Mercado"
                 }
               },
               "queryRef": "DimMercados.mercado",
-              "nativeQueryRef": "mercado",
+              "nativeQueryRef": "Mercado",
               "active": true
             }
           ]
@@ -46,6 +46,11 @@
               }
             }
           }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
         }
       ]
     },

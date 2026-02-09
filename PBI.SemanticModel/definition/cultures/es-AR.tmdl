@@ -31,7 +31,7 @@ cultureInfo es-AR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DimMercados",
-			          "ConceptualProperty": "mercado"
+			          "ConceptualProperty": "Mercado"
 			        }
 			      },
 			      "State": "Generated",
@@ -51,6 +51,9 @@ cultureInfo es-AR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "id mercado": {
@@ -132,7 +135,7 @@ cultureInfo es-AR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DimTipoAplicacion",
-			          "ConceptualProperty": "tipo_aplicacion"
+			          "ConceptualProperty": "Tipo Aplicacion"
 			        }
 			      },
 			      "State": "Generated",
@@ -140,13 +143,6 @@ cultureInfo es-AR
 			        {
 			          "tipo aplicacion": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "tipo_aplicacion": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
 			          }
 			        }
 			      ]
@@ -159,6 +155,9 @@ cultureInfo es-AR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "id tipo app": {
@@ -310,7 +309,7 @@ cultureInfo es-AR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DimCanal",
-			          "ConceptualProperty": "canal"
+			          "ConceptualProperty": "Canal"
 			        }
 			      },
 			      "State": "Generated",
@@ -396,7 +395,7 @@ cultureInfo es-AR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "DimCanal",
-			          "ConceptualProperty": "canal_detail"
+			          "ConceptualProperty": "Canal Detail"
 			        }
 			      },
 			      "State": "Generated",
@@ -404,13 +403,6 @@ cultureInfo es-AR
 			        {
 			          "canal detail": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "canal_detail": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
 			          }
 			        },
 			        {
@@ -529,6 +521,9 @@ cultureInfo es-AR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "id canal detail": {
@@ -650,21 +645,21 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fac_transaccione": {
+			    "fact_transaccione": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "FacTransacciones"
+			          "ConceptualEntity": "FactTransacciones"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "fac transaccione": {
+			          "fact transaccione": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "FacTransacciones": {
+			          "FactTransacciones": {
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
@@ -672,10 +667,10 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fac_transaccione.fecha": {
+			    "fact_transaccione.fecha": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualEntity": "FactTransacciones",
 			          "ConceptualProperty": "fecha"
 			        }
 			      },
@@ -695,10 +690,10 @@ cultureInfo es-AR
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "fac_transaccione.revenue": {
+			    "fact_transaccione.revenue": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualEntity": "FactTransacciones",
 			          "ConceptualProperty": "revenue"
 			        }
 			      },
@@ -751,10 +746,10 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fac_transaccione.revenue_distribuido": {
+			    "fact_transaccione.revenue_distribuido": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualEntity": "FactTransacciones",
 			          "ConceptualProperty": "revenue_distribuido"
 			        }
 			      },
@@ -814,10 +809,10 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fac_transaccione.id_mercado": {
+			    "fact_transaccione.id_mercado": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualEntity": "FactTransacciones",
 			          "ConceptualProperty": "Id_Mercado"
 			        }
 			      },
@@ -880,10 +875,10 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fac_transaccione.id_tipo_app": {
+			    "fact_transaccione.id_tipo_app": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualEntity": "FactTransacciones",
 			          "ConceptualProperty": "Id_TipoApp"
 			        }
 			      },
@@ -946,10 +941,10 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fac_transaccione.id_canal_detail": {
+			    "fact_transaccione.id_canal_detail": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualEntity": "FactTransacciones",
 			          "ConceptualProperty": "Id_Canal_Detail"
 			        }
 			      },
@@ -1078,10 +1073,10 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fac_transaccione.sesiones_ga": {
+			    "fact_transaccione.sesiones_ga": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualEntity": "FactTransacciones",
 			          "ConceptualProperty": "sesiones_ga"
 			        }
 			      },
@@ -1108,10 +1103,10 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fac_transaccione.transacciones_ga": {
+			    "fact_transaccione.transacciones_ga": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualEntity": "FactTransacciones",
 			          "ConceptualProperty": "transacciones_ga"
 			        }
 			      },
@@ -1138,10 +1133,10 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fac_transaccione.transacciones_real": {
+			    "fact_transaccione.transacciones_real": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualEntity": "FactTransacciones",
 			          "ConceptualProperty": "transacciones_real"
 			        }
 			      },
@@ -1168,10 +1163,10 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fac_transaccione.peso_canal": {
+			    "fact_transaccione.peso_canal": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualEntity": "FactTransacciones",
 			          "ConceptualProperty": "peso_canal"
 			        }
 			      },
@@ -1261,10 +1256,10 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fac_transaccione.ratio_conversion_ga": {
+			    "fact_transaccione.ratio_conversion_ga": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualEntity": "FactTransacciones",
 			          "ConceptualProperty": "ratio_conversion_ga"
 			        }
 			      },
@@ -1296,10 +1291,10 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fac_transaccione.ratio_conversion_real": {
+			    "fact_transaccione.ratio_conversion_real": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualEntity": "FactTransacciones",
 			          "ConceptualProperty": "ratio_conversion_real"
 			        }
 			      },
@@ -1391,171 +1386,6 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "dim_calendar": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "DimCalendar"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "dim calendar": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "DimCalendar": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "calendar": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "dim almanac": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "dim datebook": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "dim agenda": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "dim logbook": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "dim diary": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "almanac": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "datebook": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "agenda": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "logbook": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "diary": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        }
-			      ]
-			    },
-			    "dim_calendar.date": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "DimCalendar",
-			          "ConceptualProperty": "Date"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "date": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "moment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "period": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
 			    "medida": {
 			      "Definition": {
 			        "Binding": {
@@ -1579,6 +1409,9 @@ cultureInfo es-AR
 			        }
 			      },
 			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
 			      "Terms": [
 			        {
 			          "column": {
@@ -1691,7 +1524,7 @@ cultureInfo es-AR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Transacciones real"
+			          "ConceptualProperty": "Transacciones Real"
 			        }
 			      },
 			      "State": "Generated",
@@ -1700,65 +1533,105 @@ cultureInfo es-AR
 			          "transacciones real": {
 			            "State": "Generated"
 			          }
-			        }
-			      ]
-			    },
-			    "medida.transacciones_GA": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Transacciones GA"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
+			        },
 			        {
-			          "transacciones GA": {
-			            "State": "Generated"
+			          "Trans. Real": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
 			    },
-			    "medida.diferencia_absoluta_transacciones_GAreal": {
+			    "medida.transacciones_google": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Diferencia Absoluta transacciones GA-Real"
+			          "ConceptualProperty": "Transacciones Google"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "diferencia absoluta transacciones GA-real": {
+			          "transacciones google": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "diferencia absoluta transacciones GA real": {
+			          "Trans. Google": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.diferencia_ratio_conversion_googlereal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Diferencia Ratio Conversion Google-Real"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "diferencia ratio conversion google-real": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "diferencia ratio conversion google real": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        }
 			      ]
 			    },
-			    "medida.diferencia_relativa_transacciones_GAreal": {
+			    "medida.diferencia_transacciones_googlereal": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Diferencia Relativa Transacciones GA-Real"
+			          "ConceptualProperty": "% Diferencia Transacciones Google-Real"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "diferencia relativa transacciones GA-real": {
+			          "% diferencia transacciones google-real": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "diferencia relativa transacciones GA real": {
+			          "% diferencia transacciones google real": {
 			            "State": "Generated",
 			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "percentage diferencia transaccione google real": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct diferencia transaccione google real": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
 			          }
 			        }
 			      ]
@@ -1861,92 +1734,56 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "medida.total_sesiones": {
+			    "medida.sesiones": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Total Sesiones"
+			          "ConceptualProperty": "Sesiones"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "total sesiones": {
+			          "sesiones": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "aggregate sesione": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "overall sesione": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
 			          }
 			        }
 			      ]
 			    },
-			    "medida.ratio_conversion_GA": {
+			    "medida.ratio_conversion_google": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Ratio Conversion GA"
+			          "ConceptualProperty": "Ratio Conversion Google"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "ratio conversion GA": {
+			          "ratio conversion google": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "GA": {
+			          "google": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "conversion GA": {
+			          "conversion google": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "Ratio Conv. GA": {
+			          "Ratio Conv. Google": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "medida.cesta_promedio": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Cesta promedio"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "cesta promedio": {
-			            "State": "Generated"
 			          }
 			        }
 			      ]
@@ -2039,64 +1876,1792 @@ cultureInfo es-AR
 			          }
 			        }
 			      ]
-			    }
-			  },
-			  "Relationships": {
-			    "fac_transaccione_has_dim_canal": {
-			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fac_transaccione": {
-			          "Target": {
-			            "Entity": "fac_transaccione"
-			          }
-			        },
-			        "dim_canal": {
-			          "Target": {
-			            "Entity": "dim_canal"
-			          }
+			    },
+			    "medida.transacciones_perdidas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Transacciones Perdidas"
 			        }
 			      },
-			      "Phrasings": [
+			      "State": "Generated",
+			      "Terms": [
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fac_transaccione"
-			            },
-			            "Object": {
-			              "Role": "dim_canal"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_dim_canals"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_canal"
-			            },
-			            "Object": {
-			              "Role": "fac_transaccione"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_canals_have_fac_transacciones"
+			          "transacciones perdidas": {
+			            "State": "Generated"
+			          }
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_dim_tipo_aplicacion": {
+			    "medida.transacciones_perdidas1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Transacciones perdidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% transacciones perdidas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage transaccione perdida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct transaccione perdida": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.revenue_por_sesion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Revenue Por Sesion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue por sesion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "income por sesion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "profit por sesion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "turnover por sesion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "yield por sesion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim calendario": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DimCalendario": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario",
+			          "ConceptualProperty": "Fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendario.año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario",
+			          "ConceptualProperty": "Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.mes_nro": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario",
+			          "ConceptualProperty": "Mes Nro"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes nro": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me nro": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.me": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario",
+			          "ConceptualProperty": "Mes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "me": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario",
+			          "ConceptualProperty": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.día": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario",
+			          "ConceptualProperty": "Día"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "día": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.mesaño": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario",
+			          "ConceptualProperty": "Mes-Año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes-año": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me-año": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "mes año": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "me año": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.7566
+			          }
+			        }
+			      ]
+			    },
+			    "medida.transacciones_real_semana_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Transacciones Real Semana Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "transacciones real semana anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.transacciones_google_semana_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Transacciones Google Semana Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "transacciones google semana anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.transacciones_google_mes_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Transacciones Google Mes Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "transacciones google mes anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.transacciones_real_mes_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Transacciones Real Mes Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "transacciones real mes anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ratio_conversion_google_semana_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ratio Conversion Google Semana Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ratio conversion google semana anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ratio_conversion_google_mes_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ratio Conversion Google Mes Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ratio conversion google mes anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ratio_conversion_real_mes_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ratio Conversion Real Mes Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ratio conversion real mes anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ratio_conversion_real_semana_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ratio Conversion Real Semana Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ratio conversion real semana anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.transacciones_periodo_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Transacciones Periodo Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "transacciones periodo anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.variacion_transacciones": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Variacion Transacciones"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "variacion transacciones": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.variacion_transacciones1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Variacion Transacciones"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% variacion transacciones": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage variacion transaccione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct variacion transaccione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ratio_conversion_real_periodo_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ratio Conversion Real Periodo Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ratio conversion real periodo anterior": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.variacion_ratio_conversion_real": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Variacion Ratio Conversion Real"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% variacion ratio conversion real": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage variacion ratio conversion real": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct variacion ratio conversion real": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "medida.variacion_dinamica_cesta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Variacion Dinamica Cesta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% variacion dinamica cesta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage variacion dinamica cesta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "pct variacion dinamica cesta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "medida.cesta_media": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Cesta Media"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cesta media": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cesta television": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "cesta radio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "cesta broadcasting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "cesta vehicle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "cesta mode": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "cesta method": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "cesta avenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "cesta agent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "cesta organ": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "cesta mean": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "medida.cesta_media_MoM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Cesta Media MoM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cesta media MoM": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cesta media ma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "cesta media mommy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "cesta media mamma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "cesta media mama": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "cesta media mammy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "cesta media momma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "cesta media mother": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "cesta media mum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "cesta media mummy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "medida.cesta_media_WoW": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Cesta Media WoW"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cesta media WoW": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "cesta media winner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "cesta media sensation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "cesta media smash": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "cesta media triumph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "cesta media knockout": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "medida.cesta_periodo_anterior_dinamico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Cesta Periodo Anterior Dinamico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cesta periodo anterior dinamico": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.varacion_cesta_periodo_dinamico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Varacion Cesta Periodo Dinamico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "varacion cesta periodo dinamico": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.revenue_MoM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Revenue MoM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% revenue MoM": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage revenue mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "% income mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct revenue mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "% profit mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "% turnover mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "% yield mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "% revenue ma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "% revenue mommy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "% revenue mamma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "% revenue mama": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "medida.revenue_WoW": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Revenue WoW"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% revenue WoW": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage revenue wow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "% income wow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct revenue wow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "% profit wow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "% turnover wow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "% yield wow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "% revenue winner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "% revenue sensation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "% revenue smash": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "% revenue triumph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "medida.variacion_revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Variacion Revenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% variacion revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "% variacion income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "% variacion profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "% variacion turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "% variacion yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "percentage variacion revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct variacion revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.revenue_MoM1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Revenue MoM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue MoM": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MoM": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "income mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "profit mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "turnover mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "yield mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "revenue ma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "revenue mommy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "revenue mamma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "revenue mama": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "revenue mammy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "revenue momma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "medida.revenue_periodo_anterior": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Revenue Periodo Anterior"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue periodo anterior": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "income periodo anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "profit periodo anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "turnover periodo anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "yield periodo anterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.revenue_periodo_anterior_dinamico": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Revenue Periodo Anterior Dinamico"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue periodo anterior dinamico": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "income periodo anterior dinamico": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "profit periodo anterior dinamico": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "turnover periodo anterior dinamico": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "yield periodo anterior dinamico": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        }
+			      ]
+			    },
+			    "medida.revenue_total": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Revenue Total"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue total": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "revenue aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "revenue overall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "income total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "profit total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "turnover total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "yield total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "medida.revenue_WoW1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Revenue WoW"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue WoW": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "WoW": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "income wow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "profit wow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "turnover wow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "yield wow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "revenue winner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "revenue sensation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "winner": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "sensation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "revenue smash": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "revenue triumph": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "medida.variacion_revenue_MoM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Variacion Revenue MoM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "variacion revenue MoM": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "variacion income mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "variacion profit mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "variacion turnover mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "variacion yield mom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "variacion revenue ma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "variacion revenue mommy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "variacion revenue mamma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "variacion revenue mama": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "variacion revenue mammy": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "variacion revenue momma": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "selector_analisis_temporal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Selector_Analisis_Temporal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "selector analisis temporal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Selector_Analisis_Temporal": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "selector_analisis_temporal.analisis": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Selector_Analisis_Temporal",
+			          "ConceptualProperty": "Analisis"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "analisis": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "fact_transaccione_has_dim_tipo_aplicacion": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
 			        "dim_tipo_aplicacion": {
@@ -2109,7 +3674,7 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
 			              "Role": "dim_tipo_aplicacion"
@@ -2117,7 +3682,7 @@ cultureInfo es-AR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_dim_tipo_aplicacions"
+			          "ID": "fact_transacciones_have_dim_tipo_aplicacions"
 			        },
 			        {
 			          "Attribute": {
@@ -2125,24 +3690,24 @@ cultureInfo es-AR
 			              "Role": "dim_tipo_aplicacion"
 			            },
 			            "Object": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_tipo_aplicacions_have_fac_transacciones"
+			          "ID": "dim_tipo_aplicacions_have_fact_transacciones"
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_dim_mercado": {
+			    "fact_transaccione_has_dim_mercado": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
 			        "dim_mercado": {
@@ -2155,7 +3720,7 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
 			              "Role": "dim_mercado"
@@ -2163,7 +3728,7 @@ cultureInfo es-AR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_dim_mercado"
+			          "ID": "fact_transacciones_have_dim_mercado"
 			        },
 			        {
 			          "Attribute": {
@@ -2171,12 +3736,1662 @@ cultureInfo es-AR
 			              "Role": "dim_mercado"
 			            },
 			            "Object": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_mercado_have_fac_transacciones"
+			          "ID": "dim_mercado_have_fact_transacciones"
+			        }
+			      ]
+			    },
+			    "selector_analisis_temporal_has_analisis": {
+			      "Binding": {
+			        "ConceptualEntity": "Selector_Analisis_Temporal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "selector_analisis_temporal": {
+			          "Target": {
+			            "Entity": "selector_analisis_temporal"
+			          }
+			        },
+			        "selector_analisis_temporal.analisis": {
+			          "Target": {
+			            "Entity": "selector_analisis_temporal.analisis"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "selector_analisis_temporal"
+			            },
+			            "Object": {
+			              "Role": "selector_analisis_temporal.analisis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "selector_analisis_temporal_have_analisises"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_variacion_revenue_MoM": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.variacion_revenue_MoM": {
+			          "Target": {
+			            "Entity": "medida.variacion_revenue_MoM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.variacion_revenue_MoM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_variacion_revenue_MoM"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_revenue_WoW1": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.revenue_WoW1": {
+			          "Target": {
+			            "Entity": "medida.revenue_WoW1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.revenue_WoW1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_revenue_WoW"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_revenue_total": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.revenue_total": {
+			          "Target": {
+			            "Entity": "medida.revenue_total"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.revenue_total"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_revenue_total"
+			        }
+			      ]
+			    },
+			    "selector_analisis_temporal_has_medida_revenue_periodo_anterior_dinamico": {
+			      "Binding": {
+			        "ConceptualEntity": "Selector_Analisis_Temporal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "selector_analisis_temporal": {
+			          "Target": {
+			            "Entity": "selector_analisis_temporal"
+			          }
+			        },
+			        "medida.revenue_periodo_anterior_dinamico": {
+			          "Target": {
+			            "Entity": "medida.revenue_periodo_anterior_dinamico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "selector_analisis_temporal"
+			            },
+			            "Object": {
+			              "Role": "medida.revenue_periodo_anterior_dinamico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "selector_analisis_temporal_have_revenue_periodo_anterior_dinamico"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_revenue_periodo_anterior_dinamico": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.revenue_periodo_anterior_dinamico": {
+			          "Target": {
+			            "Entity": "medida.revenue_periodo_anterior_dinamico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.revenue_periodo_anterior_dinamico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_revenue_periodo_anterior_dinamico"
+			        }
+			      ]
+			    },
+			    "selector_analisis_temporal_has_medida_revenue_periodo_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "Selector_Analisis_Temporal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "selector_analisis_temporal": {
+			          "Target": {
+			            "Entity": "selector_analisis_temporal"
+			          }
+			        },
+			        "medida.revenue_periodo_anterior": {
+			          "Target": {
+			            "Entity": "medida.revenue_periodo_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "selector_analisis_temporal"
+			            },
+			            "Object": {
+			              "Role": "medida.revenue_periodo_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "selector_analisis_temporal_have_revenue_periodo_anterior"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_revenue_periodo_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.revenue_periodo_anterior": {
+			          "Target": {
+			            "Entity": "medida.revenue_periodo_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.revenue_periodo_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_revenue_periodo_anterior"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_revenue_MoM1": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.revenue_MoM1": {
+			          "Target": {
+			            "Entity": "medida.revenue_MoM1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.revenue_MoM1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_revenue_MoM"
+			        }
+			      ]
+			    },
+			    "selector_analisis_temporal_has_medida_variacion_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "Selector_Analisis_Temporal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "selector_analisis_temporal": {
+			          "Target": {
+			            "Entity": "selector_analisis_temporal"
+			          }
+			        },
+			        "medida.variacion_revenue": {
+			          "Target": {
+			            "Entity": "medida.variacion_revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "selector_analisis_temporal"
+			            },
+			            "Object": {
+			              "Role": "medida.variacion_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "selector_analisis_temporal_have__variacion_revenue"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_variacion_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.variacion_revenue": {
+			          "Target": {
+			            "Entity": "medida.variacion_revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.variacion_revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have__variacion_revenue"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_revenue_WoW": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.revenue_WoW": {
+			          "Target": {
+			            "Entity": "medida.revenue_WoW"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.revenue_WoW"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have__revenue_WoW"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_revenue_MoM": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.revenue_MoM": {
+			          "Target": {
+			            "Entity": "medida.revenue_MoM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.revenue_MoM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have__revenue_MoM"
+			        }
+			      ]
+			    },
+			    "selector_analisis_temporal_has_medida_varacion_cesta_periodo_dinamico": {
+			      "Binding": {
+			        "ConceptualEntity": "Selector_Analisis_Temporal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "selector_analisis_temporal": {
+			          "Target": {
+			            "Entity": "selector_analisis_temporal"
+			          }
+			        },
+			        "medida.varacion_cesta_periodo_dinamico": {
+			          "Target": {
+			            "Entity": "medida.varacion_cesta_periodo_dinamico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "selector_analisis_temporal"
+			            },
+			            "Object": {
+			              "Role": "medida.varacion_cesta_periodo_dinamico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "selector_analisis_temporal_have_varacion_cesta_periodo_dinamico"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_varacion_cesta_periodo_dinamico": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.varacion_cesta_periodo_dinamico": {
+			          "Target": {
+			            "Entity": "medida.varacion_cesta_periodo_dinamico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.varacion_cesta_periodo_dinamico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_varacion_cesta_periodo_dinamico"
+			        }
+			      ]
+			    },
+			    "selector_analisis_temporal_has_medida_cesta_periodo_anterior_dinamico": {
+			      "Binding": {
+			        "ConceptualEntity": "Selector_Analisis_Temporal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "selector_analisis_temporal": {
+			          "Target": {
+			            "Entity": "selector_analisis_temporal"
+			          }
+			        },
+			        "medida.cesta_periodo_anterior_dinamico": {
+			          "Target": {
+			            "Entity": "medida.cesta_periodo_anterior_dinamico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "selector_analisis_temporal"
+			            },
+			            "Object": {
+			              "Role": "medida.cesta_periodo_anterior_dinamico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "selector_analisis_temporal_have_cesta_periodo_anterior_dinamico"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_cesta_periodo_anterior_dinamico": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.cesta_periodo_anterior_dinamico": {
+			          "Target": {
+			            "Entity": "medida.cesta_periodo_anterior_dinamico"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.cesta_periodo_anterior_dinamico"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_cesta_periodo_anterior_dinamico"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_cesta_media_WoW": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.cesta_media_WoW": {
+			          "Target": {
+			            "Entity": "medida.cesta_media_WoW"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.cesta_media_WoW"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_cesta_media_WoW"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_cesta_media_MoM": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.cesta_media_MoM": {
+			          "Target": {
+			            "Entity": "medida.cesta_media_MoM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.cesta_media_MoM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_cesta_media_MoM"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_cesta_media": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.cesta_media": {
+			          "Target": {
+			            "Entity": "medida.cesta_media"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.cesta_media"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_cesta_media"
+			        }
+			      ]
+			    },
+			    "selector_analisis_temporal_has_medida_variacion_dinamica_cesta": {
+			      "Binding": {
+			        "ConceptualEntity": "Selector_Analisis_Temporal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "selector_analisis_temporal": {
+			          "Target": {
+			            "Entity": "selector_analisis_temporal"
+			          }
+			        },
+			        "medida.variacion_dinamica_cesta": {
+			          "Target": {
+			            "Entity": "medida.variacion_dinamica_cesta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "selector_analisis_temporal"
+			            },
+			            "Object": {
+			              "Role": "medida.variacion_dinamica_cesta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "selector_analisis_temporal_have__variacion_dinamica_cesta"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_variacion_dinamica_cesta": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.variacion_dinamica_cesta": {
+			          "Target": {
+			            "Entity": "medida.variacion_dinamica_cesta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.variacion_dinamica_cesta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have__variacion_dinamica_cesta"
+			        }
+			      ]
+			    },
+			    "selector_analisis_temporal_has_medida_variacion_ratio_conversion_real": {
+			      "Binding": {
+			        "ConceptualEntity": "Selector_Analisis_Temporal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "selector_analisis_temporal": {
+			          "Target": {
+			            "Entity": "selector_analisis_temporal"
+			          }
+			        },
+			        "medida.variacion_ratio_conversion_real": {
+			          "Target": {
+			            "Entity": "medida.variacion_ratio_conversion_real"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "selector_analisis_temporal"
+			            },
+			            "Object": {
+			              "Role": "medida.variacion_ratio_conversion_real"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "selector_analisis_temporal_have__variacion_ratio_conversion_real"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_variacion_ratio_conversion_real": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.variacion_ratio_conversion_real": {
+			          "Target": {
+			            "Entity": "medida.variacion_ratio_conversion_real"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.variacion_ratio_conversion_real"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have__variacion_ratio_conversion_real"
+			        }
+			      ]
+			    },
+			    "selector_analisis_temporal_has_medida_ratio_conversion_real_periodo_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "Selector_Analisis_Temporal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "selector_analisis_temporal": {
+			          "Target": {
+			            "Entity": "selector_analisis_temporal"
+			          }
+			        },
+			        "medida.ratio_conversion_real_periodo_anterior": {
+			          "Target": {
+			            "Entity": "medida.ratio_conversion_real_periodo_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "selector_analisis_temporal"
+			            },
+			            "Object": {
+			              "Role": "medida.ratio_conversion_real_periodo_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "selector_analisis_temporal_have_ratio_conversion_real_periodo_anterior"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_ratio_conversion_real_periodo_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.ratio_conversion_real_periodo_anterior": {
+			          "Target": {
+			            "Entity": "medida.ratio_conversion_real_periodo_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.ratio_conversion_real_periodo_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_ratio_conversion_real_periodo_anterior"
+			        }
+			      ]
+			    },
+			    "selector_analisis_temporal_has_medida_variacion_transacciones1": {
+			      "Binding": {
+			        "ConceptualEntity": "Selector_Analisis_Temporal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "selector_analisis_temporal": {
+			          "Target": {
+			            "Entity": "selector_analisis_temporal"
+			          }
+			        },
+			        "medida.variacion_transacciones1": {
+			          "Target": {
+			            "Entity": "medida.variacion_transacciones1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "selector_analisis_temporal"
+			            },
+			            "Object": {
+			              "Role": "medida.variacion_transacciones1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "selector_analisis_temporal_have__variacion_transacciones"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_variacion_transacciones1": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.variacion_transacciones1": {
+			          "Target": {
+			            "Entity": "medida.variacion_transacciones1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.variacion_transacciones1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have__variacion_transacciones"
+			        }
+			      ]
+			    },
+			    "selector_analisis_temporal_has_medida_variacion_transacciones": {
+			      "Binding": {
+			        "ConceptualEntity": "Selector_Analisis_Temporal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "selector_analisis_temporal": {
+			          "Target": {
+			            "Entity": "selector_analisis_temporal"
+			          }
+			        },
+			        "medida.variacion_transacciones": {
+			          "Target": {
+			            "Entity": "medida.variacion_transacciones"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "selector_analisis_temporal"
+			            },
+			            "Object": {
+			              "Role": "medida.variacion_transacciones"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "selector_analisis_temporal_have_variacion_transacciones"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_variacion_transacciones": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.variacion_transacciones": {
+			          "Target": {
+			            "Entity": "medida.variacion_transacciones"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.variacion_transacciones"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_variacion_transacciones"
+			        }
+			      ]
+			    },
+			    "selector_analisis_temporal_has_medida_transacciones_periodo_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "Selector_Analisis_Temporal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "selector_analisis_temporal": {
+			          "Target": {
+			            "Entity": "selector_analisis_temporal"
+			          }
+			        },
+			        "medida.transacciones_periodo_anterior": {
+			          "Target": {
+			            "Entity": "medida.transacciones_periodo_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "selector_analisis_temporal"
+			            },
+			            "Object": {
+			              "Role": "medida.transacciones_periodo_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "selector_analisis_temporal_have_transacciones_periodo_anterior"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_transacciones_periodo_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.transacciones_periodo_anterior": {
+			          "Target": {
+			            "Entity": "medida.transacciones_periodo_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.transacciones_periodo_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_transacciones_periodo_anterior"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_ratio_conversion_real_semana_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.ratio_conversion_real_semana_anterior": {
+			          "Target": {
+			            "Entity": "medida.ratio_conversion_real_semana_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.ratio_conversion_real_semana_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_ratio_conversion_real_semana_anterior"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_ratio_conversion_real_mes_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.ratio_conversion_real_mes_anterior": {
+			          "Target": {
+			            "Entity": "medida.ratio_conversion_real_mes_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.ratio_conversion_real_mes_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_ratio_conversion_real_mes_anterior"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_ratio_conversion_google_mes_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.ratio_conversion_google_mes_anterior": {
+			          "Target": {
+			            "Entity": "medida.ratio_conversion_google_mes_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.ratio_conversion_google_mes_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_ratio_conversion_google_mes_anterior"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_ratio_conversion_google_semana_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.ratio_conversion_google_semana_anterior": {
+			          "Target": {
+			            "Entity": "medida.ratio_conversion_google_semana_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.ratio_conversion_google_semana_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_ratio_conversion_google_semana_anterior"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_transacciones_real_mes_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.transacciones_real_mes_anterior": {
+			          "Target": {
+			            "Entity": "medida.transacciones_real_mes_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.transacciones_real_mes_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_transacciones_real_mes_anterior"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_transacciones_google_mes_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.transacciones_google_mes_anterior": {
+			          "Target": {
+			            "Entity": "medida.transacciones_google_mes_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.transacciones_google_mes_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_transacciones_google_mes_anterior"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_transacciones_google_semana_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.transacciones_google_semana_anterior": {
+			          "Target": {
+			            "Entity": "medida.transacciones_google_semana_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.transacciones_google_semana_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_transacciones_google_semana_anterior"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_transacciones_real_semana_anterior": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.transacciones_real_semana_anterior": {
+			          "Target": {
+			            "Entity": "medida.transacciones_real_semana_anterior"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.transacciones_real_semana_anterior"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_transacciones_real_semana_anterior"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_mesaño": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.mesaño": {
+			          "Target": {
+			            "Entity": "dim_calendario.mesaño"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.mesaño"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_mesaños"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_día": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.día": {
+			          "Target": {
+			            "Entity": "dim_calendario.día"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.día"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_días"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.trimestre": {
+			          "Target": {
+			            "Entity": "dim_calendario.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_trimestres"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_me": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.me": {
+			          "Target": {
+			            "Entity": "dim_calendario.me"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.me"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_me"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_mes_nro": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.mes_nro": {
+			          "Target": {
+			            "Entity": "dim_calendario.mes_nro"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.mes_nro"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_mes_nros"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_año": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.año": {
+			          "Target": {
+			            "Entity": "dim_calendario.año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_años"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.fecha": {
+			          "Target": {
+			            "Entity": "dim_calendario.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_fechas"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_revenue_por_sesion": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.revenue_por_sesion": {
+			          "Target": {
+			            "Entity": "medida.revenue_por_sesion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.revenue_por_sesion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_revenue_por_sesion"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_transacciones_perdidas1": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.transacciones_perdidas1": {
+			          "Target": {
+			            "Entity": "medida.transacciones_perdidas1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.transacciones_perdidas1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have__transacciones_perdidas"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_medida_transacciones_perdidas": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "medida.transacciones_perdidas": {
+			          "Target": {
+			            "Entity": "medida.transacciones_perdidas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.transacciones_perdidas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_transacciones_perdidas"
 			        }
 			      ]
 			    },
@@ -2226,20 +5441,20 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_medida_cesta_promedio": {
+			    "fact_transaccione_has_medida_ratio_conversion_google": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "medida.cesta_promedio": {
+			        "medida.ratio_conversion_google": {
 			          "Target": {
-			            "Entity": "medida.cesta_promedio"
+			            "Entity": "medida.ratio_conversion_google"
 			          }
 			        }
 			      },
@@ -2247,32 +5462,32 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "medida.cesta_promedio"
+			              "Role": "medida.ratio_conversion_google"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_cesta_promedio"
+			          "ID": "fact_transacciones_have_ratio_conversion_google"
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_medida_ratio_conversion_GA": {
+			    "fact_transaccione_has_medida_sesiones": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "medida.ratio_conversion_GA": {
+			        "medida.sesiones": {
 			          "Target": {
-			            "Entity": "medida.ratio_conversion_GA"
+			            "Entity": "medida.sesiones"
 			          }
 			        }
 			      },
@@ -2280,60 +5495,27 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "medida.ratio_conversion_GA"
+			              "Role": "medida.sesiones"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_ratio_conversion_GA"
+			          "ID": "fact_transacciones_have_sesiones"
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_medida_total_sesiones": {
+			    "fact_transaccione_has_medida_ratio_conversion_real": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
-			          }
-			        },
-			        "medida.total_sesiones": {
-			          "Target": {
-			            "Entity": "medida.total_sesiones"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fac_transaccione"
-			            },
-			            "Object": {
-			              "Role": "medida.total_sesiones"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_total_sesiones"
-			        }
-			      ]
-			    },
-			    "fac_transaccione_has_medida_ratio_conversion_real": {
-			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fac_transaccione": {
-			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
 			        "medida.ratio_conversion_real": {
@@ -2346,7 +5528,7 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
 			              "Role": "medida.ratio_conversion_real"
@@ -2354,24 +5536,24 @@ cultureInfo es-AR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_ratio_conversion_real"
+			          "ID": "fact_transacciones_have_ratio_conversion_real"
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_medida_diferencia_relativa_transacciones_GAreal": {
+			    "fact_transaccione_has_medida_diferencia_transacciones_googlereal": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "medida.diferencia_relativa_transacciones_GAreal": {
+			        "medida.diferencia_transacciones_googlereal": {
 			          "Target": {
-			            "Entity": "medida.diferencia_relativa_transacciones_GAreal"
+			            "Entity": "medida.diferencia_transacciones_googlereal"
 			          }
 			        }
 			      },
@@ -2379,32 +5561,32 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "medida.diferencia_relativa_transacciones_GAreal"
+			              "Role": "medida.diferencia_transacciones_googlereal"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_diferencia_relativa_transacciones_GAreal"
+			          "ID": "fact_transacciones_have__diferencia_transacciones_googlereal"
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_medida_diferencia_absoluta_transacciones_GAreal": {
+			    "fact_transaccione_has_medida_diferencia_ratio_conversion_googlereal": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "medida.diferencia_absoluta_transacciones_GAreal": {
+			        "medida.diferencia_ratio_conversion_googlereal": {
 			          "Target": {
-			            "Entity": "medida.diferencia_absoluta_transacciones_GAreal"
+			            "Entity": "medida.diferencia_ratio_conversion_googlereal"
 			          }
 			        }
 			      },
@@ -2412,32 +5594,32 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "medida.diferencia_absoluta_transacciones_GAreal"
+			              "Role": "medida.diferencia_ratio_conversion_googlereal"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_diferencia_absoluta_transacciones_GAreal"
+			          "ID": "fact_transacciones_have_diferencia_ratio_conversion_googlereal"
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_medida_transacciones_GA": {
+			    "fact_transaccione_has_medida_transacciones_google": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "medida.transacciones_GA": {
+			        "medida.transacciones_google": {
 			          "Target": {
-			            "Entity": "medida.transacciones_GA"
+			            "Entity": "medida.transacciones_google"
 			          }
 			        }
 			      },
@@ -2445,27 +5627,27 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "medida.transacciones_GA"
+			              "Role": "medida.transacciones_google"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_transacciones_GA"
+			          "ID": "fact_transacciones_have_transacciones_google"
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_medida_transacciones_real": {
+			    "fact_transaccione_has_medida_transacciones_real": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
 			        "medida.transacciones_real": {
@@ -2478,7 +5660,7 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
 			              "Role": "medida.transacciones_real"
@@ -2486,24 +5668,24 @@ cultureInfo es-AR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_transacciones_real"
+			          "ID": "fact_transacciones_have_transacciones_real"
 			        }
 			      ]
 			    },
-			    "medida_has_column": {
+			    "fact_transaccione_has_ratio_conversion_real": {
 			      "Binding": {
-			        "ConceptualEntity": "Medidas"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "medida": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "medida"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "medida.column": {
+			        "fact_transaccione.ratio_conversion_real": {
 			          "Target": {
-			            "Entity": "medida.column"
+			            "Entity": "fact_transaccione.ratio_conversion_real"
 			          }
 			        }
 			      },
@@ -2511,32 +5693,32 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "medida"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "medida.column"
+			              "Role": "fact_transaccione.ratio_conversion_real"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "medidas_have_columns"
+			          "ID": "fact_transacciones_have_ratio_conversion_reals"
 			        }
 			      ]
 			    },
-			    "dim_calendar_has_date": {
+			    "fact_transaccione_has_ratio_conversion_ga": {
 			      "Binding": {
-			        "ConceptualEntity": "DimCalendar"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "dim_calendar": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "dim_calendar"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "dim_calendar.date": {
+			        "fact_transaccione.ratio_conversion_ga": {
 			          "Target": {
-			            "Entity": "dim_calendar.date"
+			            "Entity": "fact_transaccione.ratio_conversion_ga"
 			          }
 			        }
 			      },
@@ -2544,32 +5726,32 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dim_calendar"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "dim_calendar.date"
+			              "Role": "fact_transaccione.ratio_conversion_ga"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_calendars_have_dates"
+			          "ID": "fact_transacciones_have_ratio_conversion_ga"
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_ratio_conversion_real": {
+			    "fact_transaccione_has_peso_canal": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "fac_transaccione.ratio_conversion_real": {
+			        "fact_transaccione.peso_canal": {
 			          "Target": {
-			            "Entity": "fac_transaccione.ratio_conversion_real"
+			            "Entity": "fact_transaccione.peso_canal"
 			          }
 			        }
 			      },
@@ -2577,32 +5759,32 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "fac_transaccione.ratio_conversion_real"
+			              "Role": "fact_transaccione.peso_canal"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_ratio_conversion_reals"
+			          "ID": "fact_transacciones_have_peso_canals"
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_ratio_conversion_ga": {
+			    "fact_transaccione_has_transacciones_real": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "fac_transaccione.ratio_conversion_ga": {
+			        "fact_transaccione.transacciones_real": {
 			          "Target": {
-			            "Entity": "fac_transaccione.ratio_conversion_ga"
+			            "Entity": "fact_transaccione.transacciones_real"
 			          }
 			        }
 			      },
@@ -2610,32 +5792,32 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "fac_transaccione.ratio_conversion_ga"
+			              "Role": "fact_transaccione.transacciones_real"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_ratio_conversion_ga"
+			          "ID": "fact_transacciones_have_transacciones_reals"
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_peso_canal": {
+			    "fact_transaccione_has_transacciones_ga": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "fac_transaccione.peso_canal": {
+			        "fact_transaccione.transacciones_ga": {
 			          "Target": {
-			            "Entity": "fac_transaccione.peso_canal"
+			            "Entity": "fact_transaccione.transacciones_ga"
 			          }
 			        }
 			      },
@@ -2643,32 +5825,32 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "fac_transaccione.peso_canal"
+			              "Role": "fact_transaccione.transacciones_ga"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_peso_canals"
+			          "ID": "fact_transacciones_have_transacciones_ga"
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_transacciones_real": {
+			    "fact_transaccione_has_sesiones_ga": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "fac_transaccione.transacciones_real": {
+			        "fact_transaccione.sesiones_ga": {
 			          "Target": {
-			            "Entity": "fac_transaccione.transacciones_real"
+			            "Entity": "fact_transaccione.sesiones_ga"
 			          }
 			        }
 			      },
@@ -2676,32 +5858,32 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "fac_transaccione.transacciones_real"
+			              "Role": "fact_transaccione.sesiones_ga"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_transacciones_reals"
+			          "ID": "fact_transacciones_have_sesiones_ga"
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_transacciones_ga": {
+			    "fact_transaccione_has_revenue_distribuido": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "fac_transaccione.transacciones_ga": {
+			        "fact_transaccione.revenue_distribuido": {
 			          "Target": {
-			            "Entity": "fac_transaccione.transacciones_ga"
+			            "Entity": "fact_transaccione.revenue_distribuido"
 			          }
 			        }
 			      },
@@ -2709,32 +5891,59 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "fac_transaccione.transacciones_ga"
+			              "Role": "fact_transaccione.revenue_distribuido"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_transacciones_ga"
+			          "ID": "fact_transacciones_have_revenue_distribuidos"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "fact_transaccione.revenue_distribuido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "revenue_distribuido_indicates_how_expensive_fact_transacciones_are"
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_sesiones_ga": {
+			    "fact_transaccione_has_revenue": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "fac_transaccione.sesiones_ga": {
+			        "fact_transaccione.revenue": {
 			          "Target": {
-			            "Entity": "fac_transaccione.sesiones_ga"
+			            "Entity": "fact_transaccione.revenue"
 			          }
 			        }
 			      },
@@ -2742,32 +5951,32 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "fac_transaccione.sesiones_ga"
+			              "Role": "fact_transaccione.revenue"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_sesiones_ga"
+			          "ID": "fact_transacciones_have_revenues"
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_revenue_distribuido": {
+			    "fact_transaccione_has_fecha": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "fac_transaccione.revenue_distribuido": {
+			        "fact_transaccione.fecha": {
 			          "Target": {
-			            "Entity": "fac_transaccione.revenue_distribuido"
+			            "Entity": "fact_transaccione.fecha"
 			          }
 			        }
 			      },
@@ -2775,114 +5984,15 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "fac_transaccione.revenue_distribuido"
+			              "Role": "fact_transaccione.fecha"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_revenue_distribuidos"
-			        }
-			      ]
-			    },
-			    "fac_transaccione_has_revenue": {
-			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fac_transaccione": {
-			          "Target": {
-			            "Entity": "fac_transaccione"
-			          }
-			        },
-			        "fac_transaccione.revenue": {
-			          "Target": {
-			            "Entity": "fac_transaccione.revenue"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fac_transaccione"
-			            },
-			            "Object": {
-			              "Role": "fac_transaccione.revenue"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_revenues"
-			        }
-			      ]
-			    },
-			    "fac_transaccione_has_fecha": {
-			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fac_transaccione": {
-			          "Target": {
-			            "Entity": "fac_transaccione"
-			          }
-			        },
-			        "fac_transaccione.fecha": {
-			          "Target": {
-			            "Entity": "fac_transaccione.fecha"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fac_transaccione"
-			            },
-			            "Object": {
-			              "Role": "fac_transaccione.fecha"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_fechas"
-			        }
-			      ]
-			    },
-			    "dim_canal_has_id_canal_detail": {
-			      "Binding": {
-			        "ConceptualEntity": "DimCanal"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_canal": {
-			          "Target": {
-			            "Entity": "dim_canal"
-			          }
-			        },
-			        "dim_canal.id_canal_detail": {
-			          "Target": {
-			            "Entity": "dim_canal.id_canal_detail"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_canal"
-			            },
-			            "Object": {
-			              "Role": "dim_canal.id_canal_detail"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_canals_have_id_canal_details"
+			          "ID": "fact_transacciones_have_fechas"
 			        }
 			      ]
 			    },
@@ -2952,39 +6062,6 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "dim_tipo_aplicacion_has_id_tipo_app": {
-			      "Binding": {
-			        "ConceptualEntity": "DimTipoAplicacion"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_tipo_aplicacion": {
-			          "Target": {
-			            "Entity": "dim_tipo_aplicacion"
-			          }
-			        },
-			        "dim_tipo_aplicacion.id_tipo_app": {
-			          "Target": {
-			            "Entity": "dim_tipo_aplicacion.id_tipo_app"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_tipo_aplicacion"
-			            },
-			            "Object": {
-			              "Role": "dim_tipo_aplicacion.id_tipo_app"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_tipo_aplicacions_have_id_tipo_apps"
-			        }
-			      ]
-			    },
 			    "dim_tipo_aplicacion_has_tipo_aplicacion": {
 			      "Binding": {
 			        "ConceptualEntity": "DimTipoAplicacion"
@@ -3015,39 +6092,6 @@ cultureInfo es-AR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_tipo_aplicacions_have_tipo_aplicacions"
-			        }
-			      ]
-			    },
-			    "dim_mercado_has_id_mercado": {
-			      "Binding": {
-			        "ConceptualEntity": "DimMercados"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_mercado": {
-			          "Target": {
-			            "Entity": "dim_mercado"
-			          }
-			        },
-			        "dim_mercado.id_mercado": {
-			          "Target": {
-			            "Entity": "dim_mercado.id_mercado"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_mercado"
-			            },
-			            "Object": {
-			              "Role": "dim_mercado.id_mercado"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_mercado_have_id_mercado"
 			        }
 			      ]
 			    },
@@ -3084,20 +6128,20 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fac_transaccione_has_dim_calendar": {
+			    "fact_transaccione_has_dim_canal": {
 			      "Binding": {
-			        "ConceptualEntity": "FacTransacciones"
+			        "ConceptualEntity": "FactTransacciones"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "fac_transaccione": {
+			        "fact_transaccione": {
 			          "Target": {
-			            "Entity": "fac_transaccione"
+			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "dim_calendar": {
+			        "dim_canal": {
 			          "Target": {
-			            "Entity": "dim_calendar"
+			            "Entity": "dim_canal"
 			          }
 			        }
 			      },
@@ -3105,28 +6149,74 @@ cultureInfo es-AR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "dim_calendar"
+			              "Role": "dim_canal"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fac_transacciones_have_dim_calendars"
+			          "ID": "fact_transacciones_have_dim_canals"
 			        },
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "dim_calendar"
+			              "Role": "dim_canal"
 			            },
 			            "Object": {
-			              "Role": "fac_transaccione"
+			              "Role": "fact_transaccione"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "dim_calendars_have_fac_transacciones"
+			          "ID": "dim_canals_have_fact_transacciones"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_dim_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_dim_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "fact_transaccione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_fact_transacciones"
 			        }
 			      ]
 			    }

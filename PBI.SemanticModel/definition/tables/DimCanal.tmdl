@@ -1,19 +1,19 @@
 table DimCanal
 	lineageTag: e25261a2-97d1-4b07-9c33-0cc70e8fe2a4
 
-	column canal
+	column Canal
 		dataType: string
 		lineageTag: 83b5d88e-bf45-4ad9-b965-dfa0355e21a0
 		summarizeBy: none
-		sourceColumn: canal
+		sourceColumn: Canal
 
 		annotation SummarizationSetBy = Automatic
 
-	column canal_detail
+	column 'Canal Detail'
 		dataType: string
 		lineageTag: fca49e05-8fa7-4986-b3ec-ceb1b163e334
 		summarizeBy: none
-		sourceColumn: canal_detail
+		sourceColumn: Canal Detail
 
 		annotation SummarizationSetBy = Automatic
 
@@ -31,14 +31,40 @@ table DimCanal
 
 	partition DimCanal = m
 		mode: import
+		queryGroup: 'Dimensiones Sintéticas'
 		source =
 				let
+				    // Tomar la tabla de origen
 				    Origen = TransaccionesTransaccional_agrupado,
-				    #"Otras columnas quitadas" = Table.SelectColumns(Origen,{"canal", "canal_detail"}),
-				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas"),
-				    #"Índice agregado" = Table.AddIndexColumn(#"Duplicados quitados", "Id_Canal_Detail", 1, 1, Int64.Type)
+				
+				    // Seleccionar únicamente las columnas "canal" y "canal_detail"
+				    Columnas_seleccionadas = Table.SelectColumns(
+				        Origen,
+				        {"canal", "canal_detail"}
+				    ),
+				
+				    // Quitar duplicados para tener solo combinaciones únicas de canal y canal_detail
+				    Duplicados_quitados = Table.Distinct(Columnas_seleccionadas),
+				
+				    // Agregar columna índice que servirá como Id_Canal_Detail
+				    Indice_agregado = Table.AddIndexColumn(
+				        Duplicados_quitados,
+				        "Id_Canal_Detail",
+				        1,
+				        1,
+				        Int64.Type
+				    ),
+				
+				    // Renombrar columnas para dejar nombres limpios y consistentes
+				    Columnas_renombradas = Table.RenameColumns(
+				        Indice_agregado,
+				        {
+				            {"canal", "Canal"},
+				            {"canal_detail", "Canal Detail"}
+				        }
+				    )
 				in
-				    #"Índice agregado"
+				    Columnas_renombradas
 
 	annotation PBI_NavigationStepName = Navegación
 

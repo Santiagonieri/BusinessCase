@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "ae20ae52246ee71c5dea",
   "position": {
-    "x": 248.25112107623318,
-    "y": 18.654708520179373,
+    "x": 207.38986864956095,
+    "y": 19.161020473057263,
     "z": 1000,
-    "height": 157.847533632287,
-    "width": 1031.7488789237668,
+    "height": 157.79663918988334,
+    "width": 1073.0171464912066,
     "tabOrder": 1000
   },
   "visual": {
@@ -23,7 +23,7 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Transacciones GA"
+                  "Property": "Transacciones Google"
                 }
               },
               "queryRef": "Medidas.Transacciones GA",
@@ -38,11 +38,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Transacciones real"
+                  "Property": "Transacciones Real"
                 }
               },
               "queryRef": "Medidas.Transacciones real",
-              "nativeQueryRef": "Transacciones real"
+              "nativeQueryRef": "Transacciones Real"
             },
             {
               "field": {
@@ -52,11 +52,26 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Total Sesiones"
+                  "Property": "Sesiones"
                 }
               },
               "queryRef": "Medidas.Total Sesiones",
-              "nativeQueryRef": "Total Sesiones"
+              "nativeQueryRef": "Sesiones"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Ratio Conversion Google"
+                }
+              },
+              "queryRef": "Medidas.Ratio Conversion GA",
+              "nativeQueryRef": "Ratio Conv. Google",
+              "displayName": "Ratio Conv. Google"
             },
             {
               "field": {
@@ -81,26 +96,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Ratio Conversion GA"
+                  "Property": "Cesta Media"
                 }
               },
-              "queryRef": "Medidas.Ratio Conversion GA",
-              "nativeQueryRef": "Ratio Conv. GA",
-              "displayName": "Ratio Conv. GA"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Cesta promedio"
-                }
-              },
-              "queryRef": "Medidas.Cesta promedio",
-              "nativeQueryRef": "Cesta promedio"
+              "queryRef": "Medidas.Cesta Media",
+              "nativeQueryRef": "Cesta Media"
             }
           ]
         }
@@ -115,7 +115,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Transacciones GA"
+                "Property": "Transacciones Google"
               }
             },
             "direction": "Descending"
@@ -199,7 +199,53 @@
                   "Value": "6L"
                 }
               }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'middle'"
+                }
+              }
             }
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading4'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "cardCalloutArea": [
+        {
+          "properties": {
+            "paddingUniform": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]

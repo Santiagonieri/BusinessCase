@@ -23,7 +23,7 @@
                       "Entity": "DimCanal"
                     }
                   },
-                  "Property": "canal"
+                  "Property": "Canal"
                 }
               },
               "queryRef": "DimCanal.canal",
@@ -38,7 +38,7 @@
                       "Entity": "DimCanal"
                     }
                   },
-                  "Property": "canal_detail"
+                  "Property": "Canal Detail"
                 }
               },
               "queryRef": "DimCanal.canal_detail",
@@ -68,7 +68,7 @@
                       "Entity": "DimCanal"
                     }
                   },
-                  "Property": "canal"
+                  "Property": "Canal"
                 }
               }
             ],
@@ -97,6 +97,11 @@
               }
             }
           }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
         }
       ]
     },

@@ -14,19 +14,25 @@ queryGroup Parametros
 
 	annotation PBI_QueryGroupOrder = 1
 
+/// Tablas de dimensiones
+queryGroup 'Dimensiones Sintéticas'
+
+	annotation PBI_QueryGroupOrder = 2
+
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["TransaccionesTransaccional_agrupado","DimMercados","DimTipoAplicacion","DimCanal","FacTransacciones","RutaOrigen"]
+annotation PBI_QueryOrder = ["DimCalendario","DimMercados","DimTipoAplicacion","DimCanal","FactTransacciones","FechasMinMax","RutaOrigen","TransaccionesTransaccional_agrupado"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop"]
 
 ref table DimMercados
 ref table DimTipoAplicacion
 ref table DimCanal
-ref table FacTransacciones
-ref table DimCalendar
+ref table FactTransacciones
 ref table Medidas
 ref table Campo_Seleccion
+ref table DimCalendario
+ref table Selector_Analisis_Temporal
 
 ref cultureInfo es-AR
 

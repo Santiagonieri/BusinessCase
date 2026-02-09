@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "8088507f3233107ece87",
   "position": {
-    "x": 247.96614729838811,
-    "y": 179.21189736565321,
+    "x": 225.21518987341773,
+    "y": 176.60759493670886,
     "z": 0,
-    "height": 263.74581121737646,
-    "width": 472.26279871829371,
+    "height": 257.62025316455697,
+    "width": 610.83544303797464,
     "tabOrder": 0
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "DimTipoAplicacion"
                     }
                   },
-                  "Property": "tipo_aplicacion"
+                  "Property": "Tipo Aplicacion"
                 }
               },
-              "queryRef": "DimTipoAplicacion.tipo_aplicacion",
-              "nativeQueryRef": "tipo_aplicacion",
+              "queryRef": "DimTipoAplicacion.Tipo Aplicacion",
+              "nativeQueryRef": "Tipo Aplicacion",
               "active": true
             },
             {
@@ -38,12 +38,12 @@
                       "Entity": "DimMercados"
                     }
                   },
-                  "Property": "mercado"
+                  "Property": "Mercado"
                 }
               },
-              "queryRef": "DimMercados.mercado",
-              "nativeQueryRef": "mercado",
-              "active": false
+              "queryRef": "DimMercados.Mercado",
+              "nativeQueryRef": "Mercado",
+              "active": true
             }
           ]
         },
@@ -57,11 +57,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Transacciones real"
+                  "Property": "Transacciones Google"
                 }
               },
-              "queryRef": "Medidas.Transacciones real",
-              "nativeQueryRef": "Transacciones real"
+              "queryRef": "Medidas.Transacciones Google",
+              "nativeQueryRef": "Trans. Google",
+              "displayName": "Trans. Google"
             },
             {
               "field": {
@@ -71,11 +72,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Transacciones GA"
+                  "Property": "Transacciones Real"
                 }
               },
-              "queryRef": "Medidas.Transacciones GA",
-              "nativeQueryRef": "Transacciones GA"
+              "queryRef": "Medidas.Transacciones Real",
+              "nativeQueryRef": "Trans. Real",
+              "displayName": "Trans. Real"
             },
             {
               "field": {
@@ -85,11 +87,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Diferencia Absoluta transacciones GA-Real"
+                  "Property": "Ratio Conversion Real"
                 }
               },
-              "queryRef": "Medidas.Diferencia transacciones GA-Real",
-              "nativeQueryRef": "Diferencia Absoluta transacciones GA-Real"
+              "queryRef": "Medidas.Ratio Conversion Real",
+              "nativeQueryRef": "Ratio Conversion Real"
             },
             {
               "field": {
@@ -99,31 +101,28 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Diferencia Relativa Transacciones GA-Real"
+                  "Property": "Cesta Media"
                 }
               },
-              "queryRef": "Medidas.Diferencia Relativa Transacciones GA-Real",
-              "nativeQueryRef": "Diferencia Relativa Transacciones GA-Real"
+              "queryRef": "Medidas.Cesta Media",
+              "nativeQueryRef": "Cesta Media"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Revenue Total"
+                }
+              },
+              "queryRef": "Medidas.Revenue Total1",
+              "nativeQueryRef": "Revenue Total"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
-                  }
-                },
-                "Property": "Transacciones GA"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "expansionStates": [
@@ -134,7 +133,7 @@
         "levels": [
           {
             "queryRefs": [
-              "DimTipoAplicacion.tipo_aplicacion"
+              "DimTipoAplicacion.Tipo Aplicacion"
             ],
             "isCollapsed": true,
             "identityKeys": [
@@ -145,7 +144,7 @@
                       "Entity": "DimTipoAplicacion"
                     }
                   },
-                  "Property": "tipo_aplicacion"
+                  "Property": "Tipo Aplicacion"
                 }
               }
             ],
@@ -153,15 +152,103 @@
           },
           {
             "queryRefs": [
-              "DimMercados.mercado"
+              "DimMercados.Mercado"
             ],
             "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimMercados"
+                    }
+                  },
+                  "Property": "Mercado"
+                }
+              }
+            ],
             "isPinned": true
           }
         ],
-        "root": {}
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'móvil'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'web'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
       }
     ],
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "layout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Compact'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "backColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "titleAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "drillFilterOtherVisuals": true
   }
 }

@@ -23,7 +23,7 @@
                       "Entity": "DimTipoAplicacion"
                     }
                   },
-                  "Property": "tipo_aplicacion"
+                  "Property": "Tipo Aplicacion"
                 }
               },
               "queryRef": "DimTipoAplicacion.tipo_aplicacion",
@@ -46,6 +46,11 @@
               }
             }
           }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
         }
       ]
     },

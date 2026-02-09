@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 225.00670821749861,
         "y": 0
       },
       "nodes": [
@@ -19,7 +19,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 4
         },
         {
           "location": {
@@ -32,7 +32,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 5
         },
         {
           "location": {
@@ -45,38 +45,12 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 6
         },
         {
           "location": {
-            "x": 331.69999172040554,
-            "y": 198.213028325388
-          },
-          "nodeIndex": "FacTransacciones",
-          "nodeLineageTag": "0e3616a8-f2ca-4c79-be80-5d7cf8423dbf",
-          "size": {
-            "height": 300,
-            "width": 234
-          },
-          "zIndex": 4
-        },
-        {
-          "location": {
-            "x": 697.85121878527548,
-            "y": 190.12438739197566
-          },
-          "nodeIndex": "DimCalendar",
-          "nodeLineageTag": "1dad4860-6c15-4db2-a750-d2b8bab82309",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 5
-        },
-        {
-          "location": {
-            "x": 1352.1128006800986,
-            "y": 30.961380506896063
+            "x": 1174.5586207189972,
+            "y": 382.92718857138
           },
           "nodeIndex": "Medidas",
           "nodeLineageTag": "cf1c3928-f1f1-486f-94dc-c5c91d3786b0",
@@ -84,7 +58,7 @@
             "height": 341.41483359733729,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
@@ -95,6 +69,43 @@
           "nodeLineageTag": "13fea6e0-bf8f-4769-b9b1-6d30eefb2460",
           "size": {
             "height": 152,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 331.69999172040554,
+            "y": 198.213028325388
+          },
+          "nodeIndex": "FactTransacciones",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 712.83104330418109,
+            "y": 205.60866224651477
+          },
+          "nodeIndex": "DimCalendario",
+          "nodeLineageTag": "336a76d2-fc97-4f23-a0e8-09b6a1dd3959",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1458.5586207189972,
+            "y": 283.03204382773106
+          },
+          "nodeIndex": "Selector_Analisis_Temporal",
+          "size": {
+            "height": 200,
             "width": 234
           },
           "zIndex": 0

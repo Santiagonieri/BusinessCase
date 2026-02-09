@@ -1,9 +1,9 @@
 expression TransaccionesTransaccional_agrupado =
 		let
 		    Origen = Csv.Document(File.Contents(RutaOrigen),[Delimiter=",", Columns=15, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-		    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true])
+		    Encabezados_Promovidos = Table.PromoteHeaders(Origen, [PromoteAllScalars=true])
 		in
-		    #"Encabezados promovidos"
+		    Encabezados_Promovidos
 	lineageTag: 2245f2bc-bb53-4e8f-96bd-0aa6d3398980
 	queryGroup: 'Carga datos inicial'
 
@@ -12,11 +12,26 @@ expression TransaccionesTransaccional_agrupado =
 	annotation PBI_ResultType = Table
 
 /// Colocar ruta de origen de los datos
-expression RutaOrigen = "C:\Users\Santiago Nieri\Desktop\BusinessCase - Oysho\.venv\data\procesados\TransaccionesTransaccional.csv" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+expression RutaOrigen = "C:\Users\Santiago Nieri\Desktop\BusinessCase - Oysho\data\procesados\TransaccionesTransaccional.csv" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: 45f73930-8922-41c6-b8f4-cc076776f323
 	queryGroup: Parametros
 
 	annotation PBI_NavigationStepName = Navegación
 
 	annotation PBI_ResultType = Text
+
+expression FechasMinMax =
+		let
+		    Origen = FactTransacciones,
+		
+		    // Obtener fecha mínima y máxima
+		    FechaMin = List.Min(Origen[fecha]),
+		    FechaMax = List.Max(Origen[fecha])
+		in
+		    [FechaMin = FechaMin, FechaMax = FechaMax]
+	lineageTag: 7b4c1c70-8684-4e03-8d41-076b6dac05d3
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Record
 

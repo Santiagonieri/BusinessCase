@@ -1,0 +1,156 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "25fb65101e0e7a5fc129",
+  "position": {
+    "x": 149.53271028037383,
+    "y": 139.5638629283489,
+    "z": 3,
+    "height": 299.06542056074767,
+    "width": 747.66355140186909,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "lineStackedColumnComboChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimCanal"
+                    }
+                  },
+                  "Property": "Canal"
+                }
+              },
+              "queryRef": "DimCanal.Canal",
+              "nativeQueryRef": "Canal",
+              "active": true,
+              "displayName": "Canal"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Campo_Seleccion"
+                    }
+                  },
+                  "Property": "Campo_Seleccion"
+                }
+              },
+              "index": 0,
+              "length": 1
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "1.Cesta Media"
+                }
+              },
+              "queryRef": "Medidas.Cesta Media",
+              "nativeQueryRef": "Cesta Media"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "1.% Variacion Dinamica Cesta"
+                }
+              },
+              "queryRef": "Medidas.% Variacion Cesta",
+              "nativeQueryRef": "1.% Variacion Dinamica Cesta"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "1.Cesta Media"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a5d1ced5bdfebef3700f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "1.Cesta Media"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c425e8bcb99fb91b84f4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimCanal"
+              }
+            },
+            "Property": "Canal"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e17a13e764bafddc7636",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "1.% Variacion Dinamica Cesta"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
