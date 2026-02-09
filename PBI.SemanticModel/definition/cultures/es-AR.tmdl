@@ -1,0 +1,3141 @@
+cultureInfo es-AR
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "dim_mercado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimMercados"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim mercado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DimMercados": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_mercado.mercado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimMercados",
+			          "ConceptualProperty": "mercado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mercado": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_mercado.id_mercado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimMercados",
+			          "ConceptualProperty": "Id_Mercado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id mercado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Id_Mercado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification mercado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity mercado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier mercado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential mercado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tipo_aplicacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimTipoAplicacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim tipo aplicacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DimTipoAplicacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tipo_aplicacion.tipo_aplicacion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimTipoAplicacion",
+			          "ConceptualProperty": "tipo_aplicacion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo aplicacion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "tipo_aplicacion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_tipo_aplicacion.id_tipo_app": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimTipoAplicacion",
+			          "ConceptualProperty": "Id_TipoApp"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id tipo app": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Id_TipoApp": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification tipo app": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "identity tipo app": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "identifier tipo app": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "credential tipo app": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "dim_canal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCanal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim canal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DimCanal": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "dim waterway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim seaway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "dim vessel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "dim duct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "dim tube": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "dim passage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "dim_canal.canal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCanal",
+			          "ConceptualProperty": "canal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "canal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "waterway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "seaway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "vessel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "duct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "tube": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "passage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "dim_canal.canal_detail": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCanal",
+			          "ConceptualProperty": "canal_detail"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "canal detail": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "canal_detail": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "detail": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "canal aspect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "canal element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "canal fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "aspect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "canal part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "canal feature": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "canal point": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "canal factor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "dim_canal.id_canal_detail": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCanal",
+			          "ConceptualProperty": "Id_Canal_Detail"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "id canal detail": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Id_Canal_Detail": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "detail": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "identification canal detail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "identity canal detail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "identifier canal detail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "credential canal detail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "id canal aspect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "id canal element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "id canal fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "id canal part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "id canal feature": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "id canal point": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "fac_transaccione": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FacTransacciones"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fac transaccione": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "FacTransacciones": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fac_transaccione.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualProperty": "fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fac_transaccione.revenue": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualProperty": "revenue"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "fac_transaccione.revenue_distribuido": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualProperty": "revenue_distribuido"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue distribuido": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "revenue_distribuido": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "income distribuido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "profit distribuido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "turnover distribuido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "yield distribuido": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "fac_transaccione.id_mercado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualProperty": "Id_Mercado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "id mercado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Id_Mercado": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification mercado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identity mercado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "identifier mercado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "credential mercado": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "fac_transaccione.id_tipo_app": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualProperty": "Id_TipoApp"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "id tipo app": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Id_TipoApp": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "identification tipo app": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "identity tipo app": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "identifier tipo app": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "credential tipo app": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "fac_transaccione.id_canal_detail": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualProperty": "Id_Canal_Detail"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "id canal detail": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Id_Canal_Detail": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "detail": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "identification canal detail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "identity canal detail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "identifier canal detail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "credential canal detail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "id canal aspect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "id canal element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "id canal fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "id canal part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "id canal feature": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "id canal point": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "fac_transaccione.sesiones_ga": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualProperty": "sesiones_ga"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sesiones ga": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sesione ga": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "sesiones_ga": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fac_transaccione.transacciones_ga": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualProperty": "transacciones_ga"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "transacciones ga": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "transaccione ga": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "transacciones_ga": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fac_transaccione.transacciones_real": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualProperty": "transacciones_real"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "transacciones real": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "transaccione real": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "transacciones_real": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fac_transaccione.peso_canal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualProperty": "peso_canal"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "peso canal": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "peso_canal": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "peso waterway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "peso seaway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "peso channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "peso vessel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "peso duct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "peso tube": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "peso passage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "fac_transaccione.ratio_conversion_ga": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualProperty": "ratio_conversion_ga"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ratio conversion ga": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ratio_conversion_ga": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "ga": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "conversion ga": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "fac_transaccione.ratio_conversion_real": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FacTransacciones",
+			          "ConceptualProperty": "ratio_conversion_real"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ratio conversion real": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ratio_conversion_real": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "real": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "conversion real": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "actual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "physical": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "material": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "tangible": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "existent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "original": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim calendar": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DimCalendar": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "calendar": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dim almanac": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim datebook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim logbook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim diary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "almanac": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "datebook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "logbook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "diary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendar",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.column": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Column"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "column": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pilaster": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pillar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "post": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "support": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "stake": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pole": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "buttress": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "underpinning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "contribution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "medida.transacciones_real": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Transacciones real"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "transacciones real": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.transacciones_GA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Transacciones GA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "transacciones GA": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.diferencia_absoluta_transacciones_GAreal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Diferencia Absoluta transacciones GA-Real"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "diferencia absoluta transacciones GA-real": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "diferencia absoluta transacciones GA real": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "medida.diferencia_relativa_transacciones_GAreal": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Diferencia Relativa Transacciones GA-Real"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "diferencia relativa transacciones GA-real": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "diferencia relativa transacciones GA real": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ratio_conversion_real": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ratio Conversion Real"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ratio conversion real": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "real": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "conversion real": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "actual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "physical": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "material": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "tangible": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "existent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "original": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "Ratio Conv. Real": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.total_sesiones": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Total Sesiones"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total sesiones": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aggregate sesione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall sesione": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ratio_conversion_GA": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Ratio Conversion GA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ratio conversion GA": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "GA": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "conversion GA": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "Ratio Conv. GA": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.cesta_promedio": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Cesta promedio"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cesta promedio": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "campo_seleccion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Campo_Seleccion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "campo seleccion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Campo_Seleccion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "campo_seleccion.campo_seleccion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Campo_Seleccion",
+			          "ConceptualProperty": "Campo_Seleccion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "campo seleccion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "campo seleccion name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Campo_Seleccion": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "campo_seleccion.Campo_Seleccion_campos": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Campo_Seleccion",
+			          "ConceptualProperty": "Campo_Seleccion Campos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "Campo_Seleccion campos": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "campo_seleccion.Campo_Seleccion_orden": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Campo_Seleccion",
+			          "ConceptualProperty": "Campo_Seleccion Orden"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "Campo_Seleccion orden": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "fac_transaccione_has_dim_canal": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "dim_canal": {
+			          "Target": {
+			            "Entity": "dim_canal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "dim_canal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_dim_canals"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_canal"
+			            },
+			            "Object": {
+			              "Role": "fac_transaccione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_canals_have_fac_transacciones"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_dim_tipo_aplicacion": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "dim_tipo_aplicacion": {
+			          "Target": {
+			            "Entity": "dim_tipo_aplicacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "dim_tipo_aplicacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_dim_tipo_aplicacions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tipo_aplicacion"
+			            },
+			            "Object": {
+			              "Role": "fac_transaccione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tipo_aplicacions_have_fac_transacciones"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_dim_mercado": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "dim_mercado": {
+			          "Target": {
+			            "Entity": "dim_mercado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "dim_mercado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_dim_mercado"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_mercado"
+			            },
+			            "Object": {
+			              "Role": "fac_transaccione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_mercado_have_fac_transacciones"
+			        }
+			      ]
+			    },
+			    "campo_seleccion_has_campo_seleccion": {
+			      "Binding": {
+			        "ConceptualEntity": "Campo_Seleccion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "campo_seleccion": {
+			          "Target": {
+			            "Entity": "campo_seleccion"
+			          }
+			        },
+			        "campo_seleccion.campo_seleccion": {
+			          "Target": {
+			            "Entity": "campo_seleccion.campo_seleccion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "campo_seleccion"
+			            },
+			            "Object": {
+			              "Role": "campo_seleccion.campo_seleccion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "campo_seleccions_have_campo_seleccions"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "campo_seleccion"
+			            },
+			            "Name": {
+			              "Role": "campo_seleccion.campo_seleccion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "campo_seleccions_are_names_IDs_of_campo_seleccions"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_medida_cesta_promedio": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "medida.cesta_promedio": {
+			          "Target": {
+			            "Entity": "medida.cesta_promedio"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.cesta_promedio"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_cesta_promedio"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_medida_ratio_conversion_GA": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "medida.ratio_conversion_GA": {
+			          "Target": {
+			            "Entity": "medida.ratio_conversion_GA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.ratio_conversion_GA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_ratio_conversion_GA"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_medida_total_sesiones": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "medida.total_sesiones": {
+			          "Target": {
+			            "Entity": "medida.total_sesiones"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.total_sesiones"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_total_sesiones"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_medida_ratio_conversion_real": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "medida.ratio_conversion_real": {
+			          "Target": {
+			            "Entity": "medida.ratio_conversion_real"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.ratio_conversion_real"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_ratio_conversion_real"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_medida_diferencia_relativa_transacciones_GAreal": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "medida.diferencia_relativa_transacciones_GAreal": {
+			          "Target": {
+			            "Entity": "medida.diferencia_relativa_transacciones_GAreal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.diferencia_relativa_transacciones_GAreal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_diferencia_relativa_transacciones_GAreal"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_medida_diferencia_absoluta_transacciones_GAreal": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "medida.diferencia_absoluta_transacciones_GAreal": {
+			          "Target": {
+			            "Entity": "medida.diferencia_absoluta_transacciones_GAreal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.diferencia_absoluta_transacciones_GAreal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_diferencia_absoluta_transacciones_GAreal"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_medida_transacciones_GA": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "medida.transacciones_GA": {
+			          "Target": {
+			            "Entity": "medida.transacciones_GA"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.transacciones_GA"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_transacciones_GA"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_medida_transacciones_real": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "medida.transacciones_real": {
+			          "Target": {
+			            "Entity": "medida.transacciones_real"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "medida.transacciones_real"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_transacciones_real"
+			        }
+			      ]
+			    },
+			    "medida_has_column": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.column": {
+			          "Target": {
+			            "Entity": "medida.column"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.column"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_columns"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.date": {
+			          "Target": {
+			            "Entity": "dim_calendar.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_dates"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_ratio_conversion_real": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "fac_transaccione.ratio_conversion_real": {
+			          "Target": {
+			            "Entity": "fac_transaccione.ratio_conversion_real"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "fac_transaccione.ratio_conversion_real"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_ratio_conversion_reals"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_ratio_conversion_ga": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "fac_transaccione.ratio_conversion_ga": {
+			          "Target": {
+			            "Entity": "fac_transaccione.ratio_conversion_ga"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "fac_transaccione.ratio_conversion_ga"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_ratio_conversion_ga"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_peso_canal": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "fac_transaccione.peso_canal": {
+			          "Target": {
+			            "Entity": "fac_transaccione.peso_canal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "fac_transaccione.peso_canal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_peso_canals"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_transacciones_real": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "fac_transaccione.transacciones_real": {
+			          "Target": {
+			            "Entity": "fac_transaccione.transacciones_real"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "fac_transaccione.transacciones_real"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_transacciones_reals"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_transacciones_ga": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "fac_transaccione.transacciones_ga": {
+			          "Target": {
+			            "Entity": "fac_transaccione.transacciones_ga"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "fac_transaccione.transacciones_ga"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_transacciones_ga"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_sesiones_ga": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "fac_transaccione.sesiones_ga": {
+			          "Target": {
+			            "Entity": "fac_transaccione.sesiones_ga"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "fac_transaccione.sesiones_ga"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_sesiones_ga"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_revenue_distribuido": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "fac_transaccione.revenue_distribuido": {
+			          "Target": {
+			            "Entity": "fac_transaccione.revenue_distribuido"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "fac_transaccione.revenue_distribuido"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_revenue_distribuidos"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_revenue": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "fac_transaccione.revenue": {
+			          "Target": {
+			            "Entity": "fac_transaccione.revenue"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "fac_transaccione.revenue"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_revenues"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "fac_transaccione.fecha": {
+			          "Target": {
+			            "Entity": "fac_transaccione.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "fac_transaccione.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_fechas"
+			        }
+			      ]
+			    },
+			    "dim_canal_has_id_canal_detail": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCanal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_canal": {
+			          "Target": {
+			            "Entity": "dim_canal"
+			          }
+			        },
+			        "dim_canal.id_canal_detail": {
+			          "Target": {
+			            "Entity": "dim_canal.id_canal_detail"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_canal"
+			            },
+			            "Object": {
+			              "Role": "dim_canal.id_canal_detail"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_canals_have_id_canal_details"
+			        }
+			      ]
+			    },
+			    "dim_canal_has_canal_detail": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCanal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_canal": {
+			          "Target": {
+			            "Entity": "dim_canal"
+			          }
+			        },
+			        "dim_canal.canal_detail": {
+			          "Target": {
+			            "Entity": "dim_canal.canal_detail"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_canal"
+			            },
+			            "Object": {
+			              "Role": "dim_canal.canal_detail"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_canals_have_canal_details"
+			        }
+			      ]
+			    },
+			    "dim_canal_has_canal": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCanal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_canal": {
+			          "Target": {
+			            "Entity": "dim_canal"
+			          }
+			        },
+			        "dim_canal.canal": {
+			          "Target": {
+			            "Entity": "dim_canal.canal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_canal"
+			            },
+			            "Object": {
+			              "Role": "dim_canal.canal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_canals_have_canals"
+			        }
+			      ]
+			    },
+			    "dim_tipo_aplicacion_has_id_tipo_app": {
+			      "Binding": {
+			        "ConceptualEntity": "DimTipoAplicacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tipo_aplicacion": {
+			          "Target": {
+			            "Entity": "dim_tipo_aplicacion"
+			          }
+			        },
+			        "dim_tipo_aplicacion.id_tipo_app": {
+			          "Target": {
+			            "Entity": "dim_tipo_aplicacion.id_tipo_app"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tipo_aplicacion"
+			            },
+			            "Object": {
+			              "Role": "dim_tipo_aplicacion.id_tipo_app"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tipo_aplicacions_have_id_tipo_apps"
+			        }
+			      ]
+			    },
+			    "dim_tipo_aplicacion_has_tipo_aplicacion": {
+			      "Binding": {
+			        "ConceptualEntity": "DimTipoAplicacion"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_tipo_aplicacion": {
+			          "Target": {
+			            "Entity": "dim_tipo_aplicacion"
+			          }
+			        },
+			        "dim_tipo_aplicacion.tipo_aplicacion": {
+			          "Target": {
+			            "Entity": "dim_tipo_aplicacion.tipo_aplicacion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_tipo_aplicacion"
+			            },
+			            "Object": {
+			              "Role": "dim_tipo_aplicacion.tipo_aplicacion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_tipo_aplicacions_have_tipo_aplicacions"
+			        }
+			      ]
+			    },
+			    "dim_mercado_has_id_mercado": {
+			      "Binding": {
+			        "ConceptualEntity": "DimMercados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_mercado": {
+			          "Target": {
+			            "Entity": "dim_mercado"
+			          }
+			        },
+			        "dim_mercado.id_mercado": {
+			          "Target": {
+			            "Entity": "dim_mercado.id_mercado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_mercado"
+			            },
+			            "Object": {
+			              "Role": "dim_mercado.id_mercado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_mercado_have_id_mercado"
+			        }
+			      ]
+			    },
+			    "dim_mercado_has_mercado": {
+			      "Binding": {
+			        "ConceptualEntity": "DimMercados"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_mercado": {
+			          "Target": {
+			            "Entity": "dim_mercado"
+			          }
+			        },
+			        "dim_mercado.mercado": {
+			          "Target": {
+			            "Entity": "dim_mercado.mercado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_mercado"
+			            },
+			            "Object": {
+			              "Role": "dim_mercado.mercado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_mercado_have_mercado"
+			        }
+			      ]
+			    },
+			    "fac_transaccione_has_dim_calendar": {
+			      "Binding": {
+			        "ConceptualEntity": "FacTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fac_transaccione": {
+			          "Target": {
+			            "Entity": "fac_transaccione"
+			          }
+			        },
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fac_transaccione"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fac_transacciones_have_dim_calendars"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "fac_transaccione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_fac_transacciones"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

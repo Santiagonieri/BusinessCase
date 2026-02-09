@@ -1,0 +1,46 @@
+table DimCanal
+	lineageTag: e25261a2-97d1-4b07-9c33-0cc70e8fe2a4
+
+	column canal
+		dataType: string
+		lineageTag: 83b5d88e-bf45-4ad9-b965-dfa0355e21a0
+		summarizeBy: none
+		sourceColumn: canal
+
+		annotation SummarizationSetBy = Automatic
+
+	column canal_detail
+		dataType: string
+		lineageTag: fca49e05-8fa7-4986-b3ec-ceb1b163e334
+		summarizeBy: none
+		sourceColumn: canal_detail
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Canal_Detail
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 84986944-ec46-472a-b1f1-bdf54efc3117
+		summarizeBy: none
+		sourceColumn: Id_Canal_Detail
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimCanal = m
+		mode: import
+		source =
+				let
+				    Origen = TransaccionesTransaccional_agrupado,
+				    #"Otras columnas quitadas" = Table.SelectColumns(Origen,{"canal", "canal_detail"}),
+				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas"),
+				    #"Índice agregado" = Table.AddIndexColumn(#"Duplicados quitados", "Id_Canal_Detail", 1, 1, Int64.Type)
+				in
+				    #"Índice agregado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

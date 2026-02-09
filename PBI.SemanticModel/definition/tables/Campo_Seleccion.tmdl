@@ -1,0 +1,50 @@
+table Campo_Seleccion
+	lineageTag: 13fea6e0-bf8f-4769-b9b1-6d30eefb2460
+
+	column Campo_Seleccion
+		lineageTag: 8fdf0bb4-a692-4aa4-a0da-f5f1add4056e
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Campo_Seleccion Orden'
+
+		relatedColumnDetails
+			groupByColumn: 'Campo_Seleccion Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Campo_Seleccion Campos'
+		isHidden
+		lineageTag: b473683f-1704-4085-8ff1-a1ae6fc23b3d
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Campo_Seleccion Orden'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Campo_Seleccion Orden'
+		isHidden
+		formatString: 0
+		lineageTag: b2539b22-c8b8-40e3-aef9-ea339c165a72
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Campo_Seleccion = calculated
+		mode: import
+		source =
+				{
+				    ("canal", NAMEOF('DimCanal'[canal]), 0),
+				    ("canal_detail", NAMEOF('DimCanal'[canal_detail]), 1),
+				    ("mercado", NAMEOF('DimMercados'[mercado]), 2),
+				    ("tipo_aplicacion", NAMEOF('DimTipoAplicacion'[tipo_aplicacion]), 3)
+				}
+
+	annotation PBI_Id = 5c50a4af731f49f4bee2f6be3ee0a94f
+

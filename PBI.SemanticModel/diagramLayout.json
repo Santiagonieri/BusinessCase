@@ -1,0 +1,113 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 351.98096353212219,
+            "y": 614.06408765546212
+          },
+          "nodeIndex": "DimCanal",
+          "nodeLineageTag": "e25261a2-97d1-4b07-9c33-0cc70e8fe2a4",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 289.62570456373089
+          },
+          "nodeIndex": "DimMercados",
+          "nodeLineageTag": "765852c9-dd81-460b-ad6a-b57fab9afbc7",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 378.67749885509204,
+            "y": 0
+          },
+          "nodeIndex": "DimTipoAplicacion",
+          "nodeLineageTag": "8b445670-1b54-4849-9b09-a34a1c89d524",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 331.69999172040554,
+            "y": 198.213028325388
+          },
+          "nodeIndex": "FacTransacciones",
+          "nodeLineageTag": "0e3616a8-f2ca-4c79-be80-5d7cf8423dbf",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 697.85121878527548,
+            "y": 190.12438739197566
+          },
+          "nodeIndex": "DimCalendar",
+          "nodeLineageTag": "1dad4860-6c15-4db2-a750-d2b8bab82309",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1352.1128006800986,
+            "y": 30.961380506896063
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "cf1c3928-f1f1-486f-94dc-c5c91d3786b0",
+          "size": {
+            "height": 341.41483359733729,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1071.4340766089581,
+            "y": 47.185437383362242
+          },
+          "nodeIndex": "Campo_Seleccion",
+          "nodeLineageTag": "13fea6e0-bf8f-4769-b9b1-6d30eefb2460",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 63.642545630159852,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

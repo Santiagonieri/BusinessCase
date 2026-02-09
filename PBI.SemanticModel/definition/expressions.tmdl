@@ -1,0 +1,22 @@
+expression TransaccionesTransaccional_agrupado =
+		let
+		    Origen = Csv.Document(File.Contents(RutaOrigen),[Delimiter=",", Columns=15, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true])
+		in
+		    #"Encabezados promovidos"
+	lineageTag: 2245f2bc-bb53-4e8f-96bd-0aa6d3398980
+	queryGroup: 'Carga datos inicial'
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
+/// Colocar ruta de origen de los datos
+expression RutaOrigen = "C:\Users\Santiago Nieri\Desktop\BusinessCase - Oysho\.venv\data\procesados\TransaccionesTransaccional.csv" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 45f73930-8922-41c6-b8f4-cc076776f323
+	queryGroup: Parametros
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Text
+

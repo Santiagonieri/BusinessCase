@@ -1,0 +1,38 @@
+table DimMercados
+	lineageTag: 765852c9-dd81-460b-ad6a-b57fab9afbc7
+
+	column mercado
+		dataType: string
+		lineageTag: 7e6c567a-9f31-4a5b-b746-484d0addac92
+		summarizeBy: none
+		sourceColumn: mercado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_Mercado
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d3ae8768-13fd-46f5-af54-ae58140ec00f
+		summarizeBy: none
+		sourceColumn: Id_Mercado
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimMercados = m
+		mode: import
+		source =
+				let
+				    Origen = TransaccionesTransaccional_agrupado,
+				    #"Otras columnas quitadas" = Table.SelectColumns(Origen,{"mercado"}),
+				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas"),
+				    #"Índice agregado" = Table.AddIndexColumn(#"Duplicados quitados", "Id_Mercado", 1, 1, Int64.Type)
+				in
+				    #"Índice agregado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,167 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "8088507f3233107ece87",
+  "position": {
+    "x": 247.96614729838811,
+    "y": 179.21189736565321,
+    "z": 0,
+    "height": 263.74581121737646,
+    "width": 472.26279871829371,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimTipoAplicacion"
+                    }
+                  },
+                  "Property": "tipo_aplicacion"
+                }
+              },
+              "queryRef": "DimTipoAplicacion.tipo_aplicacion",
+              "nativeQueryRef": "tipo_aplicacion",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimMercados"
+                    }
+                  },
+                  "Property": "mercado"
+                }
+              },
+              "queryRef": "DimMercados.mercado",
+              "nativeQueryRef": "mercado",
+              "active": false
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Transacciones real"
+                }
+              },
+              "queryRef": "Medidas.Transacciones real",
+              "nativeQueryRef": "Transacciones real"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Transacciones GA"
+                }
+              },
+              "queryRef": "Medidas.Transacciones GA",
+              "nativeQueryRef": "Transacciones GA"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Diferencia Absoluta transacciones GA-Real"
+                }
+              },
+              "queryRef": "Medidas.Diferencia transacciones GA-Real",
+              "nativeQueryRef": "Diferencia Absoluta transacciones GA-Real"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Diferencia Relativa Transacciones GA-Real"
+                }
+              },
+              "queryRef": "Medidas.Diferencia Relativa Transacciones GA-Real",
+              "nativeQueryRef": "Diferencia Relativa Transacciones GA-Real"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "Transacciones GA"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "DimTipoAplicacion.tipo_aplicacion"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimTipoAplicacion"
+                    }
+                  },
+                  "Property": "tipo_aplicacion"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "DimMercados.mercado"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,92 @@
+table Medidas
+	lineageTag: cf1c3928-f1f1-486f-94dc-c5c91d3786b0
+
+	measure 'Transacciones real' = ```
+			
+			
+			VAR _TransReal= 
+			SUMMARIZE(FacTransacciones,FacTransacciones[fecha],FacTransacciones[Id_Mercado],FacTransacciones[Id_TipoApp],"Numero transacciones",MAX(FacTransacciones[transacciones_real]))
+			
+			RETURN
+			
+			SUMX(_TransReal,[Numero transacciones])
+			```
+		formatString: #,0
+		lineageTag: 905739fd-9226-4a12-8d1d-d1682f47fb84
+
+	measure 'Transacciones GA' = ```
+			
+			
+			VAR _TransGA= 
+			SUMMARIZE(FacTransacciones,FacTransacciones[fecha],FacTransacciones[Id_Mercado],FacTransacciones[Id_TipoApp],"Numero transacciones",sum(FacTransacciones[transacciones_ga]))
+			
+			RETURN
+			
+			SUMX(_TransGA,[Numero transacciones])
+			```
+		formatString: #,0
+		lineageTag: 3af579b5-5309-4b53-8658-c6af4e0573e7
+
+	measure 'Diferencia Absoluta transacciones GA-Real' =
+			
+			
+			[Transacciones GA]-[Transacciones real]
+		lineageTag: 6fadc9ee-e699-4f25-8d49-c5c95e9ecf39
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Diferencia Relativa Transacciones GA-Real' =
+			
+			
+			DIVIDE([Diferencia Absoluta transacciones GA-Real],CALCULATE([Transacciones GA],ALL()))
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 1fc0e69e-1b5c-4cf7-a3da-c5375494899a
+
+	measure 'Ratio Conversion Real' = DIVIDE([Transacciones real],[Total Sesiones],0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: ce6e62ce-706d-4a2a-a86a-e26ac2a5ffe9
+
+	measure 'Total Sesiones' =
+			
+			
+			SUM(FacTransacciones[sesiones_ga])
+		formatString: #,0
+		lineageTag: 1d960fae-b2ee-465f-94b0-14eafd478c3c
+
+	measure 'Ratio Conversion GA' = DIVIDE([Transacciones GA],[Total Sesiones],0)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: fb6adb9d-a78b-4782-a775-240e0a078ee1
+
+	measure 'Cesta promedio' = ```
+			
+			
+			VAR _TotalTransacciones=[Transacciones real]
+			VAR _Revenue=SUM(FacTransacciones[revenue_distribuido])
+			
+			RETURN
+			
+			DIVIDE(_Revenue,_TotalTransacciones,0)
+			
+			
+			```
+		lineageTag: 8d5efe77-f120-48e8-a551-bb089fca78ef
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		formatString: 0
+		lineageTag: c93650ba-8d2d-45d4-931f-92cc9e2d0b5a
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = da77f8fb66684122b835f1c3a34c6d05
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

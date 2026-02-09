@@ -1,0 +1,38 @@
+table DimTipoAplicacion
+	lineageTag: 8b445670-1b54-4849-9b09-a34a1c89d524
+
+	column tipo_aplicacion
+		dataType: string
+		lineageTag: 2976bfea-35d0-4ff0-887a-2fd9e5e9247c
+		summarizeBy: none
+		sourceColumn: tipo_aplicacion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Id_TipoApp
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5198cdd0-f73c-4100-8546-e2bafe33b0d6
+		summarizeBy: none
+		sourceColumn: Id_TipoApp
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimTipoAplicacion = m
+		mode: import
+		source =
+				let
+				    Origen = TransaccionesTransaccional_agrupado,
+				    #"Otras columnas quitadas" = Table.SelectColumns(Origen,{"tipo_aplicacion"}),
+				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas"),
+				    #"Índice agregado" = Table.AddIndexColumn(#"Duplicados quitados", "Id_TipoApp", 1, 1, Int64.Type)
+				in
+				    #"Índice agregado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

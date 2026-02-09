@@ -1,0 +1,32 @@
+model Model
+	culture: es-AR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-AR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup 'Carga datos inicial'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup Parametros
+
+	annotation PBI_QueryGroupOrder = 1
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["TransaccionesTransaccional_agrupado","DimMercados","DimTipoAplicacion","DimCanal","FacTransacciones","RutaOrigen"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table DimMercados
+ref table DimTipoAplicacion
+ref table DimCanal
+ref table FacTransacciones
+ref table DimCalendar
+ref table Medidas
+ref table Campo_Seleccion
+
+ref cultureInfo es-AR
+
