@@ -1,0 +1,58 @@
+# Business Case 
+
+Este proyecto procesa información de sesiones de Google Analytics y datos del sistema transaccional con el objetivo de construir datasets finales para el análisis de KPIs en Power BI.
+
+El flujo está diseñado para ser modular, escalable y fácilmente adaptable a cambios en las reglas de negocio.
+
+---
+
+## 📌 Objetivo del ejercicio
+
+1. **Clasificar las sesiones de Google por canal y canal_detail** a partir de reglas de negocio configurables.
+2. **Repartir las transacciones y el revenue del sistema transaccional** en función del peso de las sesiones por canal, fecha, mercado y dispositivo.
+
+---
+
+## 📂 Estructura del proyecto
+├── src/
+│ ├── carga.py # Lectura de archivos de entrada
+│ ├── transformacion.py # Limpieza, estandarización y reglas de negocio
+│ └── guardado.py # Escritura de outputs
+├── reglas/
+│ └── reglas_canal.json # Reglas de clasificación de canal
+├── data/
+│ ├── raw/ # Archivos de entrada (Excel original)
+│ └── processed/ # Datasets finales por etapa
+├── notebooks/ # Análisis exploratorio (opcional)
+├── main.py # Orquestador del proceso
+├── variables.py # Configuración de rutas y parámetros
+├── requirements.txt
+└── README.md
+
+
+## ⚙️ Requisitos
+
+- Python 3.10 o superior
+
+Librerías principales:
+- pandas
+- numpy
+- openpyxl
+
+---
+
+## 🛠️ Instalación
+
+Desde la raíz del proyecto:
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+
+
+▶️ Ejecución
+
+python main.py
+## El script principal:
+

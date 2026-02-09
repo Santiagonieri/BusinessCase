@@ -1,0 +1,52 @@
+
+[
+    {
+        "nombre": "Facebook CPC Loyalty",
+        "condiciones": {"source": "facebook", "medium": "cpc", "campaign": "loyalty"},
+        "canal": "Paid",
+        "canal_detail": "Performance"
+    },
+    {
+        "nombre": "Facebook CPC",
+        "condiciones": {"source": "facebook", "medium": "cpc"},
+        "canal": "Paid",
+        "canal_detail": "Comunicacion"
+    },
+    {
+        "nombre": "Newsletter Sale",
+        "condiciones": {"source": "newsletter", "medium": "email", "campaign": "sale"},
+        "canal": "CRM",
+        "canal_detail": "Sale"
+    },
+    {
+        "nombre": "Newsletter Loyalty",
+        "condiciones": {"source": "newsletter", "medium": "email", "campaign": "loyalty"},
+        "canal": "CRM",
+        "canal_detail": "Transaccionales"
+    },
+    {
+        "nombre": "Newsletter",
+        "condiciones": {"source": "newsletter", "medium": "email"},
+        "canal": "CRM",
+        "canal_detail": "Marketing"
+    },
+    {
+        "nombre": "Organic",
+        "condiciones": {"medium": "organic"},
+        "canal": "Organic",
+        "canal_detail": "Medium"
+    },
+    {
+        "nombre": "Referral",
+        "condiciones": {"medium": "referral"},
+        "canal": "Other",
+        "canal_detail": "Referral"
+    },
+    {
+        "nombre": "Social",
+        "condiciones": {"medium": "social"},
+        "canal": "Social",
+        "canal_detail": "columna:source"
+    }
+]
+
