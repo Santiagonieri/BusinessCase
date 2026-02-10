@@ -37,6 +37,32 @@ El flujo está diseñado para ser modular, escalable y fácilmente adaptable a c
 └── README.md
 
 
+## Decisiones de negocio
+
+1.Reglas de negocio configurables:
+Las reglas se definen en un archivo JSON, permitiendo su modificación sin cambios en el código y facilitando el mantenimiento.
+
+2.Reglas no definidas:
+Cuando una regla no está definida, los campos Canal y Canal_Detail se asignan como "no identificado".
+
+3.Referencia a otras columnas:
+Si Canal_Detail debe tomar el valor de otra columna, se utiliza el formato
+"columna:nombre_columna" (ej. "columna:campaign").
+
+4.Peso por canal:
+El peso de cada canal se calcula en base a las transacciones del frontal; si no existen, se utilizan las sesiones del frontal.
+
+5.Distribución de métricas reales:
+El peso del canal se utiliza para distribuir tanto el revenue real como las transacciones reales.
+
+6.Tratamiento de nulos:
+Se trabaja únicamente con registros que no contengan valores nulos.
+
+7.Ratios de conversión:
+Los ratios se calculan usando el REAL como referencia y se comparan contra el frontal para medir variaciones porcentuales.
+
+
+
 ## ⚙️ Requisitos
 
 - Python 3.10 o superior
