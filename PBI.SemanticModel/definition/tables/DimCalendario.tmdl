@@ -1,3 +1,5 @@
+/// Tabla de dimensión de fechas que proporciona atributos temporales para análisis de series de tiempo. Incluye jerarquías de fecha (Año, Trimestre, Mes, Semana, Día) y permite realizar cálculos de inteligencia de tiempo como comparativas WoW (Week-over-Week) y MoM (Month-over-Month). Se relaciona con la tabla de hechos a través del campo Fecha. Esta tabla debe cubrir todo el rango de fechas presente en los datos de transacciones.
+/// 
 table DimCalendario
 	lineageTag: 336a76d2-fc97-4f23-a0e8-09b6a1dd3959
 	dataCategory: Time

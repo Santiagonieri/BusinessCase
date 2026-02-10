@@ -1,3 +1,4 @@
+/// Parametro de Campo para hacer una seleccion entre las diferentes dimensiones como son : Canal, Canal Detail, Mercado y Tipo Aplicacion
 table Campo_Seleccion
 	lineageTag: 13fea6e0-bf8f-4769-b9b1-6d30eefb2460
 

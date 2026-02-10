@@ -1,3 +1,4 @@
+/// Tabla de dimensión que contiene la clasificación jerárquica de canales de marketing. Incluye dos niveles: Canal (agrupación principal como Paid, CRM, Organic, Social, Other) y Canal_Detail (subcategoría específica como Performance, Sale, Transactional, etc.). Esta clasificación se deriva de las reglas de negocio aplicadas sobre los datos de source, medium y campaign de Google Analytics. Se relaciona con la tabla de hechos a través de Id_Canal_Detail.
 table DimCanal
 	lineageTag: e25261a2-97d1-4b07-9c33-0cc70e8fe2a4
 

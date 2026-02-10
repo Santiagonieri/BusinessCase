@@ -81,7 +81,7 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "d1",
+                    "Name": "d",
                     "Entity": "DimCalendario",
                     "Type": 0
                   }
@@ -95,7 +95,7 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "d1"
+                                "Source": "d"
                               }
                             },
                             "Property": "Fecha"

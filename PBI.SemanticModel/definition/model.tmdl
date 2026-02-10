@@ -32,7 +32,6 @@ ref table FactTransacciones
 ref table Medidas
 ref table Campo_Seleccion
 ref table DimCalendario
-ref table Selector_Analisis_Temporal
 
 ref cultureInfo es-AR
 

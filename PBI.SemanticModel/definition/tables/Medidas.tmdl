@@ -1,700 +1,476 @@
+/// Tabla que contiene todas las Medidas DAX del modelo.
 table Medidas
 	lineageTag: cf1c3928-f1f1-486f-94dc-c5c91d3786b0
 
+	/// Suma total de transacciones reales distribuidas por canal desde el transaccional. Representa las transacciones efectivamente completadas y registradas en el sistema de backend.
 	measure 'Transacciones Real' = ```
-			
-			ROUND(
-			 SUM(FactTransacciones[transacciones_reales_distribuidas]),
-			 0)
-			
+							
+							ROUND(
+								SUM(FactTransacciones[transacciones_reales_distribuidas]),
+								0
+							)
 			```
 		formatString: #,0
 		displayFolder: Transacciones
-		lineageTag: 905739fd-9226-4a12-8d1d-d1682f47fb84
+		lineageTag: 59a26060-b31c-4325-991d-ea9d10d1dda7
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
+	/// Total de transacciones registradas por Google Analytics, agregadas por fecha, mercado y tipo de aplicación. Se utiliza para análisis comparativo contra transacciones reales del transaccional.
 	measure 'Transacciones Google' = ```
-			
-			
-			VAR _TransGA= 
-			            SUMMARIZE(
-			                FactTransacciones,
-			                FactTransacciones[fecha],
-			                FactTransacciones[Id_Mercado],
-			                FactTransacciones[Id_TipoApp],
-			                "Numero transacciones",
-			                SUM(FactTransacciones[transacciones_ga])
-			            )
-			
-			RETURN
-			
-			SUMX(
-			    _TransGA,
-			    [Numero transacciones]
-			)
+							
+							VAR _TransGA = 
+								SUMMARIZE(
+									FactTransacciones,
+									FactTransacciones[fecha],
+									FactTransacciones[Id_Mercado],
+									FactTransacciones[Id_TipoApp],
+									"Numero transacciones",
+									SUM(FactTransacciones[transacciones_ga])
+								)
+							
+							RETURN
+								SUMX(
+									_TransGA,
+									[Numero transacciones]
+								)
 			```
 		formatString: #,0
 		displayFolder: Transacciones
-		lineageTag: 3af579b5-5309-4b53-8658-c6af4e0573e7
+		lineageTag: d94b08cb-e082-453a-adef-1f3e48607dda
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure 'Diferencia Absoluta Conversion Real Google vs Real' =
+	/// Diferencia en puntos porcentuales entre el ratio de conversión de Google y el ratio real. Valores positivos indican sobreestimación del tracking de GA respecto a ventas confirmadas.
+	measure 'Diferencia Absoluta Conversion Real vs Google' = ```
 			
-			
-			[Ratio Conversion Google]-[Ratio Conversion Real]
+							[Ratio Conversion Real] - [Ratio Conversion Google]
+			```
 		formatString: 0.00
 		displayFolder: Ratios
-		lineageTag: 6fadc9ee-e699-4f25-8d49-c5c95e9ecf39
+		lineageTag: 03ddff21-48b3-46cd-aee9-ebfdeb8722f8
 
-	measure '% Diferencia Transacciones Google-Real' =
+	/// Ratio de conversión calculado con transacciones reales del transaccional. Representa el porcentaje real de sesiones que resultan en ventas confirmadas en el backend.
+	measure 'Ratio Conversion Real' = ```
 			
-			
-			DIVIDE([Diferencia Absoluta Conversion Real Google vs Real],[Ratio Conversion Google])
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Transacciones
-		lineageTag: 1fc0e69e-1b5c-4cf7-a3da-c5375494899a
-
-	measure 'Ratio Conversion Real' = DIVIDE([Transacciones Real],[Sesiones],0)
+			                        DIVIDE(
+			                            [Transacciones Real],
+			                            [Sesiones],
+			                            0
+			                        )
+			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Ratios
-		lineageTag: ce6e62ce-706d-4a2a-a86a-e26ac2a5ffe9
+		lineageTag: 07bf222b-edab-4f4d-bc24-72681c78cd8d
 
-	measure Sesiones =
-			
-			
-			SUM(FactTransacciones[sesiones_ga])
+	/// Suma total de sesiones registradas en Google Analytics. Representa el volumen de tráfico único en el sitio web o aplicación.
+	measure Sesiones = ```
+							
+							SUM(FactTransacciones[sesiones_ga])
+			```
 		formatString: #,0
 		displayFolder: Transacciones
-		lineageTag: 1d960fae-b2ee-465f-94b0-14eafd478c3c
+		lineageTag: 418fd39b-08f6-4f84-9a43-f5f13b08a6de
 
-	measure 'Ratio Conversion Google' = DIVIDE([Transacciones Google],[Sesiones],0)
+	/// Ratio de conversión calculado a partir de datos de Google Analytics. Indica el porcentaje de sesiones que resultan en transacciones según el tracking del frontend.
+	measure 'Ratio Conversion Google' = ```
+			
+			                            DIVIDE(
+			                                [Transacciones Google],
+			                                [Sesiones],
+			                                0
+			                            )
+			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Ratios
-		lineageTag: fb6adb9d-a78b-4782-a775-240e0a078ee1
+		lineageTag: 1ad4df52-4b77-44fe-a476-ec9e4b40ecb7
 
-	measure 'Transacciones Perdidas' = [Transacciones Google]-[Transacciones Real]
+	/// Transacciones reales de la misma semana anterior. Se utiliza como base de comparación para análisis Week-over-Week.
+	measure 'Transacciones Real WoW' = ```
+							
+							CALCULATE(
+								[Transacciones Real],
+								DATEADD(DimCalendario[Fecha], -7, DAY)
+							)
+			```
 		formatString: 0.00
 		displayFolder: Transacciones
-		lineageTag: 1e5474d2-d8a5-4e6e-8065-63141e478496
+		lineageTag: 942a56ef-de7d-4c24-8c3b-183123d01f36
 
-	measure 'Transacciones Real WoW' =
-			
-			CALCULATE(
-			    [Transacciones Real],
-			    DATEADD(DimCalendario[Fecha], -7, DAY)
-			)
-		formatString: 0.00
-		displayFolder: Transacciones
-		lineageTag: 6934d4e0-5b82-46df-9368-3672b169dceb
-
-	measure 'Transacciones Google WoW' =
-			
-			CALCULATE(
-			    [Transacciones Google],
-			    DATEADD(DimCalendario[Fecha], -7, DAY)
-			)
+	/// Transacciones de Google Analytics de la misma semana anterior. Se utiliza como base de comparación para análisis Week-over-Week.
+	measure 'Transacciones Google WoW' = ```
+							
+							CALCULATE(
+								[Transacciones Google],
+								DATEADD(DimCalendario[Fecha], -7, DAY)
+							)
+			```
 		formatString: 0
 		displayFolder: Transacciones
-		lineageTag: f1416195-d3c4-4905-8aae-9232f1cb9500
+		lineageTag: 7d806349-c1ab-452a-91b9-b50df6d6025b
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure 'Transacciones Google MoM' =
-			
-			CALCULATE(
-			    [Transacciones Google],
-			    DATEADD(DimCalendario[Fecha], -1, MONTH)
-			)
+	/// Transacciones de Google Analytics del mismo período del mes anterior. Se utiliza como base de comparación para análisis Month-over-Month.
+	measure 'Transacciones Google MoM' = ```
+							
+							CALCULATE(
+								[Transacciones Google],
+								DATEADD(DimCalendario[Fecha], -1, MONTH)
+							)
+			```
 		formatString: 0
 		displayFolder: Transacciones
-		lineageTag: 27c3610d-b4cb-4851-9ace-82fb2de7205e
+		lineageTag: de890036-d2ca-460a-98ba-517fc0488d5c
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure 'Transacciones Real MoM' =
-			
-			CALCULATE(
-			    [Transacciones Real],
-			    DATEADD(DimCalendario[Fecha], -1, MONTH)
-			)
+	/// Transacciones reales del mismo período del mes anterior. Se utiliza como base de comparación para análisis Month-over-Month.
+	measure 'Transacciones Real MoM' = ```
+							
+							CALCULATE(
+								[Transacciones Real],
+								DATEADD(DimCalendario[Fecha], -1, MONTH)
+							)
+			```
 		formatString: 0.00
 		displayFolder: Transacciones
-		lineageTag: ef74c62c-ed02-4fd3-8d21-f75f1a444b6e
+		lineageTag: 7cd2d7b5-1264-4071-a3f2-18675764717c
 
-	measure 'Ratio Conversion Google WoW' =
-			
-			CALCULATE(
-			    [Ratio Conversion Google],
-			    DATEADD(DimCalendario[Fecha], -7, DAY)
-			)
-		displayFolder: Ratios
-		lineageTag: cd79718c-88ba-4fdc-87d5-a46753209c40
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Ratio Conversion Google MoM' =
-			
-			CALCULATE(
-			    [Ratio Conversion Google],
-			    DATEADD(DimCalendario[Fecha], -1, MONTH)
-			)
-		displayFolder: Ratios
-		lineageTag: 918625a6-5d37-4498-ac91-0058bc379d87
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Ratio Conversion Real MoM' =
-			
-			CALCULATE(
-			    [Ratio Conversion Real],
-			    DATEADD(DimCalendario[Fecha], -1, MONTH)
-			)
-		displayFolder: Ratios
-		lineageTag: e719f02b-c2dd-4e45-9bff-83077918460a
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Ratio Conversion Real WoW' =
-			
-			CALCULATE(
-			    [Ratio Conversion Real],
-			    DATEADD(DimCalendario[Fecha], -7, DAY)
-			)
-		displayFolder: Ratios
-		lineageTag: 0f117f53-e08c-4078-ad36-1e26fe02468b
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
+	/// Diferencia absoluta entre transacciones reales del período actual y de la semana anterior. Valores positivos indican crecimiento semanal.
 	measure 'Variacion Transacciones Real WoW' = ```
 			
-			    [Transacciones Real] - [Transacciones Real WoW]
+							[Transacciones Real] - [Transacciones Real WoW]
 			```
 		displayFolder: Transacciones
-		lineageTag: a0cffa75-520d-447f-be98-d4bc73654aa5
+		lineageTag: 2053d0f3-e321-4b69-a13c-53191d5239ca
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Variación porcentual de transacciones reales respecto a la semana anterior. Indica tasa de crecimiento o decrecimiento semanal de ventas confirmadas.
 	measure '% Variacion Transacciones Real WoW' = ```
-			
-			    DIVIDE(
-			        [Variacion Transacciones Real WoW],
-			        [Transacciones Real WoW],
-			        0
-			    )
+							
+							DIVIDE(
+								[Variacion Transacciones Real WoW],
+								[Transacciones Real WoW],
+								0
+							)
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Transacciones
-		lineageTag: 9672743d-4a69-4c1d-be57-3874ccd47c06
+		lineageTag: 9e6f140c-979e-4054-acc3-9156944f716f
 
-	measure 'Ratio Conversion Real Periodo Anterior' =
-			
-			VAR Sel = SELECTEDVALUE(Selector_Analisis_Temporal[Analisis])
-			RETURN
-			SWITCH(
-			    Sel,
-			    "Semana vs Semana", [Ratio Conversion Real WoW],
-			    "Mes vs Mes", [Ratio Conversion Real MoM],
-			    BLANK()
-			)
-		displayFolder: Ratios
-		lineageTag: 84bc9fde-c620-43c9-b5b5-73d820bb73d2
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
+	/// Variación porcentual de la cesta media respecto a la semana anterior. Indica tasa de crecimiento o decrecimiento semanal del ticket promedio.
 	measure '% Variacion Cesta WoW' = ```
-			
-			DIVIDE(
-			    [Variacion Cesta WoW],
-			    [Cesta Media WoW],
-			    0
-			)
-			
+							
+							DIVIDE(
+								[Variacion Cesta WoW],
+								[Cesta Media WoW],
+								0
+							)
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Cesta
-		lineageTag: aaab2bc6-891c-4789-8fb8-e815a5f25d49
+		lineageTag: f8db81a7-2f96-43ea-935a-9b027d88b5a9
 
+	/// Valor promedio de compra por transacción, calculado como Revenue Total dividido entre Transacciones Reales. Indica el ticket promedio de cada venta confirmada.
 	measure 'Cesta Media' = ```
 			
-			
-			VAR _TotalTransacciones=[Transacciones Real]
-			VAR _Revenue=[Revenue Total]
-			RETURN
-			
-			DIVIDE(_Revenue,_TotalTransacciones,0)
-			
-			
+							VAR _TotalTransacciones = [Transacciones Real]
+							VAR _Revenue = [Revenue Total]
+							RETURN
+								DIVIDE(_Revenue, _TotalTransacciones, 0)
 			```
 		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
 		displayFolder: Cesta
-		lineageTag: 2861ff47-12ec-4434-9b1a-c956c11439a2
+		lineageTag: 6dceea30-5d28-48e9-97ed-400d58421e3a
 
-	measure 'Cesta Media MoM' =
-			
-			CALCULATE(
-			    [Cesta Media],
-			    DATEADD(DimCalendario[Fecha], -1, MONTH)
-			)
+	/// Cesta media del mismo período del mes anterior. Base de comparación para análisis Month-over-Month del valor promedio de compra.
+	measure 'Cesta Media MoM' = ```
+							
+							CALCULATE(
+								[Cesta Media],
+								DATEADD(DimCalendario[Fecha], -1, MONTH)
+							)
+			```
 		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
 		displayFolder: Cesta
-		lineageTag: 16a5ccd7-58f0-4270-afbd-e1b10faa4e0c
+		lineageTag: aa44da89-4aca-4f2e-a2e6-7cb08db5a2c7
 
-	measure 'Cesta Media WoW' =
-			
-			CALCULATE(
-			    [Cesta Media],
-			    DATEADD(DimCalendario[Fecha], -7, DAY)
-			)
+	/// Cesta media de la misma semana anterior. Base de comparación para análisis Week-over-Week del valor promedio de compra.
+	measure 'Cesta Media WoW' = ```
+							
+							CALCULATE(
+								[Cesta Media],
+								DATEADD(DimCalendario[Fecha], -7, DAY)
+							)
+			```
 		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
 		displayFolder: Cesta
-		lineageTag: d2bdefef-068a-4186-a748-bd95fd9c2164
+		lineageTag: e88b538a-4b50-46de-ae4c-17910e7da855
 
-	measure 'Variacion Cesta WoW' =
-			
-			[Cesta Media] - [Cesta Media WoW]
+	/// Diferencia absoluta en euros entre la cesta media actual y de la semana anterior. Valores positivos indican incremento semanal en el ticket promedio.
+	measure 'Variacion Cesta WoW' = ```
+							
+							[Cesta Media] - [Cesta Media WoW]
+			```
 		formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
 		displayFolder: Cesta
-		lineageTag: b372a219-2b87-455b-aff9-d6521793c735
+		lineageTag: 3cc23e1c-71cd-4816-946f-54a11130566d
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
 
-	measure '% Variacion Revenue MoM' =
-			
-			DIVIDE(
-			    [Variacion Revenue MoM],
-			    [Revenue MoM],
-			    0
-			)
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Revenue
-		lineageTag: eed815b0-1442-4ff0-9039-357cbaa29b42
-
-	measure '% Variacion Revenue WoW' =
-			
-			DIVIDE([Variacion Revenue WoW], [Revenue WoW], 0)
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Revenue
-		lineageTag: 96a1fd6e-561b-475c-9e35-82c5a5e6fa24
-
-	measure 'Revenue MoM' =
-			
-			CALCULATE(
-			    [Revenue Total],
-			    DATEADD(DimCalendario[Fecha], -1, MONTH)
-			)
-		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
-		displayFolder: Revenue
-		lineageTag: cd3d296c-199a-4f8c-9945-e2d95b374117
-
-	measure 'Revenue Total' =
-			
-			
-			SUM(FactTransacciones[revenue_distribuido])
-		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
-		displayFolder: Revenue
-		lineageTag: 627fa9cf-40cb-4bb2-9776-67a95970e681
-
-	measure 'Revenue WoW' =
-			
-			CALCULATE(
-			    [Revenue Total],
-			    DATEADD(DimCalendario[Fecha], -7, DAY)
-			)
-		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
-		displayFolder: Revenue
-		lineageTag: 5aa5e58c-491d-40fd-b2fa-3404c72d9aa6
-
-	measure 'Variacion Revenue MoM' =
-			
-			[Revenue Total] - [Revenue MoM]
-		formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
-		displayFolder: Revenue
-		lineageTag: c4a33cce-0c4a-4a20-9813-f16450826984
-
-		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
-
-	measure '% Variacion Ratio Conversion Real' =
-			
-			DIVIDE(
-			    [Diferencia Absoluta Conversion Real Google vs Real],
-			    [Ratio Conversion Real],
-			    0
-			)
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Ratios
-		lineageTag: 8ecad954-d602-48f6-b34b-e796711a84bc
-
-	measure '% Transacciones Google sobre el total' = ```
-			
-			DIVIDE([Transacciones Google], CALCULATE([Transacciones Google],ALL()),0)
-			
+	/// Variación porcentual del revenue respecto al mes anterior. Indica tasa de crecimiento o decrecimiento mensual de ingresos.
+	measure '% Variacion Revenue MoM' = ```
+							
+							DIVIDE(
+								[Variacion Revenue MoM],
+								[Revenue MoM],
+								0
+							)
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Transacciones
-		lineageTag: 91ef4c90-7e24-41a2-be6a-32d621aca9aa
+		displayFolder: Revenue
+		lineageTag: 5d1ff881-4ae9-4d97-9e46-d4f155959712
 
-	measure '% Variacion Ratio Conversion Google' =
-			
-			DIVIDE(
-			    [Diferencia Absoluta Conversion Real Google vs Real],
-			    [Ratio Conversion Google],
-			    0
-			)
+	/// Variación porcentual del revenue respecto a la semana anterior. Indica tasa de crecimiento o decrecimiento semanal de ingresos.
+	measure '% Variacion Revenue WoW' = ```
+							
+							DIVIDE([Variacion Revenue WoW], [Revenue WoW], 0)
+			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Ratios
-		lineageTag: 1b7a3eef-4285-487c-bedb-194bb23a588c
+		displayFolder: Revenue
+		lineageTag: 5ded3b91-85f6-4fcf-ae3e-94a7b307abd0
 
-	measure 'Ratio Conversion Google Periodo Anterior' =
-			
-			VAR Sel = SELECTEDVALUE(Selector_Analisis_Temporal[Analisis])
-			RETURN
-			SWITCH(
-			    Sel,
-			    "Semana vs Semana", [Ratio Conversion Google WoW],
-			    "Mes vs Mes", [Ratio Conversion Google MoM],
-			    BLANK()
-			)
-		displayFolder: Ratios
-		lineageTag: addc2ee0-85de-4516-9cca-abbc6751a158
+	/// Revenue total del mismo período del mes anterior. Base de comparación para análisis Month-over-Month de ingresos.
+	measure 'Revenue MoM' = ```
+							
+							CALCULATE(
+								[Revenue Total],
+								DATEADD(DimCalendario[Fecha], -1, MONTH)
+							)
+			```
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Revenue
+		lineageTag: a9fd6164-fdcb-4fa3-b857-b93f181044ed
+
+	/// Suma total del revenue distribuido por canal según la metodología de distribución por pesos de conversión. Representa los ingresos totales confirmados del período.
+	measure 'Revenue Total' = ```
+							
+							SUM(FactTransacciones[revenue_distribuido])
+			```
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Revenue
+		lineageTag: 8b8d2cad-9f39-473b-aea2-237ec633b538
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Revenue total de la misma semana anterior. Base de comparación para análisis Week-over-Week de ingresos.
+	measure 'Revenue WoW' = ```
+							
+							CALCULATE(
+								[Revenue Total],
+								DATEADD(DimCalendario[Fecha], -7, DAY)
+							)
+			```
+		formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
+		displayFolder: Revenue
+		lineageTag: e0142d76-eec8-4675-87ee-09c6f36dcc6c
+
+	/// Diferencia absoluta en euros entre el revenue actual y del mes anterior. Valores positivos indican crecimiento mensual de ingresos.
+	measure 'Variacion Revenue MoM' = ```
+							
+							[Revenue Total] - [Revenue MoM]
+			```
+		formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+		displayFolder: Revenue
+		lineageTag: 74af6511-904a-421c-b26c-99817cd25142
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+	/// Variación porcentual de la cesta media respecto al mes anterior. Indica tasa de crecimiento o decrecimiento mensual del ticket promedio.
 	measure '% Variacion Cesta MoM' = ```
-			
-			DIVIDE(
-			    [Variacion Cesta MoM],
-			    [Cesta Media MoM],
-			    0
-			)
-			
+							
+							DIVIDE(
+								[Variacion Cesta MoM],
+								[Cesta Media MoM],
+								0
+							)
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Cesta
-		lineageTag: 6c05e816-5ae3-44dc-b9af-a488f1e7b427
+		lineageTag: a4567cee-0961-459e-a2f5-e0db39a5eb48
 
-	measure 'Variacion Cesta MoM' =
-			
-			[Cesta Media] - [Cesta Media MoM]
+	/// Diferencia absoluta en euros entre la cesta media actual y del mes anterior. Valores positivos indican incremento en el ticket promedio.
+	measure 'Variacion Cesta MoM' = ```
+							
+							[Cesta Media] - [Cesta Media MoM]
+			```
 		formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
 		displayFolder: Cesta
-		lineageTag: e880e1c1-73eb-478c-9da9-f2ff4918ebe8
+		lineageTag: 36d92c25-1924-4d38-9e02-a35b1c56cb74
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
 
-	measure 'Variacion Revenue WoW' =
-			
-			[Revenue Total] - [Revenue WoW]
+	/// Diferencia absoluta en euros entre el revenue actual y de la semana anterior. Valores positivos indican crecimiento semanal de ingresos.
+	measure 'Variacion Revenue WoW' = ```
+							
+							[Revenue Total] - [Revenue WoW]
+			```
 		formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
 		displayFolder: Revenue
-		lineageTag: 840312a2-aa49-48ea-9b22-07998c4d0e30
+		lineageTag: 7922687c-012e-4620-b178-b42a24f4091d
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
 
+	/// Variación porcentual de transacciones reales respecto al mes anterior. Indica tasa de crecimiento o decrecimiento mensual de ventas confirmadas.
 	measure '% Variacion Transacciones Real MoM' = ```
-			
-			    DIVIDE(
-			        [Variacion Transacciones Real MoM],
-			        [Transacciones Real MoM],
-			        0
-			    )
+							
+							DIVIDE(
+								[Variacion Transacciones Real MoM],
+								[Transacciones Real MoM],
+								0
+							)
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Transacciones
-		lineageTag: dfb8a1ca-87ec-4db2-9491-25c6254adcee
+		lineageTag: 1c00da70-3569-45bf-a82b-b8098edfecd7
 
+	/// Diferencia absoluta entre transacciones reales del período actual y del mes anterior. Valores positivos indican crecimiento mensual.
 	measure 'Variacion Transacciones Real MoM' = ```
-			
-			    [Transacciones Real] - [Transacciones Real MoM]
+							
+							[Transacciones Real] - [Transacciones Real MoM]
 			```
 		displayFolder: Transacciones
-		lineageTag: 24b5f462-f831-4490-afc6-376a7459dd9c
+		lineageTag: 31076f99-f92c-4155-ab09-3a1c759c43fd
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Transacciones Perdidas MoM' = ```
-			
-			    CALCULATE(
-			        [Transacciones Perdidas],
-			        DATEADD(DimCalendario[Fecha], -1, MONTH)
-			    )
-			```
-		formatString: 0.00
-		displayFolder: Transacciones
-		lineageTag: 1717cb6d-cbd1-42ff-aca3-f4a171d48d69
-
-	measure 'Transacciones Perdidas WoW' = ```
-			
-			    CALCULATE(
-			        [Transacciones Perdidas],
-			        DATEADD(DimCalendario[Fecha], -7, DAY)
-			    )
-			```
-		formatString: 0.00
-		displayFolder: Transacciones
-		lineageTag: 4071a502-4ce5-48c8-b58b-8db6509986d5
-
-	measure 'Variacion Transacciones Perdidas MoM' = ```
-			
-			    [Transacciones Perdidas] - [Transacciones Perdidas MoM]
-			```
-		displayFolder: Transacciones
-		lineageTag: ba86d128-aae0-4c28-8fcb-29e9d164f979
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Variacion Transacciones Perdidas WoW' = ```
-			
-			    [Transacciones Perdidas] - [Transacciones Perdidas WoW]
-			```
-		displayFolder: Transacciones
-		lineageTag: b167f8d9-f426-4e43-802d-61a4c196ce3c
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure '% Variacion Transacciones Perdidas MoM' = ```
-			
-			    DIVIDE(
-			        [Variacion Transacciones Perdidas MoM],
-			        [Transacciones Perdidas MoM],
-			        0
-			    )
-			```
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Transacciones
-		lineageTag: bf273e53-e3a2-4fa2-8581-b8fb618cb6cd
-
-	measure '% Variacion Transacciones Perdidas WoW' = ```
-			
-			    DIVIDE(
-			        [Variacion Transacciones Perdidas WoW],
-			        [Transacciones Perdidas WoW],
-			        0
-			    )
-			```
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Transacciones
-		lineageTag: 5ffc34be-9593-4bd2-8240-6dc6f40e5a81
-
+	/// Variación porcentual de transacciones de Google respecto a la semana anterior. Indica tasa de crecimiento o decrecimiento semanal del tracking de GA.
 	measure '% Variacion Transacciones Google WoW' = ```
-			
-			    DIVIDE(
-			        [Variacion Transacciones Google WoW],
-			        [Transacciones Google WoW],
-			        0
-			    )
+							
+							DIVIDE(
+								[Variacion Transacciones Google WoW],
+								[Transacciones Google WoW],
+								0
+							)
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Transacciones
-		lineageTag: 1f76e62b-0c08-4560-b582-3700d07d5f73
+		lineageTag: f7ef54a1-8230-4f4a-beb0-475aef747b2a
 
+	/// Variación porcentual de transacciones de Google respecto al mes anterior. Indica tasa de crecimiento o decrecimiento mensual del tracking de GA.
 	measure '% Variacion Transacciones Google MoM' = ```
-			
-			    DIVIDE(
-			        [Variacion Transacciones Google MoM],
-			        [Transacciones Google MoM],
-			        0
-			    )
+							
+							DIVIDE(
+								[Variacion Transacciones Google MoM],
+								[Transacciones Google MoM],
+								0
+							)
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Transacciones
-		lineageTag: dd1ce176-e198-4e65-8bde-02cbab6203cb
+		lineageTag: 635d2199-3a84-4d34-a01a-96016a66449e
 
+	/// Diferencia absoluta entre transacciones de Google del período actual y de la semana anterior. Valores positivos indican crecimiento semanal.
 	measure 'Variacion Transacciones Google WoW' = ```
-			
-			    [Transacciones Google] - [Transacciones Google WoW]
+							
+							[Transacciones Google] - [Transacciones Google WoW]
 			```
 		formatString: 0
 		displayFolder: Transacciones
-		lineageTag: e45604fd-0478-48a1-8e4d-f00149308329
+		lineageTag: e37d39b8-37f6-47a9-9746-e59220f52265
 
+	/// Diferencia absoluta entre transacciones de Google del período actual y del mes anterior. Valores positivos indican crecimiento mensual.
 	measure 'Variacion Transacciones Google MoM' = ```
-			
-			    [Transacciones Google] - [Transacciones Google MoM]
+							
+							[Transacciones Google] - [Transacciones Google MoM]
 			```
 		formatString: 0
 		displayFolder: Transacciones
-		lineageTag: 426fd70e-90e3-4ec0-b9c4-d6d7ebc49d1a
+		lineageTag: a59e340e-9dd4-4c71-97e8-d738ba2870b3
 
-	measure 'Variacion Ratio Conversion Google MoM' = ```
+	/// Variación porcentual del ratio de conversión de Google respecto al ratio real. Indica el porcentaje de discrepancia entre el tracking y las ventas confirmadas.
+	measure '% Variacion Ratio Conversion Google vs Real' = ```
 			
-			    [Ratio Conversion Google] - [Ratio Conversion Google MoM]
-			```
-		displayFolder: Ratios
-		lineageTag: 5147456f-85cd-4596-b8e5-85ca02537702
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Variacion Ratio Conversion Google WoW' = ```
-			
-			    [Ratio Conversion Google] - [Ratio Conversion Google WoW]
-			```
-		displayFolder: Ratios
-		lineageTag: 60aac6fe-95cd-4007-90a0-8f796b5b0296
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure '% Variacion Ratio Conversion Google MoM' = ```
-			
-			    DIVIDE(
-			        [Variacion Ratio Conversion Google MoM],
-			        [Ratio Conversion Google MoM],
-			        0
-			    )
+							DIVIDE(
+								[Diferencia Absoluta Conversion Real vs Google],
+								[Ratio Conversion Real],
+								0
+							)
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Ratios
-		lineageTag: b0b815d0-7acf-47c2-ba29-ccd2ab129222
+		lineageTag: d3086295-2b64-49ed-9eb7-8192615f2a1f
 
-	measure '% Variacion Ratio Conversion Google WoW' = ```
-			
-			    DIVIDE(
-			        [Variacion Ratio Conversion Google WoW],
-			        [Ratio Conversion Google WoW],
-			        0
-			    )
+	/// Sesiones del mismo período del mes anterior. Se utiliza como base de comparación para análisis Month-over-Month de tráfico.
+	measure 'Sesiones MoM' = ```
+							
+							CALCULATE(
+								[Sesiones],
+								DATEADD(DimCalendario[Fecha], -1, MONTH)
+							)
 			```
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Ratios
-		lineageTag: 169fc1c0-6c7e-4dd4-aa46-f98c5f9ebe38
-
-	measure 'Variacion Ratio Conversion Real MoM' = ```
-			
-			    [Ratio Conversion Real] - [Ratio Conversion Real MoM]
-			```
-		displayFolder: Ratios
-		lineageTag: 91ca4cf5-9c05-43ec-a648-137e1efbd77b
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Variacion Ratio Conversion Real WoW' = ```
-			
-			    [Ratio Conversion Real] - [Ratio Conversion Real WoW]
-			```
-		displayFolder: Ratios
-		lineageTag: 8cfd2b7c-f970-4597-958c-b98ea29a100b
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure '% Variacion Ratio Conversion Real MoM' = ```
-			
-			    DIVIDE(
-			        [Variacion Ratio Conversion Real MoM],
-			        [Ratio Conversion Real MoM],
-			        0
-			    )
-			```
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Ratios
-		lineageTag: 9e2d8486-e671-4b7e-85f3-07869f566c3b
-
-	measure '% Variacion Ratio Conversion Real WoW' = ```
-			
-			    DIVIDE(
-			        [Variacion Ratio Conversion Real WoW],
-			        [Ratio Conversion Real WoW],
-			        0
-			    )
-			```
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Ratios
-		lineageTag: 7dc8ea91-64e1-4f23-ba28-7b436faf123f
-
-	measure '% Diferencia CR Google vs Real' = ```
-			
-			    DIVIDE(
-			        [Diferencia Absoluta Conversion Real Google vs Real],
-			        [Ratio Conversion Real],  // Usar Real como base de comparación
-			        0
-			    )
-			```
-		formatString: 0.00\ %;-0.00\ %;0.00\ %
-		displayFolder: Ratios
-		lineageTag: cbbcf8ab-c394-4c8b-a43b-15068787cf0e
-
-	measure 'Diferencia Absoluta CR MoM' = ```
-			
-			    CALCULATE(
-			        [Diferencia Absoluta Conversion Real Google vs Real],
-			        DATEADD(DimCalendario[Fecha], -1, MONTH)
-			    )
-			```
-		formatString: 0.00
-		displayFolder: Ratios
-		lineageTag: 6a8240cf-b97a-4b52-9c45-7d64c8589554
-
-	measure 'Diferencia Absoluta CR WoW' = ```
-			
-			    CALCULATE(
-			        [Diferencia Absoluta Conversion Real Google vs Real],
-			        DATEADD(DimCalendario[Fecha], -7, DAY)
-			    )
-			```
-		formatString: 0.00
-		displayFolder: Ratios
-		lineageTag: 471a9d57-3f84-484b-98f4-086f2a844f66
-
-	measure 'Sesiones MoM' =
-			
-			
-			CALCULATE([Sesiones],
-			        DATEADD(DimCalendario[Fecha],-1,MONTH)
-			)
 		formatString: 0
 		displayFolder: Transacciones
-		lineageTag: 0a464eab-cc12-42c0-94cf-b9ef6030d6c9
+		lineageTag: ddf52f94-465b-4add-89a1-f57e795f7084
 
-	measure 'Sesiones WoW' =
-			
-			
-			CALCULATE([Sesiones],
-			        DATEADD(DimCalendario[Fecha],-7,DAY)
-			)
+	/// Sesiones de la misma semana anterior. Se utiliza como base de comparación para análisis Week-over-Week de tráfico.
+	measure 'Sesiones WoW' = ```
+							
+							CALCULATE(
+								[Sesiones],
+								DATEADD(DimCalendario[Fecha], -7, DAY)
+							)
+			```
 		formatString: 0
 		displayFolder: Transacciones
-		lineageTag: 8658f435-f0a1-45a0-bf89-ce8141ef5c32
+		lineageTag: 1f3d421b-a4ef-4034-9ff0-dd6e09b96cc5
 
+	/// Diferencia absoluta entre sesiones del período actual y de la semana anterior. Valores positivos indican crecimiento de tráfico semanal.
 	measure 'Variacion Sesiones WoW' = ```
-			
-			    [Sesiones] - [Sesiones WoW]
+							
+							[Sesiones] - [Sesiones WoW]
 			```
 		displayFolder: Transacciones
-		lineageTag: c8d51def-6c08-4891-ac31-fc6689a7468d
+		lineageTag: 09494d4e-9835-42a7-b977-175161eeaabc
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Diferencia absoluta entre sesiones del período actual y del mes anterior. Valores positivos indican crecimiento de tráfico mensual.
 	measure 'Variacion Sesiones MoM' = ```
-			
-			    [Sesiones] - [Sesiones MoM]
+							
+							[Sesiones] - [Sesiones MoM]
 			```
 		formatString: 0
 		displayFolder: Transacciones
-		lineageTag: 4d1ebd9a-6874-400e-9a37-e2920e001698
+		lineageTag: 38155827-fdef-4f67-8360-e4791e5c3684
 
+	/// Variación porcentual de sesiones respecto al mes anterior. Indica tasa de crecimiento o decrecimiento mensual del tráfico web.
 	measure '% Variacion Sesiones MoM' = ```
-			
-			    DIVIDE(
-			        [Variacion Sesiones MoM],
-			        [Sesiones MoM],
-			        0
-			    )
+							
+							DIVIDE(
+								[Variacion Sesiones MoM],
+								[Sesiones MoM],
+								0
+							)
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Transacciones
-		lineageTag: ac3fc7a0-1bbb-4025-98bf-143a80ef93d9
+		lineageTag: 730ff48f-89e4-4141-b58b-5c8df0920706
 
+	/// Variación porcentual de sesiones respecto a la semana anterior. Indica tasa de crecimiento o decrecimiento semanal del tráfico web.
 	measure '% Variacion Sesiones WoW' = ```
-			
-			    DIVIDE(
-			        [Variacion Sesiones WoW],
-			        [Sesiones WoW],
-			        0
-			    )
+							
+							DIVIDE(
+								[Variacion Sesiones WoW],
+								[Sesiones WoW],
+								0
+							)
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		displayFolder: Transacciones
-		lineageTag: 1fd25018-de07-4e35-a466-82b7df59a2a2
+		lineageTag: 37412622-692d-44bb-86fa-605539459a68
 
 	column Column
 		isHidden

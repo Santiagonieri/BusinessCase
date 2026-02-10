@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 225.00670821749861,
+        "x": 385.65799103159111,
         "y": 0
       },
       "nodes": [
@@ -19,7 +19,7 @@
             "height": 152,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 3
         },
         {
           "location": {
@@ -32,7 +32,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 5
+          "zIndex": 1
         },
         {
           "location": {
@@ -45,12 +45,12 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 6
+          "zIndex": 2
         },
         {
           "location": {
-            "x": 1174.5586207189972,
-            "y": 382.92718857138
+            "x": 1352.1128006800986,
+            "y": 8.96351750286587
           },
           "nodeIndex": "Medidas",
           "nodeLineageTag": "cf1c3928-f1f1-486f-94dc-c5c91d3786b0",
@@ -58,12 +58,12 @@
             "height": 341.41483359733729,
             "width": 234
           },
-          "zIndex": 1
+          "zIndex": 6
         },
         {
           "location": {
-            "x": 1071.4340766089581,
-            "y": 47.185437383362242
+            "x": 1071.4340766089583,
+            "y": 7.9035391618796211
           },
           "nodeIndex": "Campo_Seleccion",
           "nodeLineageTag": "13fea6e0-bf8f-4769-b9b1-6d30eefb2460",
@@ -83,7 +83,7 @@
             "height": 300,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 5
         },
         {
           "location": {
@@ -96,19 +96,7 @@
             "height": 248,
             "width": 234
           },
-          "zIndex": 3
-        },
-        {
-          "location": {
-            "x": 1458.5586207189972,
-            "y": 283.03204382773106
-          },
-          "nodeIndex": "Selector_Analisis_Temporal",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 0
+          "zIndex": 4
         }
       ],
       "name": "Todas las tablas",

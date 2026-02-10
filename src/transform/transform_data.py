@@ -44,8 +44,9 @@ def definir_tipo_datos(df):
 
     columnas_numericas=["sesiones","transacciones","revenue"]
 
-    if "fecha" in df.columns:
-        df["fecha"] = pd.to_datetime(df["fecha"], errors='coerce')
+    for col in columnas_fechas:
+        if col in df.columns:
+            df[col] = pd.to_datetime(df[col], errors="coerce")
 
     for col in columnas_string:
         if col in df.columns:
@@ -59,6 +60,8 @@ def definir_tipo_datos(df):
 
 
 def estandarizar_cadenas_string(df):
+
+    # Identificar las columnas de tipo string en el dataframe
 
     columnas_string =  df.select_dtypes(include=["object", "string"]).columns
     

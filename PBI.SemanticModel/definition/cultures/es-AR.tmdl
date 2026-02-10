@@ -1556,7 +1556,7 @@ cultureInfo es-AR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Diferencia Absoluta Conversion Real Google vs Real"
+			          "ConceptualProperty": "Diferencia Absoluta Conversion Real vs Google"
 			        }
 			      },
 			      "State": "Generated",
@@ -1564,48 +1564,6 @@ cultureInfo es-AR
 			        {
 			          "diferencia absoluta conversion real google vs real": {
 			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.diferencia_transacciones_googlereal": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "% Diferencia Transacciones Google-Real"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "% diferencia transacciones google-real": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "% diferencia transacciones google real": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "percentage diferencia transaccione google real": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "pct diferencia transaccione google real": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
 			          }
 			        }
 			      ]
@@ -1826,22 +1784,6 @@ cultureInfo es-AR
 			      "Terms": [
 			        {
 			          "Campo_Seleccion orden": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.transacciones_perdidas": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Transacciones Perdidas"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "transacciones perdidas": {
 			            "State": "Generated"
 			          }
 			        }
@@ -2359,542 +2301,6 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "medida.ratio_conversion_google_WoW": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Ratio Conversion Google WoW"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ratio conversion google WoW": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "WoW": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "google WoW": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "conversion google WoW": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "ratio conversion google winner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "ratio conversion google sensation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "conversion google winner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "conversion google sensation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "google winner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "google sensation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "ratio conversion google smash": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "ratio conversion google triumph": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "ratio conversion google knockout": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "conversion google smash": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        }
-			      ]
-			    },
-			    "medida.ratio_conversion_google_MoM": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Ratio Conversion Google MoM"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ratio conversion google MoM": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "MoM": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "google MoM": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "conversion google MoM": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "ratio conversion google ma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "ratio conversion google mommy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "ratio conversion google mamma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "ratio conversion google mama": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "ratio conversion google mammy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "ratio conversion google momma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "conversion google ma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "conversion google mommy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "conversion google mamma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "conversion google mama": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        }
-			      ]
-			    },
-			    "medida.ratio_conversion_real_MoM": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Ratio Conversion Real MoM"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ratio conversion real MoM": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "MoM": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "real MoM": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "conversion real MoM": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "ratio conversion real ma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "ratio conversion real mommy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "ratio conversion real mamma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "ratio conversion real mama": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "ratio conversion real mammy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "ratio conversion real momma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "conversion real ma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "conversion real mommy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "conversion real mamma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "conversion real mama": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        }
-			      ]
-			    },
-			    "medida.ratio_conversion_real_WoW": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Ratio Conversion Real WoW"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ratio conversion real WoW": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "WoW": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "real WoW": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "conversion real WoW": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "ratio conversion real winner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "ratio conversion real sensation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "conversion real winner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "conversion real sensation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "real winner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "real sensation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "ratio conversion real smash": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "ratio conversion real triumph": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "ratio conversion real knockout": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "conversion real smash": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        }
-			      ]
-			    },
 			    "medida.variacion_transacciones_real_WoW": {
 			      "Definition": {
 			        "Binding": {
@@ -3043,22 +2449,6 @@ cultureInfo es-AR
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.504
-			          }
-			        }
-			      ]
-			    },
-			    "medida.ratio_conversion_real_periodo_anterior": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Ratio Conversion Real Periodo Anterior"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ratio conversion real periodo anterior": {
-			            "State": "Generated"
 			          }
 			        }
 			      ]
@@ -4201,158 +3591,6 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "selector_analisis_temporal": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Selector_Analisis_Temporal"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "selector analisis temporal": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "Selector_Analisis_Temporal": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "selector_analisis_temporal.analisis": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Selector_Analisis_Temporal",
-			          "ConceptualProperty": "Analisis"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "analisis": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.variacion_ratio_conversion_real": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "% Variacion Ratio Conversion Real"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "% variacion ratio conversion real": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "percentage variacion ratio conversion real": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "pct variacion ratio conversion real": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        },
-			        {
-			          "% Variacion Ratio": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
-			        }
-			      ]
-			    },
-			    "medida.transacciones_google_sobre_el_total": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "% Transacciones Google sobre el total"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "% transacciones google sobre el total": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.variacion_ratio_conversion_google": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "% Variacion Ratio Conversion Google"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "% variacion ratio conversion google": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "percentage variacion ratio conversion google": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "pct variacion ratio conversion google": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        }
-			      ]
-			    },
-			    "medida.ratio_conversion_google_periodo_anterior": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Ratio Conversion Google Periodo Anterior"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "ratio conversion google periodo anterior": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "medida.variacion_cesta_MoM": {
 			      "Definition": {
 			        "Binding": {
@@ -4913,552 +4151,6 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "medida.transacciones_perdidas_MoM": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Transacciones Perdidas MoM"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "transacciones perdidas MoM": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "transaccione perdida ma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "transaccione perdida mommy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "transaccione perdida mamma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "transaccione perdida mama": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "transaccione perdida mammy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "transaccione perdida momma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "transaccione perdida mother": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "transaccione perdida mum": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "transaccione perdida mummy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        }
-			      ]
-			    },
-			    "medida.transacciones_perdidas_WoW": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Transacciones Perdidas WoW"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "transacciones perdidas WoW": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "transaccione perdida winner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "transaccione perdida sensation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.508
-			          }
-			        },
-			        {
-			          "transaccione perdida smash": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "transaccione perdida triumph": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "transaccione perdida knockout": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        }
-			      ]
-			    },
-			    "medida.variacion_transacciones_perdidas_MoM": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Variacion Transacciones Perdidas MoM"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "variacion transacciones perdidas MoM": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "variacion transaccione perdida ma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "variacion transaccione perdida mommy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "variacion transaccione perdida mamma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "variacion transaccione perdida mama": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "variacion transaccione perdida mammy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "variacion transaccione perdida momma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "variacion transaccione perdida mother": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "variacion transaccione perdida mum": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "variacion transaccione perdida mummy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        }
-			      ]
-			    },
-			    "medida.variacion_transacciones_perdidas_WoW": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Variacion Transacciones Perdidas WoW"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "variacion transacciones perdidas WoW": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "variacion transaccione perdida winner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "variacion transaccione perdida sensation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "variacion transaccione perdida smash": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "variacion transaccione perdida triumph": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "variacion transaccione perdida knockout": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        }
-			      ]
-			    },
-			    "medida.variacion_transacciones_perdidas_MoM1": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "% Variacion Transacciones Perdidas MoM"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "% variacion transacciones perdidas MoM": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "percentage variacion transaccione perdida mom": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "pct variacion transaccione perdida mom": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        },
-			        {
-			          "% variacion transaccione perdida ma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "% variacion transaccione perdida mommy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "% variacion transaccione perdida mamma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "% variacion transaccione perdida mama": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "% variacion transaccione perdida mammy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "% variacion transaccione perdida momma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "% variacion transaccione perdida mother": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        },
-			        {
-			          "% variacion transaccione perdida mum": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        }
-			      ]
-			    },
-			    "medida.variacion_transacciones_perdidas_WoW1": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "% Variacion Transacciones Perdidas WoW"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "% variacion transacciones perdidas WoW": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "percentage variacion transaccione perdida wow": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.624
-			          }
-			        },
-			        {
-			          "pct variacion transaccione perdida wow": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        },
-			        {
-			          "% variacion transaccione perdida winner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "% variacion transaccione perdida sensation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "% variacion transaccione perdida smash": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        },
-			        {
-			          "% variacion transaccione perdida triumph": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        },
-			        {
-			          "% variacion transaccione perdida knockout": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        }
-			      ]
-			    },
 			    "medida.variacion_transacciones_google_WoW": {
 			      "Definition": {
 			        "Binding": {
@@ -5833,598 +4525,28 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "medida.variacion_ratio_conversion_google_MoM": {
+			    "medida.variacion_ratio_conversion_google_vs_real": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Variacion Ratio Conversion Google MoM"
+			          "ConceptualProperty": "% Variacion Ratio Conversion Google vs Real"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "variacion ratio conversion google MoM": {
+			          "% variacion ratio conversion google vs real": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "variacion ratio conversion google ma": {
-			            "Type": "Noun",
+			          "% Var. Ratio": {
 			            "State": "Suggested",
 			            "Source": {
-			              "Agent": "Thesaurus"
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
 			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion google mommy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion google mamma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion google mama": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion google mammy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion google momma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion google mother": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        },
-			        {
-			          "variacion ratio conversion google mum": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        },
-			        {
-			          "variacion ratio conversion google mummy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        }
-			      ]
-			    },
-			    "medida.variacion_ratio_conversion_google_WoW": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Variacion Ratio Conversion Google WoW"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "variacion ratio conversion google WoW": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "variacion ratio conversion google winner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion google sensation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion google smash": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        },
-			        {
-			          "variacion ratio conversion google triumph": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        },
-			        {
-			          "variacion ratio conversion google knockout": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        }
-			      ]
-			    },
-			    "medida.variacion_ratio_conversion_google_MoM1": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "% Variacion Ratio Conversion Google MoM"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "% variacion ratio conversion google MoM": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.variacion_ratio_conversion_google_WoW1": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "% Variacion Ratio Conversion Google WoW"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "% variacion ratio conversion google WoW": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.variacion_ratio_conversion_real_MoM": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Variacion Ratio Conversion Real MoM"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "variacion ratio conversion real MoM": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "variacion ratio conversion real ma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion real mommy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion real mamma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion real mama": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion real mammy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion real momma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion real mother": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        },
-			        {
-			          "variacion ratio conversion real mum": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        },
-			        {
-			          "variacion ratio conversion real mummy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        }
-			      ]
-			    },
-			    "medida.variacion_ratio_conversion_real_WoW": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Variacion Ratio Conversion Real WoW"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "variacion ratio conversion real WoW": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "variacion ratio conversion real winner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion real sensation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.52
-			          }
-			        },
-			        {
-			          "variacion ratio conversion real smash": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        },
-			        {
-			          "variacion ratio conversion real triumph": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        },
-			        {
-			          "variacion ratio conversion real knockout": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.504
-			          }
-			        }
-			      ]
-			    },
-			    "medida.variacion_ratio_conversion_real_MoM1": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "% Variacion Ratio Conversion Real MoM"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "% variacion ratio conversion real MoM": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.variacion_ratio_conversion_real_WoW1": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "% Variacion Ratio Conversion Real WoW"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "% variacion ratio conversion real WoW": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.diferencia_CR_google_vs_real": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "% Diferencia CR Google vs Real"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "% diferencia CR google vs real": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.diferencia_absoluta_CR_MoM": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Diferencia Absoluta CR MoM"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "diferencia absoluta CR MoM": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "diferencia absoluta cr ma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "diferencia absoluta cr mommy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "diferencia absoluta cr mamma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "diferencia absoluta cr mama": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "diferencia absoluta cr mammy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "diferencia absoluta cr momma": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "diferencia absoluta cr mother": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "diferencia absoluta cr mum": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "diferencia absoluta cr mummy": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        }
-			      ]
-			    },
-			    "medida.diferencia_absoluta_CR_WoW": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Diferencia Absoluta CR WoW"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "diferencia absoluta CR WoW": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "diferencia absoluta cr winner": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "diferencia absoluta cr sensation": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.514
-			          }
-			        },
-			        {
-			          "diferencia absoluta cr smash": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "diferencia absoluta cr triumph": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
-			          }
-			        },
-			        {
-			          "diferencia absoluta cr knockout": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.499
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -6974,9 +5096,147 @@ cultureInfo es-AR
 			          }
 			        }
 			      ]
+			    },
+			    "fact_transaccione.transacciones_reales_distribuida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FactTransacciones",
+			          "ConceptualProperty": "transacciones_reales_distribuidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "transacciones reales distribuida": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "transaccione reale distribuida": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "transacciones_reales_distribuidas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.semana_del_año": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "DimCalendario",
+			          "ConceptualProperty": "Semana del año"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "semana del año": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "fact_transaccione_has_dim_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_dim_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "fact_transaccione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_fact_transacciones"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_dim_canal": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "dim_canal": {
+			          "Target": {
+			            "Entity": "dim_canal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "dim_canal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_dim_canals"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_canal"
+			            },
+			            "Object": {
+			              "Role": "fact_transaccione"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_canals_have_fact_transacciones"
+			        }
+			      ]
+			    },
 			    "fact_transaccione_has_dim_tipo_aplicacion": {
 			      "Binding": {
 			        "ConceptualEntity": "FactTransacciones"
@@ -7066,6 +5326,72 @@ cultureInfo es-AR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_mercado_have_fact_transacciones"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_semana_del_año": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.semana_del_año": {
+			          "Target": {
+			            "Entity": "dim_calendario.semana_del_año"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.semana_del_año"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_semana_del_años"
+			        }
+			      ]
+			    },
+			    "fact_transaccione_has_transacciones_reales_distribuida": {
+			      "Binding": {
+			        "ConceptualEntity": "FactTransacciones"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_transaccione": {
+			          "Target": {
+			            "Entity": "fact_transaccione"
+			          }
+			        },
+			        "fact_transaccione.transacciones_reales_distribuida": {
+			          "Target": {
+			            "Entity": "fact_transaccione.transacciones_reales_distribuida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_transaccione"
+			            },
+			            "Object": {
+			              "Role": "fact_transaccione.transacciones_reales_distribuida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_transacciones_have_transacciones_reales_distribuidas"
 			        }
 			      ]
 			    },
@@ -7333,7 +5659,7 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fact_transaccione_has_medida_diferencia_CR_google_vs_real": {
+			    "fact_transaccione_has_medida_variacion_ratio_conversion_google_vs_real": {
 			      "Binding": {
 			        "ConceptualEntity": "FactTransacciones"
 			      },
@@ -7344,9 +5670,9 @@ cultureInfo es-AR
 			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "medida.diferencia_CR_google_vs_real": {
+			        "medida.variacion_ratio_conversion_google_vs_real": {
 			          "Target": {
-			            "Entity": "medida.diferencia_CR_google_vs_real"
+			            "Entity": "medida.variacion_ratio_conversion_google_vs_real"
 			          }
 			        }
 			      },
@@ -7357,12 +5683,12 @@ cultureInfo es-AR
 			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "medida.diferencia_CR_google_vs_real"
+			              "Role": "medida.variacion_ratio_conversion_google_vs_real"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_transacciones_have__diferencia_CR_google_vs_real"
+			          "ID": "fact_transacciones_have__variacion_ratio_conversion_google_vs_real"
 			        }
 			      ]
 			    },
@@ -8125,105 +6451,6 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "selector_analisis_temporal_has_medida_ratio_conversion_google_periodo_anterior": {
-			      "Binding": {
-			        "ConceptualEntity": "Selector_Analisis_Temporal"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "selector_analisis_temporal": {
-			          "Target": {
-			            "Entity": "selector_analisis_temporal"
-			          }
-			        },
-			        "medida.ratio_conversion_google_periodo_anterior": {
-			          "Target": {
-			            "Entity": "medida.ratio_conversion_google_periodo_anterior"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "selector_analisis_temporal"
-			            },
-			            "Object": {
-			              "Role": "medida.ratio_conversion_google_periodo_anterior"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "selector_analisis_temporal_have_ratio_conversion_google_periodo_anterior"
-			        }
-			      ]
-			    },
-			    "fact_transaccione_has_medida_ratio_conversion_google_periodo_anterior": {
-			      "Binding": {
-			        "ConceptualEntity": "FactTransacciones"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_transaccione": {
-			          "Target": {
-			            "Entity": "fact_transaccione"
-			          }
-			        },
-			        "medida.ratio_conversion_google_periodo_anterior": {
-			          "Target": {
-			            "Entity": "medida.ratio_conversion_google_periodo_anterior"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_transaccione"
-			            },
-			            "Object": {
-			              "Role": "medida.ratio_conversion_google_periodo_anterior"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_transacciones_have_ratio_conversion_google_periodo_anterior"
-			        }
-			      ]
-			    },
-			    "fact_transaccione_has_medida_variacion_ratio_conversion_google": {
-			      "Binding": {
-			        "ConceptualEntity": "FactTransacciones"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_transaccione": {
-			          "Target": {
-			            "Entity": "fact_transaccione"
-			          }
-			        },
-			        "medida.variacion_ratio_conversion_google": {
-			          "Target": {
-			            "Entity": "medida.variacion_ratio_conversion_google"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_transaccione"
-			            },
-			            "Object": {
-			              "Role": "medida.variacion_ratio_conversion_google"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_transacciones_have__variacion_ratio_conversion_google"
-			        }
-			      ]
-			    },
 			    "fact_transaccione_has_medida_transacciones_google_sobre_el_total": {
 			      "Binding": {
 			        "ConceptualEntity": "FactTransacciones"
@@ -8254,72 +6481,6 @@ cultureInfo es-AR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_transacciones_have__transacciones_google_sobre_el_total"
-			        }
-			      ]
-			    },
-			    "fact_transaccione_has_medida_variacion_ratio_conversion_real": {
-			      "Binding": {
-			        "ConceptualEntity": "FactTransacciones"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_transaccione": {
-			          "Target": {
-			            "Entity": "fact_transaccione"
-			          }
-			        },
-			        "medida.variacion_ratio_conversion_real": {
-			          "Target": {
-			            "Entity": "medida.variacion_ratio_conversion_real"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_transaccione"
-			            },
-			            "Object": {
-			              "Role": "medida.variacion_ratio_conversion_real"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_transacciones_have__variacion_ratio_conversion_real"
-			        }
-			      ]
-			    },
-			    "selector_analisis_temporal_has_analisis": {
-			      "Binding": {
-			        "ConceptualEntity": "Selector_Analisis_Temporal"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "selector_analisis_temporal": {
-			          "Target": {
-			            "Entity": "selector_analisis_temporal"
-			          }
-			        },
-			        "selector_analisis_temporal.analisis": {
-			          "Target": {
-			            "Entity": "selector_analisis_temporal.analisis"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "selector_analisis_temporal"
-			            },
-			            "Object": {
-			              "Role": "selector_analisis_temporal.analisis"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "selector_analisis_temporal_have_analisises"
 			        }
 			      ]
 			    },
@@ -8683,72 +6844,6 @@ cultureInfo es-AR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_transacciones_have__variacion_cesta_WoW"
-			        }
-			      ]
-			    },
-			    "selector_analisis_temporal_has_medida_ratio_conversion_real_periodo_anterior": {
-			      "Binding": {
-			        "ConceptualEntity": "Selector_Analisis_Temporal"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "selector_analisis_temporal": {
-			          "Target": {
-			            "Entity": "selector_analisis_temporal"
-			          }
-			        },
-			        "medida.ratio_conversion_real_periodo_anterior": {
-			          "Target": {
-			            "Entity": "medida.ratio_conversion_real_periodo_anterior"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "selector_analisis_temporal"
-			            },
-			            "Object": {
-			              "Role": "medida.ratio_conversion_real_periodo_anterior"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "selector_analisis_temporal_have_ratio_conversion_real_periodo_anterior"
-			        }
-			      ]
-			    },
-			    "fact_transaccione_has_medida_ratio_conversion_real_periodo_anterior": {
-			      "Binding": {
-			        "ConceptualEntity": "FactTransacciones"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_transaccione": {
-			          "Target": {
-			            "Entity": "fact_transaccione"
-			          }
-			        },
-			        "medida.ratio_conversion_real_periodo_anterior": {
-			          "Target": {
-			            "Entity": "medida.ratio_conversion_real_periodo_anterior"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_transaccione"
-			            },
-			            "Object": {
-			              "Role": "medida.ratio_conversion_real_periodo_anterior"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_transacciones_have_ratio_conversion_real_periodo_anterior"
 			        }
 			      ]
 			    },
@@ -9491,7 +7586,7 @@ cultureInfo es-AR
 			        }
 			      ]
 			    },
-			    "fact_transaccione_has_medida_diferencia_transacciones_googlereal": {
+			    "fact_transaccione_has_medida_variacion_ratio_conversion_real_vs_google": {
 			      "Binding": {
 			        "ConceptualEntity": "FactTransacciones"
 			      },
@@ -9502,9 +7597,9 @@ cultureInfo es-AR
 			            "Entity": "fact_transaccione"
 			          }
 			        },
-			        "medida.diferencia_transacciones_googlereal": {
+			        "medida.variacion_ratio_conversion_real_vs_google": {
 			          "Target": {
-			            "Entity": "medida.diferencia_transacciones_googlereal"
+			            "Entity": "medida.variacion_ratio_conversion_real_vs_google"
 			          }
 			        }
 			      },
@@ -9515,12 +7610,12 @@ cultureInfo es-AR
 			              "Role": "fact_transaccione"
 			            },
 			            "Object": {
-			              "Role": "medida.diferencia_transacciones_googlereal"
+			              "Role": "medida.variacion_ratio_conversion_real_vs_google"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_transacciones_have__diferencia_transacciones_googlereal"
+			          "ID": "fact_transacciones_have__variacion_ratio_conversion_real_vs_google"
 			        }
 			      ]
 			    },
@@ -10076,98 +8171,6 @@ cultureInfo es-AR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_mercado_have_mercado"
-			        }
-			      ]
-			    },
-			    "fact_transaccione_has_dim_canal": {
-			      "Binding": {
-			        "ConceptualEntity": "FactTransacciones"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_transaccione": {
-			          "Target": {
-			            "Entity": "fact_transaccione"
-			          }
-			        },
-			        "dim_canal": {
-			          "Target": {
-			            "Entity": "dim_canal"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_transaccione"
-			            },
-			            "Object": {
-			              "Role": "dim_canal"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_transacciones_have_dim_canals"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_canal"
-			            },
-			            "Object": {
-			              "Role": "fact_transaccione"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_canals_have_fact_transacciones"
-			        }
-			      ]
-			    },
-			    "fact_transaccione_has_dim_calendario": {
-			      "Binding": {
-			        "ConceptualEntity": "FactTransacciones"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_transaccione": {
-			          "Target": {
-			            "Entity": "fact_transaccione"
-			          }
-			        },
-			        "dim_calendario": {
-			          "Target": {
-			            "Entity": "dim_calendario"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_transaccione"
-			            },
-			            "Object": {
-			              "Role": "dim_calendario"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_transacciones_have_dim_calendarios"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendario"
-			            },
-			            "Object": {
-			              "Role": "fact_transaccione"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_calendarios_have_fact_transacciones"
 			        }
 			      ]
 			    }

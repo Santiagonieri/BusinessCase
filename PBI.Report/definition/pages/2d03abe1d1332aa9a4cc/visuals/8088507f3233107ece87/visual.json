@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "8088507f3233107ece87",
   "position": {
-    "x": 207.38986864956095,
-    "y": 179.21189736565321,
+    "x": 207.66779333655239,
+    "y": 179.97875422501207,
     "z": 0,
-    "height": 249.09326614974441,
-    "width": 418.16109385319083,
+    "height": 249.20135200386287,
+    "width": 433.13568324480929,
     "tabOrder": 0
   },
   "visual": {
@@ -43,7 +43,7 @@
               },
               "queryRef": "DimTipoAplicacion.Tipo Aplicacion",
               "nativeQueryRef": "Tipo Aplicacion",
-              "active": false
+              "active": true
             }
           ]
         },
@@ -85,32 +85,15 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "% Variacion Ratio Conversion Real"
+                  "Property": "% Variacion Ratio Conversion Google vs Real"
                 }
               },
-              "queryRef": "Medidas.% Variacion Ratio Conversion Real1",
-              "nativeQueryRef": "% Variacion Ratio",
-              "displayName": "% Variacion Ratio"
+              "queryRef": "Medidas.% Variacion Ratio Conversion Google vs Real",
+              "nativeQueryRef": "% Var. Ratio",
+              "displayName": "% Var. Ratio"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
-                  }
-                },
-                "Property": "% Variacion Ratio Conversion Real"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "expansionStates": [
@@ -123,7 +106,6 @@
             "queryRefs": [
               "DimMercados.Mercado"
             ],
-            "isCollapsed": true,
             "identityKeys": [
               {
                 "Column": {
@@ -211,7 +193,7 @@
                                       "Entity": "Medidas"
                                     }
                                   },
-                                  "Property": "% Variacion Ratio Conversion Real"
+                                  "Property": "% Variacion Ratio Conversion Google vs Real"
                                 }
                               },
                               "Right": {
@@ -229,7 +211,7 @@
                                                       "Entity": "Medidas"
                                                     }
                                                   },
-                                                  "Property": "% Variacion Ratio Conversion Real"
+                                                  "Property": "% Variacion Ratio Conversion Google vs Real"
                                                 }
                                               },
                                               "Scope": [
@@ -258,7 +240,7 @@
                                                       "Entity": "Medidas"
                                                     }
                                                   },
-                                                  "Property": "% Variacion Ratio Conversion Real"
+                                                  "Property": "% Variacion Ratio Conversion Google vs Real"
                                                 }
                                               },
                                               "Scope": [
@@ -281,7 +263,7 @@
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#FBB43A'"
+                              "Value": "'#F5ED58'"
                             }
                           }
                         },
@@ -296,7 +278,7 @@
                                       "Entity": "Medidas"
                                     }
                                   },
-                                  "Property": "% Variacion Ratio Conversion Real"
+                                  "Property": "% Variacion Ratio Conversion Google vs Real"
                                 }
                               },
                               "Right": {
@@ -314,7 +296,7 @@
                                                       "Entity": "Medidas"
                                                     }
                                                   },
-                                                  "Property": "% Variacion Ratio Conversion Real"
+                                                  "Property": "% Variacion Ratio Conversion Google vs Real"
                                                 }
                                               },
                                               "Scope": [
@@ -343,7 +325,7 @@
                                                       "Entity": "Medidas"
                                                     }
                                                   },
-                                                  "Property": "% Variacion Ratio Conversion Real"
+                                                  "Property": "% Variacion Ratio Conversion Google vs Real"
                                                 }
                                               },
                                               "Scope": [
@@ -366,7 +348,7 @@
                           },
                           "Value": {
                             "Literal": {
-                              "Value": "'#FBB43A'"
+                              "Value": "'#F5ED58'"
                             }
                           }
                         }
@@ -385,7 +367,7 @@
                 }
               }
             ],
-            "metadata": "Medidas.% Variacion Ratio Conversion Real1"
+            "metadata": "Medidas.% Variacion Ratio Conversion Google vs Real"
           }
         }
       ],
@@ -455,20 +437,6 @@
           "selector": {
             "metadata": "Medidas.Ratio Conversion Google"
           }
-        },
-        {
-          "properties": {
-            "value": {
-              "expr": {
-                "Literal": {
-                  "Value": "81.4406704541857D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Medidas.% Variacion Ratio Conversion Real1"
-          }
         }
       ]
     },
@@ -507,5 +475,79 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f19b72d0d4db75dfed6e",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimMercados"
+              }
+            },
+            "Property": "Mercado"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "70fa29a73129696d0848",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DimTipoAplicacion"
+              }
+            },
+            "Property": "Tipo Aplicacion"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1c75a49b7ede67c08508",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Ratio Conversion Real"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5fc29547278a48033dcc",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Ratio Conversion Google"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "fb2ccbd2e3467d0e58f1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "% Variacion Ratio Conversion Google vs Real"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

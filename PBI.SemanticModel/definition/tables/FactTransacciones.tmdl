@@ -1,3 +1,4 @@
+/// Tabla de hechos central que integra datos de Google Analytics (sesiones y transacciones de frontend) con datos del transaccional (transacciones reales y revenue confirmados). Cada fila representa una combinación única de fecha, mercado, dispositivo y canal, con las transacciones reales distribuidas proporcionalmente según el peso de conversión de cada canal. Esta tabla es el resultado del proceso ETL que incluye: (1) clasificación de canales mediante reglas de negocio sobre source/medium/campaign, y (2) distribución del revenue del transaccional según pesos calculados por canal en cada combinación fecha-mercado-dispositivo. Granularidad: Una fila por cada combinación de fecha + mercado + dispositivo + canal +canal_detail.
 table FactTransacciones
 	lineageTag: 0e3616a8-f2ca-4c79-be80-5d7cf8423dbf
 

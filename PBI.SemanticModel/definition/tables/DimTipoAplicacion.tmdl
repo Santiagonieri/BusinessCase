@@ -1,3 +1,5 @@
+/// Tabla de dimensión que clasifica los diferentes tipos de dispositivos desde los cuales los usuarios acceden a la plataforma (Web, Móvil). Permite analizar el comportamiento y conversión por tipo de dispositivo. Se relaciona con la tabla de hechos a través de Id_TipoApp.
+/// 
 table DimTipoAplicacion
 	lineageTag: 8b445670-1b54-4849-9b09-a34a1c89d524
 

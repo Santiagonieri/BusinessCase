@@ -1,3 +1,4 @@
+/// abla de dimensión que contiene la información geográfica de los mercados donde opera el negocio. Permite segmentar y analizar métricas por país o región. Se relaciona con la tabla de hechos a través de Id_Mercado.
 table DimMercados
 	lineageTag: 765852c9-dd81-460b-ad6a-b57fab9afbc7
 

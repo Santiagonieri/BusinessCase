@@ -71,6 +71,20 @@
               },
               "queryRef": "Medidas.Revenue Total",
               "nativeQueryRef": "Revenue Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Cesta Media"
+                }
+              },
+              "queryRef": "Medidas.Cesta Media",
+              "nativeQueryRef": "Cesta Media"
             }
           ]
         }
@@ -166,7 +180,7 @@
             "columnCount": {
               "expr": {
                 "Literal": {
-                  "Value": "4L"
+                  "Value": "5L"
                 }
               }
             },
@@ -479,6 +493,77 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Medidas.Cesta Media",
+            "id": "field-8b65acad-7c90-7914-3f6a-79377bae35dd",
+            "order": 0
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "% Variacion Cesta MoM"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Medidas.Cesta Media",
+            "id": "field-3ba3643f-25ee-aa0b-5fcb-d0b8ee8610a1",
+            "order": 0
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "% Variacion Cesta WoW"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Medidas.Cesta Media",
+            "id": "field-59ca1c70-bbbf-8b7e-8c88-3f54a083efae",
+            "order": 0
+          }
         }
       ],
       "referenceLabelTitle": [
@@ -501,7 +586,7 @@
             "titleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "8D"
+                  "Value": "12D"
                 }
               }
             }
@@ -619,6 +704,13 @@
                   "Value": "'% Var MoM'"
                 }
               }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
             }
           },
           "selector": {
@@ -645,7 +737,7 @@
             "titleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "12D"
                 }
               }
             }
@@ -674,7 +766,7 @@
             "titleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "12D"
                 }
               }
             }
@@ -713,6 +805,13 @@
                   "Value": "'% Var WoW'"
                 }
               }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
             }
           },
           "selector": {
@@ -735,6 +834,13 @@
                   "Value": "'% Var MoM'"
                 }
               }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
             }
           },
           "selector": {
@@ -755,6 +861,78 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Revenue Total"
+          }
+        },
+        {
+          "properties": {
+            "titleContentType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'custom'"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'% Var. MoM'"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Cesta Media",
+            "id": "field-3ba3643f-25ee-aa0b-5fcb-d0b8ee8610a1"
+          }
+        },
+        {
+          "properties": {
+            "titleContentType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'custom'"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'% Var. WoW'"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Cesta Media",
+            "id": "field-59ca1c70-bbbf-8b7e-8c88-3f54a083efae"
+          }
         }
       ],
       "referenceLabelValue": [
@@ -770,7 +948,7 @@
             "valueFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "12D"
                 }
               }
             }
@@ -792,7 +970,7 @@
             "valueFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "12D"
                 }
               }
             }
@@ -807,7 +985,7 @@
             "valueFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "12D"
                 }
               }
             },
@@ -829,7 +1007,7 @@
             "valueFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "12D"
                 }
               }
             },
@@ -851,7 +1029,7 @@
             "valueFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "12D"
                 }
               }
             }
@@ -866,7 +1044,7 @@
             "valueFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "12D"
                 }
               }
             }
@@ -881,7 +1059,7 @@
             "valueFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "12D"
                 }
               }
             }
@@ -903,6 +1081,51 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "valueFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Total Sesiones",
+            "id": "field-eb09e4c7-8102-759e-d9a5-e4a248631f82"
+          }
+        },
+        {
+          "properties": {
+            "valueFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Cesta Media",
+            "id": "field-3ba3643f-25ee-aa0b-5fcb-d0b8ee8610a1"
+          }
+        },
+        {
+          "properties": {
+            "valueFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Cesta Media",
+            "id": "field-59ca1c70-bbbf-8b7e-8c88-3f54a083efae"
           }
         }
       ],
