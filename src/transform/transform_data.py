@@ -1,7 +1,7 @@
 
 import pandas as pd
 import json
-import numpy as np
+
 
 
 def registros_con_valores_nulos(df):

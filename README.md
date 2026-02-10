@@ -13,28 +13,34 @@ El flujo está diseñado para ser modular, escalable y fácilmente adaptable a c
 
 ---
 
-## 📂 Estructura del proyecto
+## 📁 Estructura del Proyecto
+
+```
+.
 ├── src/
-│ ├── extract/ # Lectura de datos de entrada
-│ │ └── load_data.py 
-│ ├── save/ # Escritura y guardado de outputs
-│ │ └── save_data.py 
-│ ├── transform/ # Transformaciones y lógica de negocio 
-│ │ └── transform_data.py 
-│ └── __pycache__/ # Archivos compilados de Python (auto-generados)
+│   ├── extract/
+│   │   └── load_data.py
+│   ├── save/
+│   │   └── save_data.py
+│   ├── transform/
+│   │   └── transform_data.py
+│   └── __pycache__/
 ├── reglas/
-│ └── Reglas_De_Negocio.json # Reglas de clasificación de canal
+│   └── Reglas_De_Negocio.json
 ├── data/
-│ ├── raw/ # Archivos de entrada (Excel original)
-│ └── procesados/ # Datasets finales por etapa
-├── notebooks/ # Análisis exploratorio (opcional)
-├── main.py # Orquestador del proceso
-├── variables.py # Configuración de rutas y parámetros
-├── PBI.Report # Carpeta con metadatos del reporte (visuales, páginas, etc.)
-├── PBI.SemantiModel # Carpeta con definición del modelo semántico (tablas, relaciones, medidas DAX)
-├── PBI.pbip # Archivo de proyecto de Power BI Desktop (formato PBIP)
+│   ├── raw/
+│   └── procesados/
+├── notebooks/
+├── PBI.Report/
+├── PBI.SemanticModel/
+├── main.py
+├── variables.py
+├── PBI.pbip
 ├── requirements.txt
 └── README.md
+```
+
+---
 
 
 ## Decisiones de negocio
@@ -69,7 +75,6 @@ Los ratios se calculan usando el REAL como referencia y se comparan contra el fr
 
 Librerías principales:
 - pandas
-- numpy
 - openpyxl
 
 ---
