@@ -14,27 +14,29 @@ El flujo está diseñado para ser modular, escalable y fácilmente adaptable a c
 ---
 
 ## 📂 Estructura del proyecto
+
 ├── src/
-│ ├── extract/ # Lectura de datos de entrada
-│ │ └── load_data.py 
-│ ├── save/ # Escritura y guardado de outputs
-│ │ └── save_data.py 
-│ ├── transform/ # Transformaciones y lógica de negocio 
-│ │ └── transform_data.py 
-│ └── __pycache__/ # Archivos compilados de Python (auto-generados)
+│   ├── extract/              # Lectura de datos de entrada
+│   │   └── load_data.py
+│   ├── save/                 # Escritura y guardado de outputs
+│   │   └── save_data.py
+│   ├── transform/            # Transformaciones y lógica de negocio
+│   │   └── transform_data.py
+│   └── __pycache__/           # Archivos compilados de Python (auto-generados)
 ├── reglas/
-│ └── Reglas_De_Negocio.json # Reglas de clasificación de canal
+│   └── Reglas_De_Negocio.json # Reglas de clasificación de canal
 ├── data/
-│ ├── raw/ # Archivos de entrada (Excel original)
-│ └── procesados/ # Datasets finales por etapa
-├── notebooks/ # Análisis exploratorio (opcional)
-├── main.py # Orquestador del proceso
-├── variables.py # Configuración de rutas y parámetros
-├── PBI.Report # Carpeta con metadatos del reporte (visuales, páginas, etc.)
-├── PBI.SemantiModel # Carpeta con definición del modelo semántico (tablas, relaciones, medidas DAX)
-├── PBI.pbip # Archivo de proyecto de Power BI Desktop (formato PBIP)
+│   ├── raw/                  # Archivos de entrada (Excel original)
+│   └── procesados/           # Datasets finales por etapa
+├── notebooks/                # Análisis exploratorio (opcional)
+├── main.py                   # Orquestador del proceso
+├── variables.py              # Configuración de rutas y parámetros
+├── PBI.Report/               # Metadatos del reporte (visuales, páginas, etc.)
+├── PBI.SemanticModel/        # Modelo semántico (tablas, relaciones, medidas DAX)
+├── PBI.pbip                  # Proyecto Power BI Desktop (formato PBIP)
 ├── requirements.txt
 └── README.md
+
 
 
 ## Decisiones de negocio
