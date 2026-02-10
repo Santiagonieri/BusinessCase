@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
   "name": "8088507f3233107ece87",
   "position": {
-    "x": 225.21518987341773,
-    "y": 176.60759493670886,
+    "x": 207.38986864956095,
+    "y": 179.21189736565321,
     "z": 0,
-    "height": 257.62025316455697,
-    "width": 610.83544303797464,
+    "height": 249.09326614974441,
+    "width": 418.16109385319083,
     "tabOrder": 0
   },
   "visual": {
@@ -15,21 +15,6 @@
       "queryState": {
         "Rows": {
           "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "DimTipoAplicacion"
-                    }
-                  },
-                  "Property": "Tipo Aplicacion"
-                }
-              },
-              "queryRef": "DimTipoAplicacion.Tipo Aplicacion",
-              "nativeQueryRef": "Tipo Aplicacion",
-              "active": true
-            },
             {
               "field": {
                 "Column": {
@@ -44,41 +29,26 @@
               "queryRef": "DimMercados.Mercado",
               "nativeQueryRef": "Mercado",
               "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimTipoAplicacion"
+                    }
+                  },
+                  "Property": "Tipo Aplicacion"
+                }
+              },
+              "queryRef": "DimTipoAplicacion.Tipo Aplicacion",
+              "nativeQueryRef": "Tipo Aplicacion",
+              "active": false
             }
           ]
         },
         "Values": {
           "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Transacciones Google"
-                }
-              },
-              "queryRef": "Medidas.Transacciones Google",
-              "nativeQueryRef": "Trans. Google",
-              "displayName": "Trans. Google"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Transacciones Real"
-                }
-              },
-              "queryRef": "Medidas.Transacciones Real",
-              "nativeQueryRef": "Trans. Real",
-              "displayName": "Trans. Real"
-            },
             {
               "field": {
                 "Measure": {
@@ -101,11 +71,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Cesta Media"
+                  "Property": "Ratio Conversion Google"
                 }
               },
-              "queryRef": "Medidas.Cesta Media",
-              "nativeQueryRef": "Cesta Media"
+              "queryRef": "Medidas.Ratio Conversion Google",
+              "nativeQueryRef": "Ratio Conversion Google"
             },
             {
               "field": {
@@ -115,14 +85,32 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Revenue Total"
+                  "Property": "% Variacion Ratio Conversion Real"
                 }
               },
-              "queryRef": "Medidas.Revenue Total1",
-              "nativeQueryRef": "Revenue Total"
+              "queryRef": "Medidas.% Variacion Ratio Conversion Real1",
+              "nativeQueryRef": "% Variacion Ratio",
+              "displayName": "% Variacion Ratio"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "% Variacion Ratio Conversion Real"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "expansionStates": [
@@ -131,25 +119,6 @@
           "Rows"
         ],
         "levels": [
-          {
-            "queryRefs": [
-              "DimTipoAplicacion.Tipo Aplicacion"
-            ],
-            "isCollapsed": true,
-            "identityKeys": [
-              {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "DimTipoAplicacion"
-                    }
-                  },
-                  "Property": "Tipo Aplicacion"
-                }
-              }
-            ],
-            "isPinned": true
-          },
           {
             "queryRefs": [
               "DimMercados.Mercado"
@@ -168,32 +137,28 @@
               }
             ],
             "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "DimTipoAplicacion.Tipo Aplicacion"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DimTipoAplicacion"
+                    }
+                  },
+                  "Property": "Tipo Aplicacion"
+                }
+              }
+            ],
+            "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'móvil'"
-                  }
-                }
-              ],
-              "isToggled": true
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'web'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -226,6 +191,202 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Medidas"
+                                    }
+                                  },
+                                  "Property": "% Variacion Ratio Conversion Real"
+                                }
+                              },
+                              "Right": {
+                                "RangePercent": {
+                                  "Min": {
+                                    "ScopedEval": {
+                                      "Expression": {
+                                        "Aggregation": {
+                                          "Expression": {
+                                            "ScopedEval": {
+                                              "Expression": {
+                                                "Measure": {
+                                                  "Expression": {
+                                                    "SourceRef": {
+                                                      "Entity": "Medidas"
+                                                    }
+                                                  },
+                                                  "Property": "% Variacion Ratio Conversion Real"
+                                                }
+                                              },
+                                              "Scope": [
+                                                {
+                                                  "AllRolesRef": {}
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "Function": 3
+                                        }
+                                      },
+                                      "Scope": []
+                                    }
+                                  },
+                                  "Max": {
+                                    "ScopedEval": {
+                                      "Expression": {
+                                        "Aggregation": {
+                                          "Expression": {
+                                            "ScopedEval": {
+                                              "Expression": {
+                                                "Measure": {
+                                                  "Expression": {
+                                                    "SourceRef": {
+                                                      "Entity": "Medidas"
+                                                    }
+                                                  },
+                                                  "Property": "% Variacion Ratio Conversion Real"
+                                                }
+                                              },
+                                              "Scope": [
+                                                {
+                                                  "AllRolesRef": {}
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "Function": 4
+                                        }
+                                      },
+                                      "Scope": []
+                                    }
+                                  },
+                                  "Percent": 0
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#FBB43A'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Medidas"
+                                    }
+                                  },
+                                  "Property": "% Variacion Ratio Conversion Real"
+                                }
+                              },
+                              "Right": {
+                                "RangePercent": {
+                                  "Min": {
+                                    "ScopedEval": {
+                                      "Expression": {
+                                        "Aggregation": {
+                                          "Expression": {
+                                            "ScopedEval": {
+                                              "Expression": {
+                                                "Measure": {
+                                                  "Expression": {
+                                                    "SourceRef": {
+                                                      "Entity": "Medidas"
+                                                    }
+                                                  },
+                                                  "Property": "% Variacion Ratio Conversion Real"
+                                                }
+                                              },
+                                              "Scope": [
+                                                {
+                                                  "AllRolesRef": {}
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "Function": 3
+                                        }
+                                      },
+                                      "Scope": []
+                                    }
+                                  },
+                                  "Max": {
+                                    "ScopedEval": {
+                                      "Expression": {
+                                        "Aggregation": {
+                                          "Expression": {
+                                            "ScopedEval": {
+                                              "Expression": {
+                                                "Measure": {
+                                                  "Expression": {
+                                                    "SourceRef": {
+                                                      "Entity": "Medidas"
+                                                    }
+                                                  },
+                                                  "Property": "% Variacion Ratio Conversion Real"
+                                                }
+                                              },
+                                              "Scope": [
+                                                {
+                                                  "AllRolesRef": {}
+                                                }
+                                              ]
+                                            }
+                                          },
+                                          "Function": 4
+                                        }
+                                      },
+                                      "Scope": []
+                                    }
+                                  },
+                                  "Percent": 1
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#FBB43A'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "Medidas.% Variacion Ratio Conversion Real1"
+          }
         }
       ],
       "columnHeaders": [
@@ -242,6 +403,102 @@
               "expr": {
                 "Literal": {
                   "Value": "'Center'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "108.5677803029703D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Ratio Conversion Real"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "120.93221001447847D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.Ratio Conversion Google"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "81.4406704541857D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.% Variacion Ratio Conversion Real1"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "4D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
                 }
               }
             }

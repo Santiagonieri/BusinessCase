@@ -64,37 +64,46 @@ table DimCalendario
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Semana del año'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b9a6d25-6515-4a17-a579-11d5ce1bf42d
+		summarizeBy: none
+		sourceColumn: Semana del año
+
+		annotation SummarizationSetBy = Automatic
+
 	partition DimCalendario = m
 		mode: import
 		queryGroup: 'Dimensiones Sintéticas'
 		source = ```
 				let
 				    // Usamos los valores de las consultas FechaMin y FechaMax creadas antes
-				
-				    Fechas =FechasMinMax,
-				    FechaInicio = Fechas[FechaMin],
-				    FechaFin = Fechas[FechaMax],
+				    fechas = FechasMinMax,
+				    fecha_inicio = fechas[FechaMin],
+				    fecha_fin = fechas[FechaMax],
 				    
 				    // Calculamos el número de días entre ambas fechas
-				    NumeroDias = Duration.Days(Duration.From(FechaFin - FechaInicio)) + 1,
+				    numero_dias = Duration.Days(Duration.From(fecha_fin - fecha_inicio)) + 1,
 				    
 				    // Generamos la lista de fechas
-				    Origen = List.Dates(FechaInicio, NumeroDias, #duration(1, 0, 0, 0)),
+				    lista_fechas = List.Dates(fecha_inicio, numero_dias, #duration(1, 0, 0, 0)),
 				    
 				    // Convertimos la lista en tabla
-				    #"Convertido en tabla" = Table.FromList(Origen, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
-				    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Convertido en tabla",{{"Column1", "Fecha"}}),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Columnas con nombre cambiado",{{"Fecha", type date}}),
+				    tabla_fechas = Table.FromList(lista_fechas, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+				    renombrar_columna_fecha = Table.RenameColumns(tabla_fechas, {{"Column1", "Fecha"}}),
+				    cambiar_tipo_fecha = Table.TransformColumnTypes(renombrar_columna_fecha, {{"Fecha", type date}}),
 				    
 				    // Agregamos columnas útiles
-				    #"Año Agregado" = Table.AddColumn(#"Tipo cambiado", "Año", each Date.Year([Fecha]), Int64.Type),
-				    #"Mes Agregado" = Table.AddColumn(#"Año Agregado", "Mes Nro", each Date.Month([Fecha]), Int64.Type),
-				    #"Nombre Mes Agregado" = Table.AddColumn(#"Mes Agregado", "Mes", each Text.Proper(Date.MonthName([Fecha])), type text),
-				    #"Trimestre Agregado" = Table.AddColumn(#"Nombre Mes Agregado", "Trimestre", each "T" & Text.From(Date.QuarterOfYear([Fecha])), type text),
-				    #"Día Semana Agregado" = Table.AddColumn(#"Trimestre Agregado", "Día", each Text.Proper(Date.DayOfWeekName([Fecha])), type text),
-				    #"Mes-Año Agregado" = Table.AddColumn(#"Día Semana Agregado", "Mes-Año", each Text.Start([Mes],3) & "-" & Text.End(Text.From([Año]),2), type text)
+				    agregar_columna_ano = Table.AddColumn(cambiar_tipo_fecha, "Año", each Date.Year([Fecha]), Int64.Type),
+				    agregar_columna_mes_nro = Table.AddColumn(agregar_columna_ano, "Mes Nro", each Date.Month([Fecha]), Int64.Type),
+				    agregar_columna_mes_nombre = Table.AddColumn(agregar_columna_mes_nro, "Mes", each Text.Proper(Date.MonthName([Fecha])), type text),
+				    agregar_columna_trimestre = Table.AddColumn(agregar_columna_mes_nombre, "Trimestre", each "T" & Text.From(Date.QuarterOfYear([Fecha])), type text),
+				    agregar_columna_dia_semana = Table.AddColumn(agregar_columna_trimestre, "Día", each Text.Proper(Date.DayOfWeekName([Fecha])), type text),
+				    agregar_columna_mes_ano = Table.AddColumn(agregar_columna_dia_semana, "Mes-Año", each Text.Start([Mes], 3) & "-" & Text.End(Text.From([Año]), 2), type text),
+				    agregar_columna_semana_ano = Table.AddColumn(agregar_columna_mes_ano, "Semana del año", each Date.WeekOfYear([Fecha]), Int64.Type)
 				in
-				    #"Mes-Año Agregado"
+				    agregar_columna_semana_ano
 				```
 
 	annotation PBI_NavigationStepName = Navegación

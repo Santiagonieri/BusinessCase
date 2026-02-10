@@ -2,35 +2,226 @@ createOrReplace
 
 	ref table Medidas
 
+		measure '% Diferencia CR Google vs Real' = ```
+				
+				    DIVIDE(
+				        [Diferencia Absoluta Conversion Real Google vs Real],
+				        [Ratio Conversion Real],  // Usar Real como base de comparación
+				        0
+				    )
+				```
+			displayFolder: Ratios
+			lineageTag: cbbcf8ab-c394-4c8b-a43b-15068787cf0e
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 		measure '% Diferencia Transacciones Google-Real' =
 				
 				
-				DIVIDE([Diferencia Ratio Conversion Google-Real],[Ratio Conversion Google])
+				DIVIDE([Diferencia Absoluta Conversion Real Google vs Real],[Ratio Conversion Google])
 			formatString: 0.00\ %;-0.00\ %;0.00\ %
 			displayFolder: Transacciones
 			lineageTag: 1fc0e69e-1b5c-4cf7-a3da-c5375494899a
 
-		measure '% Transacciones perdidas' =
+		measure '% Transacciones Google sobre el total' = ```
 				
+				DIVIDE([Transacciones Google], CALCULATE([Transacciones Google],ALL()),0)
 				
-				DIVIDE([Transacciones Perdidas],[Transacciones Google],0)
+				```
+			formatString: 0.00\ %;-0.00\ %;0.00\ %
 			displayFolder: Transacciones
-			lineageTag: b6003544-57c8-4fad-8e91-e4dde2b1d898
+			lineageTag: 91ef4c90-7e24-41a2-be6a-32d621aca9aa
 
-			annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-		measure '% Variacion Dinamica Cesta' = ```
+		measure '% Variacion Cesta MoM' = ```
 				
 				DIVIDE(
-				    [Varacion Cesta Periodo Dinamico],
-				    [Cesta Periodo Anterior Dinamico],
+				    [Variacion Cesta MoM],
+				    [Cesta Media MoM],
+				    0
+				)
+				
+				```
+			displayFolder: Cesta
+			lineageTag: 6c05e816-5ae3-44dc-b9af-a488f1e7b427
+
+		measure '% Variacion Cesta WoW' = ```
+				
+				DIVIDE(
+				    [Variacion Cesta WoW],
+				    [Cesta Media WoW],
 				    0
 				)
 				
 				```
 			formatString: 0.00\ %;-0.00\ %;0.00\ %
 			displayFolder: Cesta
-			
+			lineageTag: aaab2bc6-891c-4789-8fb8-e815a5f25d49
+
+		measure '% Variacion Ratio Conversion Google' =
+				
+				DIVIDE(
+				    [Diferencia Absoluta Conversion Real Google vs Real],
+				    [Ratio Conversion Google],
+				    0
+				)
+			formatString: 0.00\ %;-0.00\ %;0.00\ %
+			displayFolder: Ratios
+			lineageTag: 1b7a3eef-4285-487c-bedb-194bb23a588c
+
+		measure '% Variacion Ratio Conversion Google MoM' = ```
+				
+				    DIVIDE(
+				        [Variacion Ratio Conversion Google MoM],
+				        [Ratio Conversion Google MoM],
+				        0
+				    )
+				```
+			displayFolder: Ratios
+			lineageTag: b0b815d0-7acf-47c2-ba29-ccd2ab129222
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure '% Variacion Ratio Conversion Google WoW' = ```
+				
+				    DIVIDE(
+				        [Variacion Ratio Conversion Google WoW],
+				        [Ratio Conversion Google WoW],
+				        0
+				    )
+				```
+			displayFolder: Ratios
+			lineageTag: 169fc1c0-6c7e-4dd4-aa46-f98c5f9ebe38
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure '% Variacion Ratio Conversion Real' =
+				
+				DIVIDE(
+				    [Diferencia Absoluta Conversion Real Google vs Real],
+				    [Ratio Conversion Real],
+				    0
+				)
+			formatString: 0.00\ %;-0.00\ %;0.00\ %
+			displayFolder: Ratios
+			lineageTag: 8ecad954-d602-48f6-b34b-e796711a84bc
+
+		measure '% Variacion Ratio Conversion Real MoM' = ```
+				
+				    DIVIDE(
+				        [Variacion Ratio Conversion Real MoM],
+				        [Ratio Conversion Real MoM],
+				        0
+				    )
+				```
+			displayFolder: Ratios
+			lineageTag: 9e2d8486-e671-4b7e-85f3-07869f566c3b
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure '% Variacion Ratio Conversion Real WoW' = ```
+				
+				    DIVIDE(
+				        [Variacion Ratio Conversion Real WoW],
+				        [Ratio Conversion Real WoW],
+				        0
+				    )
+				```
+			displayFolder: Ratios
+			lineageTag: 7dc8ea91-64e1-4f23-ba28-7b436faf123f
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure '% Variacion Revenue MoM' =
+				
+				DIVIDE(
+				    [Variacion Revenue MoM],
+				    [Revenue MoM],
+				    0
+				)
+			displayFolder: Revenue
+			lineageTag: eed815b0-1442-4ff0-9039-357cbaa29b42
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure '% Variacion Revenue WoW' =
+				
+				DIVIDE([Variacion Revenue WoW], [Revenue WoW], 0)
+			displayFolder: Revenue
+			lineageTag: 96a1fd6e-561b-475c-9e35-82c5a5e6fa24
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure '% Variacion Transacciones Google MoM' = ```
+				
+				    DIVIDE(
+				        [Variacion Transacciones Google MoM],
+				        [Transacciones Google MoM],
+				        0
+				    )
+				```
+			displayFolder: Transacciones
+			lineageTag: dd1ce176-e198-4e65-8bde-02cbab6203cb
+
+		measure '% Variacion Transacciones Google WoW' = ```
+				
+				    DIVIDE(
+				        [Variacion Transacciones Google WoW],
+				        [Transacciones Google WoW],
+				        0
+				    )
+				```
+			displayFolder: Transacciones
+			lineageTag: 1f76e62b-0c08-4560-b582-3700d07d5f73
+
+		measure '% Variacion Transacciones Perdidas MoM' = ```
+				
+				    DIVIDE(
+				        [Variacion Transacciones Perdidas MoM],
+				        [Transacciones Perdidas MoM],
+				        0
+				    )
+				```
+			displayFolder: Transacciones
+			lineageTag: bf273e53-e3a2-4fa2-8581-b8fb618cb6cd
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure '% Variacion Transacciones Perdidas WoW' = ```
+				
+				    DIVIDE(
+				        [Variacion Transacciones Perdidas WoW],
+				        [Transacciones Perdidas WoW],
+				        0
+				    )
+				```
+			displayFolder: Transacciones
+			lineageTag: 5ffc34be-9593-4bd2-8240-6dc6f40e5a81
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure '% Variacion Transacciones Real MoM' = ```
+				
+				    DIVIDE(
+				        [Variacion Transacciones Real MoM],
+				        [Transacciones Real MoM],
+				        0
+				    )
+				```
+			displayFolder: Transacciones
+			lineageTag: dfb8a1ca-87ec-4db2-9491-25c6254adcee
+
+		measure '% Variacion Transacciones Real WoW' = ```
+				
+				    DIVIDE(
+				        [Variacion Transacciones Real WoW],
+				        [Transacciones Real WoW],
+				        0
+				    )
+				```
+			displayFolder: Transacciones
+			lineageTag: 9672743d-4a69-4c1d-be57-3874ccd47c06
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 		measure 'Cesta Media' = ```
 				
@@ -45,7 +236,7 @@ createOrReplace
 				```
 			formatString: "€"\ #,0.00;-"€"\ #,0.00;"€"\ #,0.00
 			displayFolder: Cesta
-			
+			lineageTag: 2861ff47-12ec-4434-9b1a-c956c11439a2
 
 		measure 'Cesta Media MoM' =
 				
@@ -55,7 +246,7 @@ createOrReplace
 				)
 			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
 			displayFolder: Cesta
-			
+			lineageTag: 16a5ccd7-58f0-4270-afbd-e1b10faa4e0c
 
 			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
 
@@ -67,153 +258,11 @@ createOrReplace
 				)
 			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
 			displayFolder: Cesta
-			
+			lineageTag: d2bdefef-068a-4186-a748-bd95fd9c2164
 
 			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
 
-		measure 'Cesta Periodo Anterior Dinamico' =
-				
-				VAR Seleccion =
-				    SELECTEDVALUE(Selector_Analisis_Temporal[Analisis])
-				RETURN
-				SWITCH(
-				    Seleccion,
-				    "Semana vs Semana", [Cesta Media WoW],
-				    "Mes vs Mes", [Cesta Media MoM],
-				    BLANK()
-				)
-			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
-			displayFolder: Cesta
-			
-
-			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
-
-		measure 'Varacion Cesta Periodo Dinamico' =
-				
-				[Cesta Media] - [Cesta Periodo Anterior Dinamico]
-			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
-			displayFolder: Cesta
-			
-
-			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
-
-		measure '% Revenue MoM' =
-				
-				DIVIDE(
-				    [Variacion Revenue MoM],
-				    [Revenue MoM],
-				    0
-				)
-			displayFolder: Revenue
-			
-
-			annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-		measure '% Revenue WoW' = ```
-				
-				VAR IngresosActual = [Revenue Total]
-				VAR IngresosSemanaAnterior = 
-				    CALCULATE(
-				        [Revenue Total], 
-				        DATEADD('DimCalendario'[Fecha], -7, DAY)
-				    )
-				RETURN
-				DIVIDE(IngresosActual - IngresosSemanaAnterior, IngresosSemanaAnterior, 0)
-				```
-			displayFolder: Revenue
-			
-
-			annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-		measure '% Variacion Revenue' =
-				
-				DIVIDE(
-				    [Revenue Total] - [Revenue Periodo Anterior],
-				    [Revenue Periodo Anterior],
-				    0
-				)
-			displayFolder: Revenue
-			
-
-			annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-		measure 'Revenue MoM' =
-				
-				CALCULATE(
-				    [Revenue Total],
-				    DATEADD(DimCalendario[Fecha], -1, MONTH)
-				)
-			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
-			displayFolder: Revenue
-			
-
-			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
-
-		measure 'Revenue Periodo Anterior' = ```
-				
-				VAR Sel = SELECTEDVALUE(Selector_Analisis_Temporal[Analisis])
-				RETURN
-				SWITCH(
-				    Sel,
-				    "Semana vs Semana", [Revenue WoW],
-				    "Mes vs Mes", [Revenue MoM]
-				)
-				
-				```
-			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
-			displayFolder: Revenue
-			
-
-			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
-
-		measure 'Revenue Periodo Anterior Dinamico' =
-				
-				VAR Seleccion =
-				    SELECTEDVALUE(Selector_Analisis_Temporal[Analisis])
-				RETURN
-				SWITCH(
-				    Seleccion,
-				    "Semana vs Semana", [Revenue WoW],
-				    "Mes vs Mes", [Revenue MoM],
-				    BLANK()
-				)
-			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
-			displayFolder: Revenue
-			
-
-			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
-
-		measure 'Revenue Total' =
-				
-				
-				SUM(FactTransacciones[revenue_distribuido])
-			displayFolder: Revenue
-			
-
-			annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-		measure 'Revenue WoW' =
-				
-				CALCULATE(
-				    [Revenue Total],
-				    DATEADD(DimCalendario[Fecha], -7, DAY)
-				)
-			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
-			displayFolder: Revenue
-			
-
-			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
-
-		measure 'Variacion Revenue MoM' =
-				
-				[Revenue Total] - [Revenue MoM]
-			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
-			displayFolder: Revenue
-			
-
-			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
-
-		measure 'Diferencia Ratio Conversion Google-Real' =
+		measure 'Diferencia Absoluta Conversion Real Google vs Real' =
 				
 				
 				[Ratio Conversion Google]-[Ratio Conversion Real]
@@ -222,12 +271,36 @@ createOrReplace
 
 			annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+		measure 'Diferencia Absoluta CR MoM' = ```
+				
+				    CALCULATE(
+				        [Diferencia Absoluta Conversion Real Google vs Real],
+				        DATEADD(DimCalendario[Fecha], -1, MONTH)
+				    )
+				```
+			displayFolder: Ratios
+			lineageTag: 6a8240cf-b97a-4b52-9c45-7d64c8589554
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Diferencia Absoluta CR WoW' = ```
+				
+				    CALCULATE(
+				        [Diferencia Absoluta Conversion Real Google vs Real],
+				        DATEADD(DimCalendario[Fecha], -7, DAY)
+				    )
+				```
+			displayFolder: Ratios
+			lineageTag: 471a9d57-3f84-484b-98f4-086f2a844f66
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 		measure 'Ratio Conversion Google' = DIVIDE([Transacciones Google],[Sesiones],0)
 			formatString: 0.00\ %;-0.00\ %;0.00\ %
 			displayFolder: Ratios
 			lineageTag: fb6adb9d-a78b-4782-a775-240e0a078ee1
 
-		measure 'Ratio Conversion Google Mes Anterior' =
+		measure 'Ratio Conversion Google MoM' =
 				
 				CALCULATE(
 				    [Ratio Conversion Google],
@@ -238,7 +311,22 @@ createOrReplace
 
 			annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-		measure 'Ratio Conversion Google Semana Anterior' =
+		measure 'Ratio Conversion Google Periodo Anterior' =
+				
+				VAR Sel = SELECTEDVALUE(Selector_Analisis_Temporal[Analisis])
+				RETURN
+				SWITCH(
+				    Sel,
+				    "Semana vs Semana", [Ratio Conversion Google WoW],
+				    "Mes vs Mes", [Ratio Conversion Google MoM],
+				    BLANK()
+				)
+			displayFolder: Ratios
+			lineageTag: addc2ee0-85de-4516-9cca-abbc6751a158
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Ratio Conversion Google WoW' =
 				
 				CALCULATE(
 				    [Ratio Conversion Google],
@@ -254,7 +342,7 @@ createOrReplace
 			displayFolder: Ratios
 			lineageTag: ce6e62ce-706d-4a2a-a86a-e26ac2a5ffe9
 
-		measure 'Ratio Conversion Real Mes Anterior' =
+		measure 'Ratio Conversion Real MoM' =
 				
 				CALCULATE(
 				    [Ratio Conversion Real],
@@ -265,7 +353,22 @@ createOrReplace
 
 			annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-		measure 'Ratio Conversion Real Semana Anterior' =
+		measure 'Ratio Conversion Real Periodo Anterior' =
+				
+				VAR Sel = SELECTEDVALUE(Selector_Analisis_Temporal[Analisis])
+				RETURN
+				SWITCH(
+				    Sel,
+				    "Semana vs Semana", [Ratio Conversion Real WoW],
+				    "Mes vs Mes", [Ratio Conversion Real MoM],
+				    BLANK()
+				)
+			displayFolder: Ratios
+			lineageTag: 84bc9fde-c620-43c9-b5b5-73d820bb73d2
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Ratio Conversion Real WoW' =
 				
 				CALCULATE(
 				    [Ratio Conversion Real],
@@ -276,13 +379,36 @@ createOrReplace
 
 			annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-		measure 'Revenue Por Sesion' =
+		measure 'Revenue MoM' =
 				
-				
-				DIVIDE([Revenue Total],[Sesiones],0)
+				CALCULATE(
+				    [Revenue Total],
+				    DATEADD(DimCalendario[Fecha], -1, MONTH)
+				)
 			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
 			displayFolder: Revenue
-			lineageTag: f96e5556-2742-4628-9671-52ad79cd1f09
+			lineageTag: cd3d296c-199a-4f8c-9945-e2d95b374117
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+		measure 'Revenue Total' =
+				
+				
+				SUM(FactTransacciones[revenue_distribuido])
+			displayFolder: Revenue
+			lineageTag: 627fa9cf-40cb-4bb2-9776-67a95970e681
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Revenue WoW' =
+				
+				CALCULATE(
+				    [Revenue Total],
+				    DATEADD(DimCalendario[Fecha], -7, DAY)
+				)
+			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+			displayFolder: Revenue
+			lineageTag: 5aa5e58c-491d-40fd-b2fa-3404c72d9aa6
 
 			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
 
@@ -298,17 +424,27 @@ createOrReplace
 				
 				
 				VAR _TransGA= 
-				SUMMARIZE(FactTransacciones,FactTransacciones[fecha],FactTransacciones[Id_Mercado],FactTransacciones[Id_TipoApp],"Numero transacciones",sum(FactTransacciones[transacciones_ga]))
+				            SUMMARIZE(
+				                FactTransacciones,
+				                FactTransacciones[fecha],
+				                FactTransacciones[Id_Mercado],
+				                FactTransacciones[Id_TipoApp],
+				                "Numero transacciones",
+				                SUM(FactTransacciones[transacciones_ga])
+				            )
 				
 				RETURN
 				
-				SUMX(_TransGA,[Numero transacciones])
+				SUMX(
+				    _TransGA,
+				    [Numero transacciones]
+				)
 				```
 			formatString: #,0
 			displayFolder: Transacciones
 			lineageTag: 3af579b5-5309-4b53-8658-c6af4e0573e7
 
-		measure 'Transacciones Google Mes Anterior' =
+		measure 'Transacciones Google MoM' =
 				
 				CALCULATE(
 				    [Transacciones Google],
@@ -318,7 +454,7 @@ createOrReplace
 			displayFolder: Transacciones
 			lineageTag: 27c3610d-b4cb-4851-9ace-82fb2de7205e
 
-		measure 'Transacciones Google Semana Anterior' =
+		measure 'Transacciones Google WoW' =
 				
 				CALCULATE(
 				    [Transacciones Google],
@@ -331,6 +467,30 @@ createOrReplace
 		measure 'Transacciones Perdidas' = [Transacciones Google]-[Transacciones Real]
 			displayFolder: Transacciones
 			lineageTag: 1e5474d2-d8a5-4e6e-8065-63141e478496
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Transacciones Perdidas MoM' = ```
+				
+				    CALCULATE(
+				        [Transacciones Perdidas],
+				        DATEADD(DimCalendario[Fecha], -1, MONTH)
+				    )
+				```
+			displayFolder: Transacciones
+			lineageTag: 1717cb6d-cbd1-42ff-aca3-f4a171d48d69
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Transacciones Perdidas WoW' = ```
+				
+				    CALCULATE(
+				        [Transacciones Perdidas],
+				        DATEADD(DimCalendario[Fecha], -7, DAY)
+				    )
+				```
+			displayFolder: Transacciones
+			lineageTag: 4071a502-4ce5-48c8-b58b-8db6509986d5
 
 			annotation PBI_FormatHint = {"isGeneralNumber":true}
 
@@ -358,7 +518,7 @@ createOrReplace
 			displayFolder: Transacciones
 			lineageTag: 905739fd-9226-4a12-8d1d-d1682f47fb84
 
-		measure 'Transacciones Real Mes Anterior' =
+		measure 'Transacciones Real MoM' =
 				
 				CALCULATE(
 				    [Transacciones Real],
@@ -369,7 +529,7 @@ createOrReplace
 
 			annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-		measure 'Transacciones Real Semana Anterior' =
+		measure 'Transacciones Real WoW' =
 				
 				CALCULATE(
 				    [Transacciones Real],
@@ -377,6 +537,130 @@ createOrReplace
 				)
 			displayFolder: Transacciones
 			lineageTag: 6934d4e0-5b82-46df-9368-3672b169dceb
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Variacion Cesta MoM' =
+				
+				[Cesta Media] - [Cesta Media MoM]
+			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+			displayFolder: Cesta
+			lineageTag: e880e1c1-73eb-478c-9da9-f2ff4918ebe8
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+		measure 'Variacion Cesta WoW' =
+				
+				[Cesta Media] - [Cesta Media WoW]
+			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+			displayFolder: Cesta
+			lineageTag: b372a219-2b87-455b-aff9-d6521793c735
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+		measure 'Variacion Ratio Conversion Google MoM' = ```
+				
+				    [Ratio Conversion Google] - [Ratio Conversion Google MoM]
+				```
+			displayFolder: Ratios
+			lineageTag: 5147456f-85cd-4596-b8e5-85ca02537702
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Variacion Ratio Conversion Google WoW' = ```
+				
+				    [Ratio Conversion Google] - [Ratio Conversion Google WoW]
+				```
+			displayFolder: Ratios
+			lineageTag: 60aac6fe-95cd-4007-90a0-8f796b5b0296
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Variacion Ratio Conversion Real MoM' = ```
+				
+				    [Ratio Conversion Real] - [Ratio Conversion Real MoM]
+				```
+			displayFolder: Ratios
+			lineageTag: 91ca4cf5-9c05-43ec-a648-137e1efbd77b
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Variacion Ratio Conversion Real WoW' = ```
+				
+				    [Ratio Conversion Real] - [Ratio Conversion Real WoW]
+				```
+			displayFolder: Ratios
+			lineageTag: 8cfd2b7c-f970-4597-958c-b98ea29a100b
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Variacion Revenue MoM' =
+				
+				[Revenue Total] - [Revenue MoM]
+			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+			displayFolder: Revenue
+			lineageTag: c4a33cce-0c4a-4a20-9813-f16450826984
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+		measure 'Variacion Revenue WoW' =
+				
+				[Revenue Total] - [Revenue WoW]
+			formatString: \$\ #,0.###############;-\$\ #,0.###############;\$\ #,0.###############
+			displayFolder: Revenue
+			lineageTag: 840312a2-aa49-48ea-9b22-07998c4d0e30
+
+			annotation PBI_FormatHint = {"currencyCulture":"es-AR"}
+
+		measure 'Variacion Transacciones Google MoM' = ```
+				
+				    [Transacciones Google] - [Transacciones Google MoM]
+				```
+			formatString: 0
+			displayFolder: Transacciones
+			lineageTag: 426fd70e-90e3-4ec0-b9c4-d6d7ebc49d1a
+
+		measure 'Variacion Transacciones Google WoW' = ```
+				
+				    [Transacciones Google] - [Transacciones Google WoW]
+				```
+			formatString: 0
+			displayFolder: Transacciones
+			lineageTag: e45604fd-0478-48a1-8e4d-f00149308329
+
+		measure 'Variacion Transacciones Perdidas MoM' = ```
+				
+				    [Transacciones Perdidas] - [Transacciones Perdidas MoM]
+				```
+			displayFolder: Transacciones
+			lineageTag: ba86d128-aae0-4c28-8fcb-29e9d164f979
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Variacion Transacciones Perdidas WoW' = ```
+				
+				    [Transacciones Perdidas] - [Transacciones Perdidas WoW]
+				```
+			displayFolder: Transacciones
+			lineageTag: b167f8d9-f426-4e43-802d-61a4c196ce3c
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Variacion Transacciones Real MoM' = ```
+				
+				    [Transacciones Real] - [Transacciones Real MoM]
+				```
+			displayFolder: Transacciones
+			lineageTag: 24b5f462-f831-4490-afc6-376a7459dd9c
+
+			annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+		measure 'Variacion Transacciones Real WoW' = ```
+				
+				    [Transacciones Real] - [Transacciones Real WoW]
+				```
+			displayFolder: Transacciones
+			lineageTag: a0cffa75-520d-447f-be98-d4bc73654aa5
 
 			annotation PBI_FormatHint = {"isGeneralNumber":true}
 

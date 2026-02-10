@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "dd2d56fd9bbf294d88a2",
+  "name": "f107333e359bb1f7eb39",
   "position": {
     "x": 6,
-    "y": 622.16960594868283,
-    "z": 5000,
+    "y": 237.23169369501585,
+    "z": 11000,
     "height": 90,
     "width": 190,
-    "tabOrder": 5000
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DimTipoAplicacion"
+                      "Entity": "DimCalendario"
                     }
                   },
-                  "Property": "Tipo Aplicacion"
+                  "Property": "Semana del año"
                 }
               },
-              "queryRef": "DimTipoAplicacion.tipo_aplicacion",
-              "nativeQueryRef": "tipo_aplicacion",
+              "queryRef": "DimCalendario.Semana del año",
+              "nativeQueryRef": "Semana del año",
               "active": true
             }
           ]
@@ -48,11 +48,6 @@
           }
         }
       ],
-      "general": [
-        {
-          "properties": {}
-        }
-      ],
       "header": [
         {
           "properties": {
@@ -64,6 +59,11 @@
               }
             }
           }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
         }
       ]
     },
@@ -81,7 +81,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tipo Dispositivo'"
+                  "Value": "'Semana del Año'"
                 }
               }
             },

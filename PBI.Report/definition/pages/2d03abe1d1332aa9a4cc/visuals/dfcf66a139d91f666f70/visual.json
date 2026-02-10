@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "3bb3d535a571bbca0e73",
+  "name": "dfcf66a139d91f666f70",
   "position": {
     "x": 207.38986864956095,
-    "y": 447.46618398845487,
-    "z": 1,
-    "height": 236.694958784825,
+    "y": 435.06787662353548,
+    "z": 7000,
+    "height": 249.09326614974441,
     "width": 501.56788885355775,
-    "tabOrder": 1
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "columnChart",
@@ -49,6 +49,40 @@
             }
           ]
         },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "% Variacion Cesta WoW"
+                }
+              },
+              "queryRef": "Medidas.% Variacion Cesta WoW",
+              "nativeQueryRef": "% Var. WoW",
+              "displayName": "% Var. WoW"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "% Variacion Cesta MoM"
+                }
+              },
+              "queryRef": "Medidas.% Variacion Cesta MoM",
+              "nativeQueryRef": "% Var. MoM",
+              "displayName": "% Var. MoM"
+            }
+          ]
+        },
         "Y": {
           "projections": [
             {
@@ -59,11 +93,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "1.Cesta Media"
+                  "Property": "Cesta Media"
                 }
               },
-              "queryRef": "Medidas.Cesta promedio",
-              "nativeQueryRef": "Cesta promedio"
+              "queryRef": "Medidas.Cesta Media",
+              "nativeQueryRef": "Cesta Media"
             }
           ]
         }
@@ -78,7 +112,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "1.Cesta Media"
+                "Property": "Cesta Media"
               }
             },
             "direction": "Descending"
@@ -108,7 +142,7 @@
                                       "Entity": "Medidas"
                                     }
                                   },
-                                  "Property": "1.Cesta Media"
+                                  "Property": "Cesta Media"
                                 }
                               },
                               "Right": {
@@ -126,7 +160,7 @@
                                                       "Entity": "Medidas"
                                                     }
                                                   },
-                                                  "Property": "1.Cesta Media"
+                                                  "Property": "Cesta Media"
                                                 }
                                               },
                                               "Scope": [
@@ -155,7 +189,7 @@
                                                       "Entity": "Medidas"
                                                     }
                                                   },
-                                                  "Property": "1.Cesta Media"
+                                                  "Property": "Cesta Media"
                                                 }
                                               },
                                               "Scope": [
@@ -193,7 +227,7 @@
                                       "Entity": "Medidas"
                                     }
                                   },
-                                  "Property": "1.Cesta Media"
+                                  "Property": "Cesta Media"
                                 }
                               },
                               "Right": {
@@ -211,7 +245,7 @@
                                                       "Entity": "Medidas"
                                                     }
                                                   },
-                                                  "Property": "1.Cesta Media"
+                                                  "Property": "Cesta Media"
                                                 }
                                               },
                                               "Scope": [
@@ -240,7 +274,7 @@
                                                       "Entity": "Medidas"
                                                     }
                                                   },
-                                                  "Property": "1.Cesta Media"
+                                                  "Property": "Cesta Media"
                                                 }
                                               },
                                               "Scope": [
@@ -278,7 +312,7 @@
                                       "Entity": "Medidas"
                                     }
                                   },
-                                  "Property": "1.Cesta Media"
+                                  "Property": "Cesta Media"
                                 }
                               },
                               "Right": {
@@ -296,7 +330,7 @@
                                                       "Entity": "Medidas"
                                                     }
                                                   },
-                                                  "Property": "1.Cesta Media"
+                                                  "Property": "Cesta Media"
                                                 }
                                               },
                                               "Scope": [
@@ -325,7 +359,7 @@
                                                       "Entity": "Medidas"
                                                     }
                                                   },
-                                                  "Property": "1.Cesta Media"
+                                                  "Property": "Cesta Media"
                                                 }
                                               },
                                               "Scope": [
@@ -399,7 +433,40 @@
                   "Value": "8D"
                 }
               }
+            },
+            "enableTitleDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
+          }
+        },
+        {
+          "properties": {
+            "dynamicLabelValue": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Cesta Media"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "highlightMatching": 1
           }
         }
       ],

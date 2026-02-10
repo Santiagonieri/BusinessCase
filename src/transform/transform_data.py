@@ -157,7 +157,7 @@ def agrupar_por_canal(df):
     return df_agrupado
 
 
-def distribucion_revenue(GA_agrupado,df_transaccional):
+def distribucion_revenue_transacciones(GA_agrupado,df_transaccional):
 
     """Funcion para calcular la distribucion del revenue por canal y canal_detail, 
     se asume que el revenue se distribuye en base al peso de las transacciones de cada canal y canal_detail,
@@ -172,6 +172,7 @@ def distribucion_revenue(GA_agrupado,df_transaccional):
 
     #Distribucion del revenue en base al peso de las transacciones de cada canal y canal_detail
     df_agrupado['revenue_distribuido'] = df_agrupado['peso_canal'] * df_agrupado['revenue']
+    df_agrupado['transacciones_reales_distribuidas'] = df_agrupado['peso_canal'] * df_agrupado['transacciones_real']
 
     return df_agrupado
 

@@ -1,6 +1,6 @@
 expression TransaccionesTransaccional_agrupado =
 		let
-		    Origen = Csv.Document(File.Contents(RutaOrigen),[Delimiter=",", Columns=15, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		    Origen = Csv.Document(File.Contents(RutaOrigen),[Delimiter=",", Columns=16, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 		    Encabezados_Promovidos = Table.PromoteHeaders(Origen, [PromoteAllScalars=true])
 		in
 		    Encabezados_Promovidos

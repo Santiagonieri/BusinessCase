@@ -54,7 +54,7 @@ def main():
     # ======================
     # ETAPA 2 - TRANSACCIONAL
     # ======================
-    df_transacciones = td.distribucion_revenue(df_ga, df_transacciones)
+    df_transacciones = td.distribucion_revenue_transacciones(df_ga, df_transacciones)
     df_transacciones = td.ratio_conversion_real(df_transacciones)
 
     sd.guardar_df_en_formato_csv(

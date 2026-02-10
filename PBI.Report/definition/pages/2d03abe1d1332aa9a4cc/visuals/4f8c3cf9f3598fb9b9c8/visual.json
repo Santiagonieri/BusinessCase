@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "dd2d56fd9bbf294d88a2",
+  "name": "4f8c3cf9f3598fb9b9c8",
   "position": {
     "x": 6,
-    "y": 622.16960594868283,
-    "z": 5000,
+    "y": 140.99721563159912,
+    "z": 10000,
     "height": 90,
     "width": 190,
-    "tabOrder": 5000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DimTipoAplicacion"
+                      "Entity": "DimCalendario"
                     }
                   },
-                  "Property": "Tipo Aplicacion"
+                  "Property": "Mes"
                 }
               },
-              "queryRef": "DimTipoAplicacion.tipo_aplicacion",
-              "nativeQueryRef": "tipo_aplicacion",
+              "queryRef": "DimCalendario.Mes",
+              "nativeQueryRef": "Mes",
               "active": true
             }
           ]
@@ -46,11 +46,6 @@
               }
             }
           }
-        }
-      ],
-      "general": [
-        {
-          "properties": {}
         }
       ],
       "header": [
@@ -81,14 +76,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tipo Dispositivo'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "13D"
+                  "Value": "'Mes'"
                 }
               }
             },
@@ -96,6 +84,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
                 }
               }
             }

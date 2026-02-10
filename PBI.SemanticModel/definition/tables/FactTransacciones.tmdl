@@ -123,6 +123,16 @@ table FactTransacciones
 
 		annotation SummarizationSetBy = Automatic
 
+	column transacciones_reales_distribuidas
+		dataType: double
+		lineageTag: bb97eb8a-c199-4d68-9142-eabb61ad9be3
+		summarizeBy: sum
+		sourceColumn: transacciones_reales_distribuidas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition FactTransacciones = m
 		mode: import
 		source = ```
@@ -146,6 +156,7 @@ table FactTransacciones
 				            {"ratio_conversion_real", Percentage.Type},
 				            {"revenue", type number},
 				            {"transacciones_real", type number},
+				            {"transacciones_reales_distribuidas", type number},
 				            {"revenue_distribuido", Currency.Type}
 				        },
 				        "US-us"
@@ -209,6 +220,7 @@ table FactTransacciones
 				            "ratio_conversion_ga",
 				            "revenue",
 				            "transacciones_real",
+				            "transacciones_reales_distribuidas",
 				            "revenue_distribuido",
 				            "ratio_conversion_real",
 				            "Id_Mercado",

@@ -4,5 +4,57 @@
   "displayName": "Overview",
   "displayOption": "FitToPage",
   "height": 720,
-  "width": 1280
+  "width": 1280,
+  "visualInteractions": [
+    {
+      "source": "a798d8e915f298b9985a",
+      "target": "485cbf30585649e56f06",
+      "type": "DataFilter"
+    },
+    {
+      "source": "a798d8e915f298b9985a",
+      "target": "dfcf66a139d91f666f70",
+      "type": "DataFilter"
+    },
+    {
+      "source": "8088507f3233107ece87",
+      "target": "dfcf66a139d91f666f70",
+      "type": "DataFilter"
+    },
+    {
+      "source": "8088507f3233107ece87",
+      "target": "a798d8e915f298b9985a",
+      "type": "DataFilter"
+    },
+    {
+      "source": "8088507f3233107ece87",
+      "target": "485cbf30585649e56f06",
+      "type": "DataFilter"
+    },
+    {
+      "source": "485cbf30585649e56f06",
+      "target": "a798d8e915f298b9985a",
+      "type": "DataFilter"
+    },
+    {
+      "source": "485cbf30585649e56f06",
+      "target": "dfcf66a139d91f666f70",
+      "type": "DataFilter"
+    },
+    {
+      "source": "dfcf66a139d91f666f70",
+      "target": "485cbf30585649e56f06",
+      "type": "DataFilter"
+    },
+    {
+      "source": "dfcf66a139d91f666f70",
+      "target": "a798d8e915f298b9985a",
+      "type": "DataFilter"
+    },
+    {
+      "source": "dfcf66a139d91f666f70",
+      "target": "8088507f3233107ece87",
+      "type": "DataFilter"
+    }
+  ]
 }

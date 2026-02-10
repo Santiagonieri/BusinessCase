@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "dd2d56fd9bbf294d88a2",
+  "name": "cfb77e6ba06f9ac343c5",
   "position": {
     "x": 6,
-    "y": 622.16960594868283,
-    "z": 5000,
+    "y": 429.70064982184937,
+    "z": 12000,
     "height": 90,
     "width": 190,
-    "tabOrder": 5000
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,20 +20,37 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DimTipoAplicacion"
+                      "Entity": "DimCanal"
                     }
                   },
-                  "Property": "Tipo Aplicacion"
+                  "Property": "Canal Detail"
                 }
               },
-              "queryRef": "DimTipoAplicacion.tipo_aplicacion",
-              "nativeQueryRef": "tipo_aplicacion",
+              "queryRef": "DimCanal.Canal Detail",
+              "nativeQueryRef": "Canal Detail",
               "active": true
             }
           ]
         }
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Values"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "DimCanal.Canal Detail"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
     "objects": {
       "data": [
         {
@@ -81,7 +98,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Tipo Dispositivo'"
+                  "Value": "'Canal Detail'"
                 }
               }
             },
