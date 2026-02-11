@@ -15,9 +15,12 @@ table FactTransacciones
 
 	column revenue
 		dataType: double
+		isHidden
 		lineageTag: 6855a8bc-13cc-4f44-afe4-2b0ceb0a81eb
 		summarizeBy: sum
 		sourceColumn: revenue
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 
@@ -88,9 +91,12 @@ table FactTransacciones
 
 	column transacciones_real
 		dataType: double
+		isHidden
 		lineageTag: 0dbb2bd1-a3a8-4023-97e5-925483187a3c
 		summarizeBy: sum
 		sourceColumn: transacciones_real
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

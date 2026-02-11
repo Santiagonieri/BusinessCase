@@ -43,7 +43,7 @@
               },
               "queryRef": "DimTipoAplicacion.Tipo Aplicacion",
               "nativeQueryRef": "Tipo Aplicacion",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -94,6 +94,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "% Variacion Ratio Conversion Google vs Real"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
       }
     },
     "expansionStates": [
@@ -106,6 +123,7 @@
             "queryRefs": [
               "DimMercados.Mercado"
             ],
+            "isCollapsed": true,
             "identityKeys": [
               {
                 "Column": {
